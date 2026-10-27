@@ -15,31 +15,32 @@
 <meta name="theme-color" content="#ffffff">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
-<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap">
 </head>
 <body>
 <style>
 /* L'atelier ouvert — maquette fixe (étape 2 du brief).
    Papier ivoire, encre, vermillon. Les œuvres apportent la couleur ; l'interface est le cadre.
-   General Sans en production (Fontshare) ; Instrument Sans en doublure d'aperçu. */
+   Satoshi (Fontshare). */
 :root{
   --paper:#FFFFFF;
   --paper-2:#FFFFFF;
   --ink:#1B1916;
   --ink-soft:#57534A;
-  --verm:#B83228;
+  --verm:#B83228; --orange:#E8692A;
   --line:#DED8CA;
-  --sans:'General Sans','Instrument Sans',system-ui,'Helvetica Neue',Arial,sans-serif;
+  --sans:'Satoshi',system-ui,'Helvetica Neue',Arial,sans-serif;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
   font-size:1.03rem;line-height:1.65;-webkit-font-smoothing:antialiased}
 @media (prefers-reduced-motion:no-preference){ html{scroll-behavior:smooth} }
+.o{color:var(--orange)}
 ::selection{background:var(--verm);color:var(--paper)}
 a{color:inherit}
 img{max-width:100%;display:block;height:auto}
 .wrap{max-width:76rem;margin:0 auto;padding-inline:clamp(16px,4vw,44px)}
-h1,h2,h3{letter-spacing:-.025em;line-height:1.08;text-wrap:balance;margin:0;font-weight:640}
+h1,h2,h3{letter-spacing:-.025em;line-height:1.08;text-wrap:balance;margin:0;font-weight:500}
 section{scroll-margin-top:5.5rem}
 .eyebrow{font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--verm)}
 .num{font-variant-numeric:tabular-nums}
@@ -74,11 +75,11 @@ header.hero{padding-block:clamp(3rem,7vh,5.5rem) clamp(3rem,6vh,5rem)}
 .hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(16rem,1fr);
   gap:3rem clamp(2.5rem,6vw,5.5rem);align-items:center}
 .hero .metier{margin:0 0 1.2rem}
-.hero h1{font-size:clamp(3rem,8.5vw,6.2rem);font-weight:680}
+.hero h1{font-size:clamp(3rem,8.5vw,6.2rem);font-weight:500}
 .hero .name-row{position:relative;display:inline-block}
 .hero .stroke{position:absolute;left:-2%;bottom:-.12em;width:104%;height:.22em;pointer-events:none}
 .hero .stroke path{fill:none;stroke:var(--verm);stroke-width:7;stroke-linecap:round;opacity:.9}
-.hero .titre{margin:1.9rem 0 0;font-size:clamp(1.35rem,2.8vw,1.9rem);font-weight:620;
+.hero .titre{margin:1.9rem 0 0;font-size:clamp(1.35rem,2.8vw,1.9rem);font-weight:500;
   letter-spacing:-.02em;line-height:1.25}
 .hero .titre em{font-style:normal;color:var(--verm)}
 .hero .intro{max-width:30em;margin:1.2rem 0 0;color:var(--ink-soft)}
@@ -251,7 +252,7 @@ footer{border-top:1px solid var(--line);
 <section id="projets"><div class="wrap">
   <div class="sec-head">
     <span class="eyebrow">Projets choisis</span>
-    <h2>Quelques projets qui racontent ma façon de créer</h2>
+    <h2>Quelques projets qui racontent ma façon de <span class="o">créer</span></h2>
     <p>Une identité, un livre, un site : chaque projet commence par une question et prend forme
     à travers des choix. Voici une sélection de réalisations et de ce qui les a fait naître.</p>
   </div>
@@ -294,7 +295,7 @@ footer{border-top:1px solid var(--line);
 <section id="pauline"><div class="wrap">
   <div class="sec-head">
     <span class="eyebrow">Cas — édition</span>
-    <h2>Pauline — du premier dessin au livre imprimé</h2>
+    <h2>Pauline — du premier <span class="o">dessin</span> au livre imprimé</h2>
   </div>
   <figure class="cas-open">
     <img src="atelier/pauline/planche-visite.jpg" alt="Double page de Pauline : le boucher fait visiter le pré à Pauline, « Est-ce que c'est clair !? »" loading="lazy" width="1800" height="1012">
@@ -332,7 +333,7 @@ footer{border-top:1px solid var(--line);
 <section id="dessins"><div class="wrap">
   <div class="sec-head">
     <span class="eyebrow">Dessins &amp; recherches</span>
-    <h2>Avant que tout soit bien rangé</h2>
+    <h2>Avant que tout soit bien <span class="o">rangé</span></h2>
     <p>Des croquis, des recherches, des pistes abandonnées et quelques idées qui ont trouvé leur chemin.</p>
   </div>
 
@@ -355,7 +356,7 @@ footer{border-top:1px solid var(--line);
 <section id="apports"><div class="wrap">
   <div class="sec-head">
     <span class="eyebrow">Ce que j'apporte à une équipe</span>
-    <h2>Trois choses, avec leurs preuves</h2>
+    <h2>Trois choses, avec leurs <span class="o">preuves</span></h2>
   </div>
   <div class="apports">
     <article>
@@ -382,7 +383,7 @@ footer{border-top:1px solid var(--line);
 <section id="apropos"><div class="wrap">
   <div class="sec-head">
     <span class="eyebrow">À propos</span>
-    <h2>Parcours &amp; informations pratiques</h2>
+    <h2><span class="o">Parcours</span> &amp; informations pratiques</h2>
   </div>
   <div class="apropos-grid">
     <img src="atelier/portrait.jpg" alt="Portrait d'Adrien Thétaz, crayon en main" width="538" height="591">
@@ -403,7 +404,7 @@ footer{border-top:1px solid var(--line);
 </div></section>
 
 <section id="contact" class="contact"><div class="wrap">
-  <h2>Et si on imaginait <em>la suite ensemble ?</em></h2>
+  <h2>Et si on <span class="o">imaginait</span> <em>la suite ensemble ?</em></h2>
   <p class="pitch">Je cherche une équipe avec laquelle créer des choses utiles, singulières
   et bien faites. Si mon travail fait écho à vos projets, parlons-en.</p>
   <div class="ctas">
