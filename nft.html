@@ -20,7 +20,7 @@
 /* Page projet « Collections NFT » — même système que l'accueil : blanc, encre, vermillon.
    Les œuvres portent la couleur ; deux chapitres, une épilogue. */
 :root{
-  --paper:#FFFFFF; --ink:#1B1916; --ink-soft:#57534A; --verm:#B83228; --orange:#E8692A; --line:#E4E0D8; --tint:#F6F5F2;
+  --paper:#FFFFFF; --ink:#1B1916; --ink-soft:#57534A; --verm:#B83228; --orange:#E8921C; --line:#E4E0D8; --tint:#F6F5F2;
   --sans:'Satoshi',system-ui,'Helvetica Neue',Arial,sans-serif;
 }
 *{box-sizing:border-box}
@@ -50,7 +50,7 @@ nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-
 .hero{padding-block:clamp(2.5rem,6vh,4.5rem) 2rem}
 .hero .eyebrow{display:block;margin-bottom:1rem}
 .hero h1{font-size:clamp(2.6rem,7vw,5.4rem);max-width:12em}
-.hero h1 em{font-style:normal;color:var(--verm)}
+.hero h1 em{font-style:normal;color:var(--orange)}
 .hero .lede{max-width:40em;color:var(--ink-soft);margin:1.4rem 0 0;font-size:1.08rem}
 .facts{display:flex;flex-wrap:wrap;gap:.4rem .6rem;margin-top:1.6rem}
 .facts span{font-size:.76rem;font-weight:600;border:1px solid var(--line);border-radius:999px;padding:.32rem .8rem;color:var(--ink-soft)}
@@ -71,7 +71,7 @@ nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-
 /* chapitres */
 .chap{padding-block:clamp(3.2rem,7vh,5.5rem);border-top:1px solid var(--line)}
 .chap-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:1rem 4rem;align-items:end;margin-bottom:2.6rem}
-.chap-head .num-big{font-size:clamp(3.5rem,9vw,7rem);font-weight:500;line-height:.85;color:var(--verm);letter-spacing:-.04em}
+.chap-head .num-big{font-size:clamp(3.5rem,9vw,7rem);font-weight:500;line-height:.85;color:var(--orange);letter-spacing:-.04em}
 .chap-head h2{font-size:clamp(1.9rem,4vw,2.9rem);margin-top:.6rem}
 .chap-head p{margin:0;color:var(--ink-soft);max-width:36em}
 .step{margin-top:3.2rem}
@@ -152,7 +152,7 @@ footer{padding-block:1.6rem calc(1.6rem + env(safe-area-inset-bottom,0px));font-
 
 <header class="hero wrap">
   <span class="eyebrow">Projet personnel · 2023 · Illustration &amp; système génératif</span>
-  <h1>Deux collections <span class="o">NFT</span>, <em>dessinées à la main.</em></h1>
+  <h1>Deux collections NFT, <em>dessinées à la main.</em></h1>
   <p class="lede">En 2023, j'ai conçu deux collections d'avatars génératifs : chaque élément est
   dessiné, puis découpé en calques qu'un script assemble par milliers. La bulle NFT s'est effondrée
   avant la sortie. Les dessins, eux, sont restés — voici leur histoire, du premier croquis au système.</p>
@@ -411,7 +411,7 @@ footer{padding-block:1.6rem calc(1.6rem + env(safe-area-inset-bottom,0px));font-
 
 <section class="epilogue"><div class="wrap">
   <span class="eyebrow" style="color:#E86A5E">Épilogue</span>
-  <h2 style="margin-top:.8rem">La bulle a <span class="o">éclaté</span>. <em>Les dessins sont restés.</em></h2>
+  <h2 style="margin-top:.8rem">La bulle a éclaté. <em>Les dessins sont restés.</em></h2>
   <p>Le marché des NFT s'est effondré avant la mise en vente. Plutôt que de laisser dormir
   le travail, je l'ai réassemblé pour ce site : deux systèmes complets, prêts à générer
   des centaines de milliers de pièces uniques — et la preuve qu'un trait peut devenir tout un monde.</p>
