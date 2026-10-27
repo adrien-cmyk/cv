@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pauline, bande dessinée — Adrien Thétaz</title>
+<meta name="description" content="Pauline — Au commencement : une bande dessinée de 104 pages écrite, dessinée et éditée par Adrien Thétaz. Du premier dessin de 2013 aux pages en couleur.">
+<link rel="canonical" href="https://adrienthetaz.ch/pauline.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pauline — dix ans avec une vache">
+<meta property="og:description" content="Une BD d’auteur, du crayon à la couleur.">
+<meta property="og:url" content="https://adrienthetaz.ch/pauline.html">
+<meta property="og:image" content="https://adrienthetaz.ch/pauline-assets/couverture.webp">
+<meta property="og:locale" content="fr_CH">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap">
+<style>
+/* Page « Logos » — même système que l'accueil et la page NFT. */
+:root{
+  --paper:#FFFFFF; --ink:#1B1916; --ink-soft:#57534A; --verm:#B83228; --orange:#E8921C; --line:#E4E0D8; --tint:#F6F5F2;
+  --sans:'Satoshi',system-ui,'Helvetica Neue',Arial,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:1.03rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit}
+.o{color:var(--orange)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--verm);outline-offset:3px}
+.wrap{max-width:76rem;margin:0 auto;padding-inline:clamp(16px,4vw,44px)}
+h1,h2,h3{letter-spacing:-.025em;line-height:1.08;text-wrap:balance;margin:0;font-weight:500}
+.eyebrow{font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--verm)}
+.num{font-variant-numeric:tabular-nums}
+figure{margin:0}
+figcaption{font-size:.8rem;color:var(--ink-soft);margin-top:.6rem;line-height:1.5}
+figcaption b{color:var(--ink);font-weight:600}
+section{scroll-margin-top:5rem}
+
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,#fff 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.4rem;padding-block:.8rem}
+.brand{font-weight:700;letter-spacing:-.02em;text-decoration:none;margin-right:auto}
+.brand i{font-style:normal;color:var(--verm)}
+.nav-in a:not(.brand){font-size:.86rem;font-weight:550;color:var(--ink-soft);text-decoration:none}
+.nav-in a:not(.brand):hover{color:var(--verm)}
+
+/* hero */
+.hero{padding-block:clamp(2.5rem,6vh,4.5rem) 2rem}
+.hero .eyebrow{display:block;margin-bottom:1rem}
+.hero h1{font-size:clamp(2.6rem,7vw,5.4rem);max-width:12em}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero .lede{max-width:40em;color:var(--ink-soft);margin:1.4rem 0 0;font-size:1.08rem}
+.facts{display:flex;flex-wrap:wrap;gap:.4rem .6rem;margin-top:1.6rem}
+.facts span{font-size:.76rem;font-weight:600;border:1px solid var(--line);border-radius:999px;padding:.32rem .8rem;color:var(--ink-soft)}
+
+/* Croquis / Réalisé */
+.trait{margin-top:2.4rem}
+.trait-frame{position:relative;border:1px solid var(--line);background:#fff;overflow:hidden}
+.trait-frame img{width:100%}
+.trait-frame img + img{position:absolute;inset:0;height:100%;object-fit:cover}
+.trait-frame[data-state="croquis"] .is-real{opacity:0}
+.trait-frame[data-state="realise"] .is-real{opacity:1}
+@media (prefers-reduced-motion:no-preference){.trait-frame .is-real{transition:opacity .5s ease}}
+.toggle{display:inline-flex;margin-top:1rem;border:1px solid var(--ink);border-radius:999px;padding:3px;gap:3px}
+.toggle button{font:inherit;font-size:.85rem;font-weight:600;border:0;background:none;color:var(--ink);padding:.5rem 1.1rem;border-radius:999px;cursor:pointer}
+.toggle button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.trait-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.6rem 1.5rem}
+
+/* chapitres */
+.chap{padding-block:clamp(3.2rem,7vh,5.5rem);border-top:1px solid var(--line)}
+.chap-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:1rem 4rem;align-items:end;margin-bottom:2.6rem}
+.chap-head .num-big{font-size:clamp(3.5rem,9vw,7rem);font-weight:500;line-height:.85;color:var(--orange);letter-spacing:-.04em}
+.chap-head h2{font-size:clamp(1.9rem,4vw,2.9rem);margin-top:.6rem}
+.chap-head p{margin:0;color:var(--ink-soft);max-width:36em}
+.step{margin-top:3.2rem}
+.step h3{font-size:1.15rem;margin-bottom:.4rem}
+.step > p{margin:0 0 1.4rem;color:var(--ink-soft);max-width:44em;font-size:.97rem}
+.step > p b{color:var(--ink);font-weight:600}
+
+.duo{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:2.5rem;align-items:center}
+.grid-sk{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
+.grid-sk figure,.strip figure,.bordered{border:1px solid var(--line);background:#fff}
+.grid-sk img{aspect-ratio:3/4;object-fit:cover;width:100%}
+.strip{display:grid;grid-template-columns:repeat(6,1fr);gap:.8rem;counter-reset:s}
+.strip figure{counter-increment:s;position:relative}
+.strip figure::before{content:counter(s);position:absolute;top:.5rem;left:.55rem;font-size:.7rem;font-weight:700;color:var(--verm)}
+.strip img{aspect-ratio:1/1;object-fit:cover;width:100%}
+.strip figcaption,.grid-sk figcaption{padding:.55rem .65rem .65rem;margin:0}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:1.4rem}
+.rules div{background:#fff;padding:1rem 1.1rem}
+.rules b{display:block;font-size:.72rem;font-weight:650;letter-spacing:.1em;text-transform:uppercase;color:var(--verm);margin-bottom:.3rem}
+.rules span{font-size:.9rem;color:var(--ink-soft)}
+
+.showcase{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
+.showcase figure{border:1px solid var(--line)}
+.showcase img{display:block;width:100%;height:auto}
+.greek-all a{display:block}
+.greek-all figure,.naut-all figure{content-visibility:auto;contain-intrinsic-block-size:auto 480px}
+.showcase figcaption{padding:.55rem .7rem .7rem;margin:0}
+
+/* murs de collection */
+.wall-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.5rem 2rem;margin-bottom:1rem}
+.wall-head p{margin:0;color:var(--ink-soft);font-size:.9rem}
+.wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:4px}
+.wall img{width:100%;aspect-ratio:1/1;object-fit:cover;background:var(--tint)}
+.wall.dark{background:#101418;padding:4px}
+
+.etapes{display:grid;grid-template-columns:repeat(5,1fr);gap:.8rem}
+.etapes figure{border:1px solid var(--line)}
+.etapes figcaption{padding:.5rem .6rem .6rem;margin:0}
+.etapes figure::after{content:"";display:none}
+
+.epilogue{background:var(--ink);color:#fff;padding-block:clamp(3.2rem,8vh,5.5rem)}
+.epilogue h2{font-size:clamp(1.9rem,4.4vw,3.1rem);max-width:15em}
+.epilogue h2 em{font-style:normal;color:#E86A5E}
+.epilogue p{color:#C9C4BA;max-width:42em}
+.big-nums{display:flex;flex-wrap:wrap;gap:1.5rem 4rem;margin:2.2rem 0 2.4rem}
+.big-nums div{display:flex;flex-direction:column}
+.big-nums b{font-size:clamp(2rem,5vw,3.2rem);font-weight:700;letter-spacing:-.03em}
+.big-nums span{font-size:.82rem;color:#A8A296}
+.back{display:inline-flex;font-size:.9rem;font-weight:600;text-decoration:none;border-radius:999px;padding:.75rem 1.4rem;background:#fff;color:var(--ink)}
+.back:hover{background:#E86A5E;color:#fff}
+
+footer{padding-block:1.6rem calc(1.6rem + env(safe-area-inset-bottom,0px));font-size:.82rem;color:var(--ink-soft)}
+.foot-in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 2rem}
+.foot-in b{color:var(--verm)}
+
+@media (max-width:900px){
+  .chap-head,.duo{grid-template-columns:1fr}
+  .grid-sk{grid-template-columns:repeat(3,1fr)}
+  .strip{grid-template-columns:repeat(3,1fr)}
+  .etapes{grid-template-columns:repeat(3,1fr)}
+  .showcase{grid-template-columns:1fr 1fr}
+}
+@media (max-width:540px){
+  .grid-sk,.strip,.etapes{grid-template-columns:repeat(2,1fr)}
+  .showcase{grid-template-columns:1fr}
+  .wall{grid-template-columns:repeat(auto-fill,minmax(76px,1fr))}
+}
+
+/* logos */
+.logos-all{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
+.logos-all figure{border:1px solid var(--line);content-visibility:auto;contain-intrinsic-block-size:auto 440px}
+.logos-all img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.logos-all figcaption,.ctx figcaption,.mos figcaption{padding:.55rem .7rem .7rem;margin:0}
+.ctx{display:grid;gap:1.2rem;grid-template-columns:repeat(var(--c,3),minmax(0,1fr));align-items:start}
+.ctx figure,.mos figure{border:1px solid var(--line);background:#fff}
+.ctx.c2{--c:2}.ctx.c4{--c:4}.ctx.c5{--c:5}.ctx.c6{--c:6}.ctx.c7{--c:7}
+.ctx.sq img{aspect-ratio:1/1;object-fit:contain;background:#fff}
+.mos{columns:3 18rem;column-gap:1.2rem}
+.mos figure{break-inside:avoid;margin-bottom:1.2rem}
+.bois{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.6rem}
+.bois img{width:100%;aspect-ratio:2/3;object-fit:cover}
+.dessin{grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);align-items:start}
+.dessin > figure,.dessin-side figure{border:1px solid var(--line)}
+.dessin-side{display:grid;gap:1.2rem}
+.bois .w{grid-column:span 2}.bois .w img{aspect-ratio:auto;height:100%}
+.essai{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2.5rem 4rem}
+.essai p{margin:0 0 1rem;color:var(--ink-soft)}
+.essai p b{color:var(--ink);font-weight:600}
+.cas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:2rem}
+.cas div{background:#fff;padding:1.2rem 1.3rem}
+.cas b{display:block;font-size:1.6rem;font-weight:700;letter-spacing:-.02em}
+.cas small{display:block;font-size:.72rem;font-weight:650;letter-spacing:.1em;text-transform:uppercase;color:var(--verm);margin:.2rem 0 .5rem}
+.cas span{font-size:.9rem;color:var(--ink-soft)}
+.sl{background:#0B0B0A;color:#fff;padding-block:clamp(3.2rem,8vh,5.5rem)}
+.sl h2{font-size:clamp(2rem,5vw,3.6rem);max-width:13em}
+.sl .lede{color:#C9C4BA;max-width:44em;margin:1.2rem 0 0}
+.piliers{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:#2A2926;border:1px solid #2A2926;margin-top:2.4rem}
+.piliers div{background:#0B0B0A;padding:1.2rem 1.1rem}
+.piliers small{display:block;font-size:.68rem;letter-spacing:.14em;color:#8E897F;margin-bottom:.5rem}
+.piliers b{display:block;font-size:1rem;font-weight:700;margin-bottom:.5rem}
+.piliers span{font-size:.86rem;color:#B5B0A6;line-height:1.55}
+.bloq{display:flex;flex-wrap:wrap;gap:.5rem .7rem;margin-top:1.8rem}
+.bloq span{font-size:.78rem;font-weight:600;border:1px solid #3A3833;border-radius:999px;padding:.35rem .85rem;color:#E4E0D8}
+.sl .big-nums span{color:#A8A296}
+.sl a.back{margin-right:.6rem}
+@media (max-width:900px){.dessin{grid-template-columns:1fr}.cas{grid-template-columns:1fr 1fr}.logos-all{grid-template-columns:1fr 1fr}.ctx{--c:2!important}.piliers{grid-template-columns:1fr 1fr}.essai{grid-template-columns:1fr}.bois{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.cas{grid-template-columns:1fr}.logos-all{grid-template-columns:1fr}.ctx{--c:1!important}.piliers{grid-template-columns:1fr}}
+
+/* Titres : Bricolage Grotesque — paragraphes inchangés (Satoshi) */
+h1,h2,h3,.eyebrow,.tag,.num-big,.titre,.big-nums b,.cas b,.piliers b,.brand,.k,.yr{font-family:'Bricolage Grotesque',var(--sans);font-optical-sizing:auto}
+h1,h2,h3{font-weight:600;letter-spacing:-.03em}
+.num-big,.big-nums b{font-weight:600}
+
+/* Farinet */
+.viewer{border:1px solid var(--line);background:#fff;padding:clamp(1rem,3vw,2rem)}
+.stage{position:relative;max-width:min(820px,calc((100vh - 230px)*.953));margin:0 auto;cursor:zoom-in;touch-action:pan-y}
+.stage img{width:100%;height:auto;user-select:none;-webkit-user-drag:none}
+.loupe{position:absolute;width:220px;height:220px;border-radius:50%;border:3px solid #fff;box-shadow:0 8px 30px rgba(0,0,0,.28),0 0 0 1px rgba(0,0,0,.15);
+  pointer-events:none;background-repeat:no-repeat;opacity:0;transform:translate(-50%,-50%);transition:opacity .15s}
+.stage.on .loupe{opacity:1}
+.v-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.8rem 1.5rem;margin-top:1.2rem}
+.v-bar .val{font-family:'Bricolage Grotesque',var(--sans);font-weight:600;font-size:clamp(1.6rem,3.5vw,2.4rem);letter-spacing:-.03em}
+.v-bar .val small{font-family:var(--sans);font-size:.85rem;font-weight:500;color:var(--ink-soft);letter-spacing:0;margin-left:.6rem}
+.v-nav{display:flex;gap:.5rem}
+.v-nav button,.thumbs button{font:inherit;cursor:pointer}
+.v-nav button{border:1px solid var(--ink);background:#fff;color:var(--ink);border-radius:999px;padding:.55rem 1.1rem;font-size:.9rem;font-weight:600}
+.v-nav button:hover{background:var(--ink);color:#fff}
+.thumbs{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:.5rem;margin-top:1.2rem}
+.thumbs button{border:1px solid var(--line);background:#fff;padding:0;opacity:.55;transition:opacity .2s,border-color .2s}
+.thumbs button[aria-current="true"],.thumbs button:hover{opacity:1;border-color:var(--ink)}
+.thumbs span{display:block;font-size:.72rem;font-weight:600;padding:.3rem 0}
+.hint{font-size:.8rem;color:var(--ink-soft);text-align:center;margin:.8rem 0 0}
+.details{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem;align-items:start}
+.details figure{border:1px solid var(--line)}
+.details .w2{grid-column:span 2}
+.refs{list-style:none;padding:0;margin:1.4rem 0 0;display:grid;gap:.6rem}
+.refs a{font-weight:600;text-decoration:none;border-bottom:1px solid var(--line)}
+.refs a:hover{color:var(--verm);border-color:var(--verm)}
+.refs span{color:var(--ink-soft);font-size:.9rem}
+.essai a{color:var(--ink);font-weight:600}
+@media (max-width:900px){.details{grid-template-columns:1fr 1fr}.details .w2{grid-column:span 2}.thumbs{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:540px){.details{grid-template-columns:1fr}.details .w2{grid-column:auto}}
+
+
+.pq{margin:0;max-width:46em;font-family:'Bricolage Grotesque',var(--sans);font-size:clamp(1.25rem,2.4vw,1.7rem);line-height:1.3;letter-spacing:-.015em}
+.pq cite{display:block;margin-top:.6rem;font-family:var(--sans);font-style:normal;font-size:.85rem;color:var(--ink-soft)}
+.epilogue .back.ghost{background:transparent;color:#fff;border:1px solid #5a564f;margin-left:.4rem}
+/* Pauline */
+.pa-hero{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:2.5rem 4rem;align-items:center}
+.pa-hero h1{font-size:clamp(2.4rem,6vw,4.6rem)}
+.pairs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.4rem}
+.wipe{border:1px solid var(--line);background:#fff}
+.w-box{position:relative;aspect-ratio:1010/1400;overflow:hidden}
+.w-box img{position:absolute;inset:0;width:100%;height:100%;object-fit:fill}
+.w-bar{position:absolute;top:0;bottom:0;width:2px;background:var(--orange);transform:translateX(-1px);pointer-events:none}
+.w-bar::after{content:"";position:absolute;top:50%;left:50%;width:26px;height:26px;border-radius:50%;background:var(--orange);transform:translate(-50%,-50%);box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.wipe input{display:block;width:calc(100% - 1.4rem);margin:.7rem .7rem 0;accent-color:var(--orange)}
+.wipe figcaption{padding:.4rem .7rem .7rem;margin:0}
+.thumbs.tpa{grid-template-columns:repeat(var(--n),minmax(0,1fr))}
+.thumbs.tpa img{aspect-ratio:1010/1400;object-fit:cover;width:100%}
+#stage{max-width:min(720px,calc((100vh - 230px)*.72))}
+.pa-press{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem;align-items:start}
+.pa-side{display:grid;gap:1.2rem}
+@media (max-width:900px){.pa-hero{grid-template-columns:1fr}.pairs,.pa-press{grid-template-columns:1fr 1fr}.thumbs.tpa{grid-template-columns:repeat(6,minmax(0,1fr))}}
+@media (max-width:540px){.pairs,.pa-press{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap nav-in">
+  <a class="brand" href="./">Adrien Thétaz<i>.</i></a>
+  <a href="#origine">L’origine</a>
+  <a href="#crayon">Du crayon à la couleur</a>
+  <a href="#livre">Le livre</a>
+  <a href="#presse">Presse</a>
+  <a href="./#projets">← Tous les projets</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="pa-hero">
+    <div>
+      <span class="eyebrow">Bande dessinée · Auteur complet · 2013–2025</span>
+      <h1>Pauline, <em>dix ans avec une vache.</em></h1>
+      <p class="lede">Une nuit de 2013, je rêve d’une vache en imperméable. Au réveil, l’histoire s’est effacée — pas la vache.
+      Dix ans plus tard, <b>Pauline — Au commencement</b> est un album de 104 pages dont j’ai tout fait : les dessins,
+      les textes, la mise en page, l’édition. Une satire tendre, drôle et grinçante, qui se lit à plusieurs niveaux.</p>
+      <div class="facts"><span>104 pages</span><span>Dessin &amp; scénario</span><span>Édition &amp; diffusion</span><span>Crayon · Photoshop · InDesign</span></div>
+    </div>
+    <figure class="bordered"><img src="pauline-assets/couverture.webp" alt="Couverture de Pauline — Au commencement, by TAZ" width="1282" height="1800"></figure>
+  </div>
+</div></header>
+
+<section id="origine" class="chap"><div class="wrap">
+  <div class="chap-head">
+    <div><span class="num-big">01</span><h2>Le premier <span class="o">dessin</span></h2></div>
+    <p>Le croquis du matin, en 2013 : une vache en imper, valise à la main. Tout l’univers est parti de là.</p>
+  </div>
+  <div class="duo">
+    <figure class="bordered"><img src="pauline-assets/origine-2013.webp" alt="Premier dessin de Pauline en 2013 : une vache en imperméable avec une valise" loading="lazy" width="1800" height="1658"><figcaption><b>Pauline, 2013</b> · le dessin du rêve</figcaption></figure>
+    <blockquote class="pq">« Je me lève au milieu de la nuit pour tout écrire, et là, trou noir. Tout s’est effacé, sauf le dessin de Pauline. Alors je suis parti de là. »
+      <cite>Adrien Thétaz</cite></blockquote>
+  </div>
+</div></section>
+
+<section id="crayon" class="chap"><div class="wrap">
+  <div class="chap-head">
+    <div><span class="num-big">02</span><h2>Du crayon à la <span class="o">couleur</span></h2></div>
+    <p>Pas de cases, pas de plan figé : « Je dessine aussi vite que je pense, sinon, je perds Pauline. »
+    Chaque page naît au crayon, puis prend sa couleur. Faites glisser le curseur sur chaque page.</p>
+  </div>
+  <div class="pairs">
+    <figure class="wipe"><div class="w-box"><img src="pauline-assets/paires/couleur-16.webp" alt="Page 16 de l’album, en couleur" loading="lazy" width="1010" height="1400"><img class="w-top" src="pauline-assets/paires/croquis-14.webp" alt="Même page au crayon" loading="lazy" width="990" height="1400"><span class="w-bar"></span></div><input type="range" min="0" max="100" value="55" aria-label="Croquis ou couleur, page 16"><figcaption><b>Page 16</b> · crayon ⟷ couleur</figcaption></figure>
+    <figure class="wipe"><div class="w-box"><img src="pauline-assets/paires/couleur-39.webp" alt="Page 39 de l’album, en couleur" loading="lazy" width="1010" height="1400"><img class="w-top" src="pauline-assets/paires/croquis-38.webp" alt="Même page au crayon" loading="lazy" width="990" height="1400"><span class="w-bar"></span></div><input type="range" min="0" max="100" value="55" aria-label="Croquis ou couleur, page 39"><figcaption><b>Page 39</b> · crayon ⟷ couleur</figcaption></figure>
+    <figure class="wipe"><div class="w-box"><img src="pauline-assets/paires/couleur-49.webp" alt="Page 49 de l’album, en couleur" loading="lazy" width="1010" height="1400"><img class="w-top" src="pauline-assets/paires/croquis-49.webp" alt="Même page au crayon" loading="lazy" width="990" height="1400"><span class="w-bar"></span></div><input type="range" min="0" max="100" value="55" aria-label="Croquis ou couleur, page 49"><figcaption><b>Page 49</b> · crayon ⟷ couleur</figcaption></figure>
+    <figure class="wipe"><div class="w-box"><img src="pauline-assets/paires/couleur-56.webp" alt="Page 56 de l’album, en couleur" loading="lazy" width="1010" height="1400"><img class="w-top" src="pauline-assets/paires/croquis-53.webp" alt="Même page au crayon" loading="lazy" width="990" height="1400"><span class="w-bar"></span></div><input type="range" min="0" max="100" value="55" aria-label="Croquis ou couleur, page 56"><figcaption><b>Page 56</b> · crayon ⟷ couleur</figcaption></figure>
+    <figure class="wipe"><div class="w-box"><img src="pauline-assets/paires/couleur-65.webp" alt="Page 65 de l’album, en couleur" loading="lazy" width="1010" height="1400"><img class="w-top" src="pauline-assets/paires/croquis-64.webp" alt="Même page au crayon" loading="lazy" width="990" height="1400"><span class="w-bar"></span></div><input type="range" min="0" max="100" value="55" aria-label="Croquis ou couleur, page 65"><figcaption><b>Page 65</b> · crayon ⟷ couleur</figcaption></figure>
+    <figure class="wipe"><div class="w-box"><img src="pauline-assets/paires/couleur-72.webp" alt="Page 72 de l’album, en couleur" loading="lazy" width="1010" height="1400"><img class="w-top" src="pauline-assets/paires/croquis-70.webp" alt="Même page au crayon" loading="lazy" width="990" height="1400"><span class="w-bar"></span></div><input type="range" min="0" max="100" value="55" aria-label="Croquis ou couleur, page 72"><figcaption><b>Page 72</b> · crayon ⟷ couleur</figcaption></figure>
+    
+  </div>
+</div></section>
+
+<section id="livre" class="chap"><div class="wrap">
+  <div class="chap-head">
+    <div><span class="num-big">03</span><h2>Feuilleter <span class="o">l’album</span></h2></div>
+    <p>Quelques pages de <i>Pauline — Au commencement</i>, à lire de près avec la loupe.</p>
+  </div>
+  <div class="viewer" id="viewer">
+    <div class="stage" id="stage">
+      <img id="page" src="pauline-assets/pages/page-013.webp" alt="Page de l’album Pauline" width="1010" height="1400">
+      <div class="loupe" id="loupe" aria-hidden="true"></div>
+    </div>
+    <div class="v-bar">
+      <div class="val num" id="val" aria-live="polite">Page</div>
+      <div class="v-nav"><button type="button" id="prev" aria-label="Page précédente">← Précédent</button><button type="button" id="next" aria-label="Page suivante">Suivant →</button></div>
+    </div>
+    <div class="thumbs tpa" id="thumbs" style="--n:16"><button type="button" aria-label="Page 13"><img src="pauline-assets/pages/page-013.webp" alt="" loading="lazy" width="1010" height="1400"><span>13</span></button><button type="button" aria-label="Page 16"><img src="pauline-assets/pages/page-016.webp" alt="" loading="lazy" width="1010" height="1400"><span>16</span></button><button type="button" aria-label="Page 39"><img src="pauline-assets/pages/page-039.webp" alt="" loading="lazy" width="1010" height="1400"><span>39</span></button><button type="button" aria-label="Page 48"><img src="pauline-assets/pages/page-048.webp" alt="" loading="lazy" width="1010" height="1400"><span>48</span></button><button type="button" aria-label="Page 49"><img src="pauline-assets/pages/page-049.webp" alt="" loading="lazy" width="1010" height="1400"><span>49</span></button><button type="button" aria-label="Page 56"><img src="pauline-assets/pages/page-056.webp" alt="" loading="lazy" width="1010" height="1400"><span>56</span></button><button type="button" aria-label="Page 57"><img src="pauline-assets/pages/page-057.webp" alt="" loading="lazy" width="1010" height="1400"><span>57</span></button><button type="button" aria-label="Page 59"><img src="pauline-assets/pages/page-059.webp" alt="" loading="lazy" width="1010" height="1400"><span>59</span></button><button type="button" aria-label="Page 65"><img src="pauline-assets/pages/page-065.webp" alt="" loading="lazy" width="1010" height="1400"><span>65</span></button><button type="button" aria-label="Page 72"><img src="pauline-assets/pages/page-072.webp" alt="" loading="lazy" width="1010" height="1400"><span>72</span></button><button type="button" aria-label="Page 74"><img src="pauline-assets/pages/page-074.webp" alt="" loading="lazy" width="1010" height="1400"><span>74</span></button><button type="button" aria-label="Page 77"><img src="pauline-assets/pages/page-077.webp" alt="" loading="lazy" width="1010" height="1400"><span>77</span></button><button type="button" aria-label="Page 85"><img src="pauline-assets/pages/page-085.webp" alt="" loading="lazy" width="1010" height="1400"><span>85</span></button><button type="button" aria-label="Page 96"><img src="pauline-assets/pages/page-096.webp" alt="" loading="lazy" width="1010" height="1400"><span>96</span></button><button type="button" aria-label="Page 97"><img src="pauline-assets/pages/page-097.webp" alt="" loading="lazy" width="1010" height="1400"><span>97</span></button><button type="button" aria-label="Page 100"><img src="pauline-assets/pages/page-100.webp" alt="" loading="lazy" width="1010" height="1400"><span>100</span></button></div>
+  </div>
+  <div class="step">
+    <h3>Les personnages</h3>
+    <figure class="bordered"><img src="pauline-assets/univers/famille.webp" alt="Les personnages de Pauline : le chou-fleur, l’aubergine, Pauline, le patron et le taureau" loading="lazy" width="1760" height="950"></figure>
+  </div>
+</div></section>
+
+<section id="presse" class="chap"><div class="wrap">
+  <div class="chap-head">
+    <div><span class="num-big">04</span><h2>En librairie et dans la <span class="o">presse</span></h2></div>
+    <p>L’album est sorti fin 2025 ; la presse locale a raconté l’histoire du designer devenu dessinateur de BD.</p>
+  </div>
+  <div class="pa-press">
+    <figure class="bordered"><img src="pauline-assets/univers/articlegazette-1.webp" alt="Article de presse : Adrien Thétaz, le designer devenu dessinateur de BD" loading="lazy" width="1279" height="1800"><figcaption><b>Presse</b> · « Adrien Thétaz, le designer devenu dessinateur de BD »</figcaption></figure>
+    <figure class="bordered"><img src="pauline-assets/univers/articlegazette-2.webp" alt="Suite de l’article de presse sur Pauline" loading="lazy" width="1278" height="1800"><figcaption><b>Presse</b> · suite de l’article</figcaption></figure>
+    <div class="pa-side">
+      <figure class="bordered"><img src="pauline-assets/univers/librairie.webp" alt="L’album Pauline exposé en boutique" loading="lazy" width="1800" height="1350"><figcaption><b>En boutique</b></figcaption></figure>
+      <figure class="bordered"><img src="pauline-assets/univers/adrien-dessine.webp" alt="Adrien Thétaz en train de dessiner en terrasse" loading="lazy" width="1050" height="1400"><figcaption><b>Au travail</b></figcaption></figure>
+    </div>
+  </div>
+  <div class="step">
+    <h3>Hors des cases</h3>
+    <p>Pour les réseaux de Pauline : des fleurs des prés, peintes comme le décor de l’album.</p>
+    <div class="ctx c2">
+      <figure class="bordered"><img src="pauline-assets/univers/marguerites.webp" alt="Illustration de marguerites" loading="lazy" width="1400" height="1394"><figcaption><b>Marguerites</b></figcaption></figure>
+      <figure class="bordered"><img src="pauline-assets/univers/chicoree.webp" alt="Illustration de chicorée sauvage" loading="lazy" width="1216" height="1400"><figcaption><b>Chicorée sauvage</b></figcaption></figure>
+    </div>
+  </div>
+</div></section>
+
+<section class="epilogue"><div class="wrap">
+  <span class="eyebrow" style="color:#E8921C">Pauline</span>
+  <h2 style="margin-top:.8rem">Une vache qui dit oui à tout le monde. <span class="o">Et la suite arrive.</span></h2>
+  <a class="back" href="https://pauline-bd.ch" target="_blank" rel="noopener">pauline-bd.ch →</a>
+  <a class="back ghost" href="./#projets">← Retour aux projets</a>
+</div></section>
+
+<footer><div class="wrap foot-in">
+  <span class="num">© 2026 Adrien Thétaz — designer MPA &amp; illustrateur, Martigny</span>
+  <span lang="en">Art makes <b>(hi)</b>story</span>
+</div></footer>
+
+<script>
+(function(){
+  /* Curseurs croquis / couleur */
+  [].slice.call(document.querySelectorAll('.wipe')).forEach(function(w){
+    var r=w.querySelector('input'), top=w.querySelector('.w-top'), bar=w.querySelector('.w-bar');
+    function set(v){ top.style.clipPath='inset(0 '+(100-v)+'% 0 0)'; bar.style.left=v+'%'; }
+    r.addEventListener('input',function(){set(+r.value);}); set(+r.value);
+  });
+  /* Feuilleteur */
+  var P=[13, 16, 39, 48, 49, 56, 57, 59, 65, 72, 74, 77, 85, 96, 97, 100], N=P.length, i=0, Z=2.4, R=110, img=document.getElementById('page'), st=document.getElementById('stage'), lp=document.getElementById('loupe'),
+      val=document.getElementById('val'), th=[].slice.call(document.querySelectorAll('#thumbs button'));
+  function src(k){return 'pauline-assets/pages/page-'+String(P[k]).padStart(3,'0')+'.webp';}
+  function show(k){ i=(k+N)%N; img.src=src(i); img.alt='Album Pauline, page '+P[i];
+    val.innerHTML='Page '+P[i]+'<small>'+(i+1)+' / '+N+'</small>'; lp.style.backgroundImage='url('+src(i)+')';
+    th.forEach(function(b,n){b.setAttribute('aria-current',n===i?'true':'false');}); var nx=new Image(); nx.src=src((i+1)%N); }
+  function move(x,y){ var r=img.getBoundingClientRect(), px=x-r.left, py=y-r.top;
+    if(px<0||py<0||px>r.width||py>r.height){st.classList.remove('on');return;}
+    var s=st.getBoundingClientRect(); st.classList.add('on'); lp.style.left=(x-s.left)+'px'; lp.style.top=(y-s.top)+'px';
+    lp.style.backgroundSize=(r.width*Z)+'px '+(r.height*Z)+'px'; lp.style.backgroundPosition=(-(px*Z-R))+'px '+(-(py*Z-R))+'px'; }
+  st.addEventListener('mousemove',function(e){move(e.clientX,e.clientY);});
+  st.addEventListener('mouseleave',function(){st.classList.remove('on');});
+  st.addEventListener('touchstart',function(e){var t=e.touches[0];move(t.clientX,t.clientY);},{passive:true});
+  st.addEventListener('touchmove',function(e){var t=e.touches[0];move(t.clientX,t.clientY);},{passive:true});
+  st.addEventListener('touchend',function(){st.classList.remove('on');});
+  document.getElementById('prev').onclick=function(){show(i-1);};
+  document.getElementById('next').onclick=function(){show(i+1);};
+  th.forEach(function(b,n){b.onclick=function(){show(n);};});
+  document.addEventListener('keydown',function(e){ var r=document.getElementById('viewer').getBoundingClientRect();
+    if(r.bottom<0||r.top>innerHeight) return; if(e.key==='ArrowRight')show(i+1); if(e.key==='ArrowLeft')show(i-1); });
+  show(0);
+})();
+</script>
+</body>
+</html>
