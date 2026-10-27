@@ -28,7 +28,7 @@ jobs:
       - name: Vérifier la configuration
         env:
           S: ${{ secrets.FTP_SERVER || vars.FTP_SERVER }}
-          U: ${{ secrets.INFOMANIAK_FTP_USERNAME || vars.INFOMANIAK_FTP_USERNAME }}
+          U: ${{ secrets.INFOMANIAK_FTP_USERNAME || secrets.INFOMANIAK_FTP_USER || secrets.INFOMANIAK_USERNAME || secrets.FTP_USERNAME || vars.INFOMANIAK_FTP_USERNAME }}
           P: ${{ secrets.INFOMANIAK_FTP_PASSWORD || vars.INFOMANIAK_FTP_PASSWORD }}
         run: |
           ok=1
@@ -41,7 +41,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER || vars.FTP_SERVER }}
-          username: ${{ secrets.INFOMANIAK_FTP_USERNAME || vars.INFOMANIAK_FTP_USERNAME }}
+          username: ${{ secrets.INFOMANIAK_FTP_USERNAME || secrets.INFOMANIAK_FTP_USER || secrets.INFOMANIAK_USERNAME || secrets.FTP_USERNAME || vars.INFOMANIAK_FTP_USERNAME }}
           password: ${{ secrets.INFOMANIAK_FTP_PASSWORD || vars.INFOMANIAK_FTP_PASSWORD }}
           protocol: ftps
           server-dir: /web/
