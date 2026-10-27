@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Logos — Adrien Thétaz</title>
+<meta name="description" content="41 logos dessinés en Valais et en Suisse romande, montrés en grand, dans leur contexte et avec leur recherche. Et ce que je sais du métier : un logo ne se juge pas, il se mesure.">
+<link rel="canonical" href="https://adrienthetaz.ch/logos.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Logos — Adrien Thétaz">
+<meta property="og:description" content="41 logos, leurs déclinaisons et leurs recherches.">
+<meta property="og:url" content="https://adrienthetaz.ch/logos.html">
+<meta property="og:image" content="https://adrienthetaz.ch/logos-assets/grand/besson.webp">
+<meta property="og:locale" content="fr_CH">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap">
+<style>
+/* Page « Logos » — même système que l'accueil et la page NFT. */
+:root{
+  --paper:#FFFFFF; --ink:#1B1916; --ink-soft:#57534A; --verm:#B83228; --orange:#E8921C; --line:#E4E0D8; --tint:#F6F5F2;
+  --sans:'Satoshi',system-ui,'Helvetica Neue',Arial,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:1.03rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit}
+.o{color:var(--orange)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--verm);outline-offset:3px}
+.wrap{max-width:76rem;margin:0 auto;padding-inline:clamp(16px,4vw,44px)}
+h1,h2,h3{letter-spacing:-.025em;line-height:1.08;text-wrap:balance;margin:0;font-weight:500}
+.eyebrow{font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--verm)}
+.num{font-variant-numeric:tabular-nums}
+figure{margin:0}
+figcaption{font-size:.8rem;color:var(--ink-soft);margin-top:.6rem;line-height:1.5}
+figcaption b{color:var(--ink);font-weight:600}
+section{scroll-margin-top:5rem}
+
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,#fff 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.4rem;padding-block:.8rem}
+.brand{font-weight:700;letter-spacing:-.02em;text-decoration:none;margin-right:auto}
+.brand i{font-style:normal;color:var(--verm)}
+.nav-in a:not(.brand){font-size:.86rem;font-weight:550;color:var(--ink-soft);text-decoration:none}
+.nav-in a:not(.brand):hover{color:var(--verm)}
+
+/* hero */
+.hero{padding-block:clamp(2.5rem,6vh,4.5rem) 2rem}
+.hero .eyebrow{display:block;margin-bottom:1rem}
+.hero h1{font-size:clamp(2.6rem,7vw,5.4rem);max-width:12em}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero .lede{max-width:40em;color:var(--ink-soft);margin:1.4rem 0 0;font-size:1.08rem}
+.facts{display:flex;flex-wrap:wrap;gap:.4rem .6rem;margin-top:1.6rem}
+.facts span{font-size:.76rem;font-weight:600;border:1px solid var(--line);border-radius:999px;padding:.32rem .8rem;color:var(--ink-soft)}
+
+/* Croquis / Réalisé */
+.trait{margin-top:2.4rem}
+.trait-frame{position:relative;border:1px solid var(--line);background:#fff;overflow:hidden}
+.trait-frame img{width:100%}
+.trait-frame img + img{position:absolute;inset:0;height:100%;object-fit:cover}
+.trait-frame[data-state="croquis"] .is-real{opacity:0}
+.trait-frame[data-state="realise"] .is-real{opacity:1}
+@media (prefers-reduced-motion:no-preference){.trait-frame .is-real{transition:opacity .5s ease}}
+.toggle{display:inline-flex;margin-top:1rem;border:1px solid var(--ink);border-radius:999px;padding:3px;gap:3px}
+.toggle button{font:inherit;font-size:.85rem;font-weight:600;border:0;background:none;color:var(--ink);padding:.5rem 1.1rem;border-radius:999px;cursor:pointer}
+.toggle button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.trait-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.6rem 1.5rem}
+
+/* chapitres */
+.chap{padding-block:clamp(3.2rem,7vh,5.5rem);border-top:1px solid var(--line)}
+.chap-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:1rem 4rem;align-items:end;margin-bottom:2.6rem}
+.chap-head .num-big{font-size:clamp(3.5rem,9vw,7rem);font-weight:500;line-height:.85;color:var(--orange);letter-spacing:-.04em}
+.chap-head h2{font-size:clamp(1.9rem,4vw,2.9rem);margin-top:.6rem}
+.chap-head p{margin:0;color:var(--ink-soft);max-width:36em}
+.step{margin-top:3.2rem}
+.step h3{font-size:1.15rem;margin-bottom:.4rem}
+.step > p{margin:0 0 1.4rem;color:var(--ink-soft);max-width:44em;font-size:.97rem}
+.step > p b{color:var(--ink);font-weight:600}
+
+.duo{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:2.5rem;align-items:center}
+.grid-sk{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
+.grid-sk figure,.strip figure,.bordered{border:1px solid var(--line);background:#fff}
+.grid-sk img{aspect-ratio:3/4;object-fit:cover;width:100%}
+.strip{display:grid;grid-template-columns:repeat(6,1fr);gap:.8rem;counter-reset:s}
+.strip figure{counter-increment:s;position:relative}
+.strip figure::before{content:counter(s);position:absolute;top:.5rem;left:.55rem;font-size:.7rem;font-weight:700;color:var(--verm)}
+.strip img{aspect-ratio:1/1;object-fit:cover;width:100%}
+.strip figcaption,.grid-sk figcaption{padding:.55rem .65rem .65rem;margin:0}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:1.4rem}
+.rules div{background:#fff;padding:1rem 1.1rem}
+.rules b{display:block;font-size:.72rem;font-weight:650;letter-spacing:.1em;text-transform:uppercase;color:var(--verm);margin-bottom:.3rem}
+.rules span{font-size:.9rem;color:var(--ink-soft)}
+
+.showcase{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
+.showcase figure{border:1px solid var(--line)}
+.showcase img{display:block;width:100%;height:auto}
+.greek-all a{display:block}
+.greek-all figure,.naut-all figure{content-visibility:auto;contain-intrinsic-block-size:auto 480px}
+.showcase figcaption{padding:.55rem .7rem .7rem;margin:0}
+
+/* murs de collection */
+.wall-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.5rem 2rem;margin-bottom:1rem}
+.wall-head p{margin:0;color:var(--ink-soft);font-size:.9rem}
+.wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:4px}
+.wall img{width:100%;aspect-ratio:1/1;object-fit:cover;background:var(--tint)}
+.wall.dark{background:#101418;padding:4px}
+
+.etapes{display:grid;grid-template-columns:repeat(5,1fr);gap:.8rem}
+.etapes figure{border:1px solid var(--line)}
+.etapes figcaption{padding:.5rem .6rem .6rem;margin:0}
+.etapes figure::after{content:"";display:none}
+
+.epilogue{background:var(--ink);color:#fff;padding-block:clamp(3.2rem,8vh,5.5rem)}
+.epilogue h2{font-size:clamp(1.9rem,4.4vw,3.1rem);max-width:15em}
+.epilogue h2 em{font-style:normal;color:#E86A5E}
+.epilogue p{color:#C9C4BA;max-width:42em}
+.big-nums{display:flex;flex-wrap:wrap;gap:1.5rem 4rem;margin:2.2rem 0 2.4rem}
+.big-nums div{display:flex;flex-direction:column}
+.big-nums b{font-size:clamp(2rem,5vw,3.2rem);font-weight:700;letter-spacing:-.03em}
+.big-nums span{font-size:.82rem;color:#A8A296}
+.back{display:inline-flex;font-size:.9rem;font-weight:600;text-decoration:none;border-radius:999px;padding:.75rem 1.4rem;background:#fff;color:var(--ink)}
+.back:hover{background:#E86A5E;color:#fff}
+
+footer{padding-block:1.6rem calc(1.6rem + env(safe-area-inset-bottom,0px));font-size:.82rem;color:var(--ink-soft)}
+.foot-in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 2rem}
+.foot-in b{color:var(--verm)}
+
+@media (max-width:900px){
+  .chap-head,.duo{grid-template-columns:1fr}
+  .grid-sk{grid-template-columns:repeat(3,1fr)}
+  .strip{grid-template-columns:repeat(3,1fr)}
+  .etapes{grid-template-columns:repeat(3,1fr)}
+  .showcase{grid-template-columns:1fr 1fr}
+}
+@media (max-width:540px){
+  .grid-sk,.strip,.etapes{grid-template-columns:repeat(2,1fr)}
+  .showcase{grid-template-columns:1fr}
+  .wall{grid-template-columns:repeat(auto-fill,minmax(76px,1fr))}
+}
+
+/* logos */
+.logos-all{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
+.logos-all figure{border:1px solid var(--line);content-visibility:auto;contain-intrinsic-block-size:auto 440px}
+.logos-all img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.logos-all figcaption,.ctx figcaption,.mos figcaption{padding:.55rem .7rem .7rem;margin:0}
+.ctx{display:grid;gap:1.2rem;grid-template-columns:repeat(var(--c,3),minmax(0,1fr));align-items:start}
+.ctx figure,.mos figure{border:1px solid var(--line);background:#fff}
+.ctx.c2{--c:2}.ctx.c4{--c:4}.ctx.c5{--c:5}.ctx.c6{--c:6}.ctx.c7{--c:7}
+.ctx.sq img{aspect-ratio:1/1;object-fit:contain;background:#fff}
+.mos{columns:3 18rem;column-gap:1.2rem}
+.mos figure{break-inside:avoid;margin-bottom:1.2rem}
+.bois{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.6rem}
+.bois img{width:100%;aspect-ratio:2/3;object-fit:cover}
+.bois .w{grid-column:span 2}.bois .w img{aspect-ratio:auto;height:100%}
+.essai{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2.5rem 4rem}
+.essai p{margin:0 0 1rem;color:var(--ink-soft)}
+.essai p b{color:var(--ink);font-weight:600}
+.cas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:2rem}
+.cas div{background:#fff;padding:1.2rem 1.3rem}
+.cas b{display:block;font-size:1.6rem;font-weight:700;letter-spacing:-.02em}
+.cas small{display:block;font-size:.72rem;font-weight:650;letter-spacing:.1em;text-transform:uppercase;color:var(--verm);margin:.2rem 0 .5rem}
+.cas span{font-size:.9rem;color:var(--ink-soft)}
+.sl{background:#0B0B0A;color:#fff;padding-block:clamp(3.2rem,8vh,5.5rem)}
+.sl h2{font-size:clamp(2rem,5vw,3.6rem);max-width:13em}
+.sl .lede{color:#C9C4BA;max-width:44em;margin:1.2rem 0 0}
+.piliers{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:#2A2926;border:1px solid #2A2926;margin-top:2.4rem}
+.piliers div{background:#0B0B0A;padding:1.2rem 1.1rem}
+.piliers small{display:block;font-size:.68rem;letter-spacing:.14em;color:#8E897F;margin-bottom:.5rem}
+.piliers b{display:block;font-size:1rem;font-weight:700;margin-bottom:.5rem}
+.piliers span{font-size:.86rem;color:#B5B0A6;line-height:1.55}
+.bloq{display:flex;flex-wrap:wrap;gap:.5rem .7rem;margin-top:1.8rem}
+.bloq span{font-size:.78rem;font-weight:600;border:1px solid #3A3833;border-radius:999px;padding:.35rem .85rem;color:#E4E0D8}
+.sl .big-nums span{color:#A8A296}
+.sl a.back{margin-right:.6rem}
+@media (max-width:900px){.cas{grid-template-columns:1fr 1fr}.logos-all{grid-template-columns:1fr 1fr}.ctx{--c:2!important}.piliers{grid-template-columns:1fr 1fr}.essai{grid-template-columns:1fr}.bois{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.cas{grid-template-columns:1fr}.logos-all{grid-template-columns:1fr}.ctx{--c:1!important}.piliers{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap nav-in">
+  <a class="brand" href="./">Adrien Thétaz<i>.</i></a>
+  <a href="#logos">Logos</a>
+  <a href="#contexte">En contexte</a>
+  <a href="#recherche">Recherche</a>
+  <a href="#metier">Le métier</a>
+  <a href="./#projets">← Tous les projets</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="eyebrow">Création de logos · identités · Valais &amp; Suisse romande</span>
+  <h1>41 logos, <em>dessinés pour durer.</em></h1>
+  <p class="lede">Une boucherie depuis 1921, une menuiserie, une cabane de montagne, un théâtre, une fondation.
+  Chaque logo part d'une histoire : celle du client, de son métier, de son lieu. Le dessin vient après — et il doit
+  tenir à 16 pixels comme sur un fourgon, en couleur comme en noir, aujourd'hui comme dans vingt ans.</p>
+  <div class="facts num"><span>41 logos</span><span>Recherches &amp; déclinaisons</span><span>Lignes graphiques complètes</span><span>Illustrator · InDesign · dessin</span></div>
+</div></header>
+
+<section id="logos" class="chap"><div class="wrap">
+  <div class="chap-head">
+    <div><span class="num-big">01</span><h2>Les <span class="o">logos</span></h2></div>
+    <p>Tous, en grand. Des signes simples, lisibles, pensés pour leur secteur — et reconnaissables
+    même réduits à leur silhouette.</p>
+  </div>
+  <div class="logos-all">
+      <figure><img src="logos-assets/grand/abclic.webp" alt="Logo AB Clic" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>AB Clic</b> · Informatique</figcaption></figure>
+      <figure><img src="logos-assets/grand/ailes-st-bernard.webp" alt="Logo Les Ailes du St-Bernard" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Les Ailes du St-Bernard</b> · Parapente</figcaption></figure>
+      <figure><img src="logos-assets/grand/aleph.webp" alt="Logo Aleph" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Aleph</b> · Massothérapie</figcaption></figure>
+      <figure><img src="logos-assets/grand/altis-invest.webp" alt="Logo Altis Invest" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Altis Invest</b> · Investissement</figcaption></figure>
+      <figure><img src="logos-assets/grand/arpette.webp" alt="Logo Relais d'Arpette" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Relais d'Arpette</b> · Restaurant</figcaption></figure>
+      <figure><img src="logos-assets/grand/bahia.webp" alt="Logo Bahia" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Bahia</b> · Coiffure</figcaption></figure>
+      <figure><img src="logos-assets/grand/besson.webp" alt="Logo Besson" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Besson</b> · Menuiserie · charpente</figcaption></figure>
+      <figure><img src="logos-assets/grand/boucherie-st-bernard.webp" alt="Logo Boucherie du Saint-Bernard" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Boucherie du Saint-Bernard</b> · Boucherie depuis 1921</figcaption></figure>
+      <figure><img src="logos-assets/grand/bourgeoisie.webp" alt="Logo Bourgeoisie d'Orsières" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Bourgeoisie d'Orsières</b> · Service forestier</figcaption></figure>
+      <figure><img src="logos-assets/grand/cabanon.webp" alt="Logo Le Cabanon" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Le Cabanon</b> · Café-restaurant · Champex-Lac</figcaption></figure>
+      <figure><img src="logos-assets/grand/capital-dev.webp" alt="Logo Capital Développement" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Capital Développement</b> · Finance</figcaption></figure>
+      <figure><img src="logos-assets/grand/cestadire.webp" alt="Logo C'est-à-dire" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>C'est-à-dire</b> · Logopédie</figcaption></figure>
+      <figure><img src="logos-assets/grand/couleursitalie.webp" alt="Logo Aux Couleurs d'Italie" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Aux Couleurs d'Italie</b> · Épicerie fine</figcaption></figure>
+      <figure><img src="logos-assets/grand/cp.webp" alt="Logo Groupe CP" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Groupe CP</b> · Architecture</figcaption></figure>
+      <figure><img src="logos-assets/grand/envb.webp" alt="Logo Énergies Val de Bagnes" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Énergies Val de Bagnes</b> · Énergie</figcaption></figure>
+      <figure><img src="logos-assets/grand/fromagerie.webp" alt="Logo Fromagerie de Martigny" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Fromagerie de Martigny</b> · Fromagerie</figcaption></figure>
+      <figure><img src="logos-assets/grand/garden-st-bernard.webp" alt="Logo Garden du St-Bernard" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Garden du St-Bernard</b> · Jardinerie</figcaption></figure>
+      <figure><img src="logos-assets/grand/goteat.webp" alt="Logo Got eat." loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Got eat.</b> · Restauration</figcaption></figure>
+      <figure><img src="logos-assets/grand/guliko.webp" alt="Logo Guliko" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Guliko</b> · Restauration</figcaption></figure>
+      <figure><img src="logos-assets/grand/hedonie.webp" alt="Logo Hédonie" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Hédonie</b> · Raclette bar · Haute-Nendaz</figcaption></figure>
+      <figure><img src="logos-assets/grand/horizonthall.webp" alt="Logo Horizont'Hall" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Horizont'Hall</b> · Escalade</figcaption></figure>
+      <figure><img src="logos-assets/grand/just1.webp" alt="Logo Just1" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Just1</b> · Ski</figcaption></figure>
+      <figure><img src="logos-assets/grand/ladresse.webp" alt="Logo l'adresse immobilière." loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>l'adresse immobilière.</b> · Immobilier</figcaption></figure>
+      <figure><img src="logos-assets/grand/lookseego.webp" alt="Logo Look See Go" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Look See Go</b></figcaption></figure>
+      <figure><img src="logos-assets/grand/midi24.webp" alt="Logo MIDI24" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>MIDI24</b> · Holding</figcaption></figure>
+      <figure><img src="logos-assets/grand/netaudio.webp" alt="Logo Net Audio SA" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Net Audio SA</b> · Audio</figcaption></figure>
+      <figure><img src="logos-assets/grand/plandujeu.webp" alt="Logo Cabane du Plan du Jeu" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Cabane du Plan du Jeu</b> · Cabane de montagne</figcaption></figure>
+      <figure><img src="logos-assets/grand/popup.webp" alt="Logo Pop Up Challenge" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Pop Up Challenge</b> · Événement</figcaption></figure>
+      <figure><img src="logos-assets/grand/portalet.webp" alt="Logo Portalet Sàrl" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Portalet Sàrl</b></figcaption></figure>
+      <figure><img src="logos-assets/grand/providence.webp" alt="Logo Maisons de la Providence" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Maisons de la Providence</b> · Institution</figcaption></figure>
+      <figure><img src="logos-assets/grand/raclette.webp" alt="Logo raclettes.ch" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>raclettes.ch</b></figcaption></figure>
+      <figure><img src="logos-assets/grand/raphael.webp" alt="Logo Fondation Raphaël Abbet" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Fondation Raphaël Abbet</b> · Fondation</figcaption></figure>
+      <figure><img src="logos-assets/grand/requiem.webp" alt="Logo Requiem pour un glacier" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Requiem pour un glacier</b> · Projet artistique</figcaption></figure>
+      <figure><img src="logos-assets/grand/rizette.webp" alt="Logo Rizette & Cie" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Rizette & Cie</b> · Théâtre</figcaption></figure>
+      <figure><img src="logos-assets/grand/rockwater.webp" alt="Logo Rockwater" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Rockwater</b></figcaption></figure>
+      <figure><img src="logos-assets/grand/sarrasin.webp" alt="Logo Jonathan Sarrasin" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Jonathan Sarrasin</b> · Menuiserie</figcaption></figure>
+      <figure><img src="logos-assets/grand/shareforce.webp" alt="Logo ShareForce" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>ShareForce</b> · by HR&M</figcaption></figure>
+      <figure><img src="logos-assets/grand/squadro.webp" alt="Logo S-Quadro" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>S-Quadro</b></figcaption></figure>
+      <figure><img src="logos-assets/grand/valon-arande.webp" alt="Logo La Plume du Vallon de l'Arande" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>La Plume du Vallon de l'Arande</b></figcaption></figure>
+      <figure><img src="logos-assets/grand/verde.webp" alt="Logo Verde" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Verde</b> · Construction durable</figcaption></figure>
+      <figure><img src="logos-assets/grand/yorick.webp" alt="Logo Hauteurs & Horizons" loading="lazy" decoding="async" width="1100" height="1100"><figcaption><b>Hauteurs & Horizons</b></figcaption></figure>
+  </div>
+</div></section>
+
+<section id="contexte" class="chap"><div class="wrap">
+  <div class="chap-head">
+    <div><span class="num-big">02</span><h2>En <span class="o">contexte</span></h2></div>
+    <p>Un logo n'existe vraiment qu'une fois posé : sur une carte, un vêtement, une affiche, une vitrine.
+    Voici quelques-uns d'entre eux dans leur vie réelle.</p>
+  </div>
+
+  <div class="step">
+    <h3>Portalet — une ligne graphique complète</h3>
+    <p>Du signe taillé comme l'aiguille du Portalet jusqu'au merchandising : zone de protection, typographie,
+    couleurs, versions allongées, papeterie, cartes et objets. <b>Le logo devient un système.</b></p>
+    <div class="ctx">
+      <figure><img src="logos-assets/contexte/portalet-ligne-1.webp" alt="Ligne graphique Portalet, page 1" loading="lazy" decoding="async" width="1800" height="1273"></figure>
+      <figure><img src="logos-assets/contexte/portalet-ligne-2.webp" alt="Ligne graphique Portalet, page 2" loading="lazy" decoding="async" width="1800" height="1273"></figure>
+      <figure><img src="logos-assets/contexte/portalet-ligne-3.webp" alt="Ligne graphique Portalet, page 3" loading="lazy" decoding="async" width="1800" height="1273"></figure>
+      <figure><img src="logos-assets/contexte/portalet-ligne-4.webp" alt="Ligne graphique Portalet, page 4" loading="lazy" decoding="async" width="1800" height="1273"></figure>
+      <figure><img src="logos-assets/contexte/portalet-ligne-5.webp" alt="Ligne graphique Portalet, page 5" loading="lazy" decoding="async" width="1800" height="1273"></figure>
+      <figure><img src="logos-assets/contexte/portalet-ligne-6.webp" alt="Ligne graphique Portalet, page 6" loading="lazy" decoding="async" width="1800" height="1273"></figure>
+      <figure><img src="logos-assets/contexte/portalet-ligne-7.webp" alt="Ligne graphique Portalet, page 7" loading="lazy" decoding="async" width="1800" height="1273"></figure>
+      <figure><img src="logos-assets/contexte/portalet-ligne-8.webp" alt="Ligne graphique Portalet, page 8" loading="lazy" decoding="async" width="1800" height="1273"></figure>
+      <figure><img src="logos-assets/contexte/portalet-ligne-9.webp" alt="Ligne graphique Portalet, page 9" loading="lazy" decoding="async" width="1800" height="1273"></figure>
+    </div>
+  </div>
+
+  <div class="step">
+    <h3>MIDI24 — une marque, cinq sociétés</h3>
+    <p>Un même logotype décliné par couleur pour chaque entité du groupe : holding, sustainable, industries,
+    patrimoine, disponible. La famille se reconnaît, chaque membre garde sa voix.</p>
+    <div class="ctx c4">
+      <figure><img src="logos-assets/contexte/midi24-1.webp" alt="Déclinaison MIDI24 1" loading="lazy" decoding="async" width="1273" height="1800"></figure>
+      <figure><img src="logos-assets/contexte/midi24-2.webp" alt="Déclinaison MIDI24 2" loading="lazy" decoding="async" width="1273" height="1800"></figure>
+      <figure><img src="logos-assets/contexte/midi24-3.webp" alt="Déclinaison MIDI24 3" loading="lazy" decoding="async" width="1273" height="1800"></figure>
+      <figure><img src="logos-assets/contexte/midi24-4.webp" alt="Déclinaison MIDI24 4" loading="lazy" decoding="async" width="1273" height="1800"></figure>
+      <figure><img src="logos-assets/contexte/midi24-5.webp" alt="Déclinaison MIDI24 5" loading="lazy" decoding="async" width="1273" height="1800"></figure>
+      <figure><img src="logos-assets/contexte/midi24-6.webp" alt="Déclinaison MIDI24 6" loading="lazy" decoding="async" width="1273" height="1800"></figure>
+      <figure><img src="logos-assets/contexte/midi24-7.webp" alt="Déclinaison MIDI24 7" loading="lazy" decoding="async" width="1273" height="1800"></figure>
+    </div>
+  </div>
+
+  <div class="step">
+    <h3>Fromagerie de Martigny — un signe qui se décompose</h3>
+    <p>L'edelweiss central se décompose en pictogrammes animaliers, chacun utilisable seul,
+    sans jamais quitter la famille.</p>
+    <div class="ctx c5">
+      <figure><img src="logos-assets/contexte/fromagerie-1.webp" alt="Fromagerie de Martigny, variante 1" loading="lazy" decoding="async" width="1400" height="1400"></figure>
+      <figure><img src="logos-assets/contexte/fromagerie-2.webp" alt="Fromagerie de Martigny, variante 2" loading="lazy" decoding="async" width="1400" height="1400"></figure>
+      <figure><img src="logos-assets/contexte/fromagerie-3.webp" alt="Fromagerie de Martigny, variante 3" loading="lazy" decoding="async" width="1400" height="1400"></figure>
+      <figure><img src="logos-assets/contexte/fromagerie-4.webp" alt="Fromagerie de Martigny, variante 4" loading="lazy" decoding="async" width="1400" height="1400"></figure>
+      <figure><img src="logos-assets/contexte/fromagerie-5.webp" alt="Fromagerie de Martigny, variante 5" loading="lazy" decoding="async" width="1400" height="1400"></figure>
+    </div>
+  </div>
+
+  <div class="step">
+    <h3>Cartes, vêtements, affiches</h3>
+    <p>Papeterie, textiles de travail, supports imprimés : là où le logo doit résister au réel.</p>
+    <div class="mos">
+      <figure><img src="logos-assets/contexte/bourgeoisie-3.webp" alt="Vêtements de travail de la Bourgeoisie d'Orsières" loading="lazy" decoding="async" width="1273" height="1800"><figcaption><b>Bourgeoisie d'Orsières</b> · vêtements</figcaption></figure>
+      <figure><img src="logos-assets/contexte/adresse-carte-1.webp" alt="Carte de visite l'adresse immobilière" loading="lazy" decoding="async" width="1800" height="1165"><figcaption><b>l'adresse immobilière.</b> · cartes</figcaption></figure>
+      <figure><img src="logos-assets/contexte/rizette-affiche.webp" alt="Affiche Aéroport sous contrôle, Rizette & Cie" loading="lazy" decoding="async" width="1273" height="1800"><figcaption><b>Rizette &amp; Cie</b> · affiche 2019</figcaption></figure>
+      <figure><img src="logos-assets/contexte/aleph-carte-2.webp" alt="Carte de visite Aleph massothérapie" loading="lazy" decoding="async" width="1800" height="1194"><figcaption><b>Aleph</b> · carte</figcaption></figure>
+      <figure><img src="logos-assets/contexte/cabanon-ligne.webp" alt="Ligne graphique du Cabanon : polos et pictos" loading="lazy" decoding="async" width="1800" height="1273"><figcaption><b>Le Cabanon</b> · ligne graphique</figcaption></figure>
+      <figure><img src="logos-assets/contexte/artisalp-transition.webp" alt="Annonce de transition René Rausis devient Artis'Alpes" loading="lazy" decoding="async" width="1800" height="1273"><figcaption><b>Artis'Alpes</b> · annonce de reprise</figcaption></figure>
+      <figure><img src="logos-assets/contexte/horizonthall-affiche.webp" alt="Affiche Grimpe Contest Horizont'Hall" loading="lazy" decoding="async" width="1273" height="1800"><figcaption><b>Horizont'Hall</b> · affiche</figcaption></figure>
+      <figure><img src="logos-assets/contexte/capital-carte-1.webp" alt="Carte Capital Développement" loading="lazy" decoding="async" width="1800" height="1144"><figcaption><b>Capital Développement</b> · carte</figcaption></figure>
+      <figure><img src="logos-assets/contexte/bourgeoisie-2.webp" alt="Blason de la Bourgeoisie d'Orsières" loading="lazy" decoding="async" width="1273" height="1800"><figcaption><b>Bourgeoisie d'Orsières</b> · blason</figcaption></figure>
+      <figure><img src="logos-assets/contexte/hedonie-vitrine.webp" alt="Vitrine Hédonie raclette bar" loading="lazy" decoding="async" width="1800" height="1067"><figcaption><b>Hédonie</b> · vitrine</figcaption></figure>
+      <figure><img src="logos-assets/contexte/artisalp-carte-2.webp" alt="Carte de visite Artis'Alpes" loading="lazy" decoding="async" width="1800" height="1259"><figcaption><b>Artis'Alpes</b> · carte</figcaption></figure>
+      <figure><img src="logos-assets/contexte/bahia-flyer.webp" alt="Bon cadeau Bahia coiffure" loading="lazy" decoding="async" width="1298" height="1800"><figcaption><b>Bahia</b> · bon cadeau</figcaption></figure>
+      <figure><img src="logos-assets/contexte/adresse-carte-2.webp" alt="Carte de visite l'adresse immobilière" loading="lazy" decoding="async" width="1800" height="1165"><figcaption><b>l'adresse</b> · carte</figcaption></figure>
+      <figure><img src="logos-assets/contexte/raphael-2.webp" alt="Logo Fondation Raphaël Abbet sur fond foncé" loading="lazy" decoding="async" width="1800" height="852"><figcaption><b>Fondation Raphaël Abbet</b> · négatif</figcaption></figure>
+      <figure><img src="logos-assets/contexte/artisalp-reseaux.webp" alt="Visuel réseaux sociaux Artis'Alpes" loading="lazy" decoding="async" width="1800" height="877"><figcaption><b>Artis'Alpes</b> · réseaux sociaux</figcaption></figure>
+      <figure><img src="logos-assets/contexte/hauteurs-2.webp" alt="Hauteurs & Horizons sur fond foncé" loading="lazy" decoding="async" width="1800" height="1273"><figcaption><b>Hauteurs &amp; Horizons</b> · négatif</figcaption></figure>
+      <figure><img src="logos-assets/contexte/verde-pos-neg.webp" alt="Verde positif et négatif" loading="lazy" decoding="async" width="1800" height="1273"><figcaption><b>Verde</b> · positif / négatif</figcaption></figure>
+      <figure><img src="logos-assets/contexte/sarrasin-guide.webp" alt="Jonathan Sarrasin positif et négatif" loading="lazy" decoding="async" width="1800" height="1273"><figcaption><b>Jonathan Sarrasin</b> · versions</figcaption></figure>
+      <figure><img src="logos-assets/contexte/altis-declinaisons.webp" alt="Déclinaisons Altis Invest" loading="lazy" decoding="async" width="1800" height="1273"><figcaption><b>Altis Invest</b> · déclinaisons</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="step">
+    <h3>Look See Go — tenir sur le noir comme sur le blanc</h3>
+    <p>Quatre versions testées côte à côte, en positif et en négatif, avant de retenir la plus juste.</p>
+    <div class="ctx c4">
+      <figure><img src="logos-assets/contexte/lookseego-1.webp" alt="Look See Go, version 1" loading="lazy" decoding="async" width="1273" height="1800"></figure>
+      <figure><img src="logos-assets/contexte/lookseego-2.webp" alt="Look See Go, version 2" loading="lazy" decoding="async" width="1273" height="1800"></figure>
+      <figure><img src="logos-assets/contexte/lookseego-3.webp" alt="Look See Go, version 3" loading="lazy" decoding="async" width="1273" height="1800"></figure>
+      <figure><img src="logos-assets/contexte/lookseego-4.webp" alt="Look See Go, version 4" loading="lazy" decoding="async" width="1273" height="1800"></figure>
+    </div>
+  </div>
+</div></section>
+
+<section id="recherche" class="chap"><div class="wrap">
+  <div class="chap-head">
+    <div><span class="num-big">03</span><h2>La <span class="o">recherche</span></h2></div>
+    <p>Ce qu'on ne voit jamais : les dizaines de pistes avant le bon signe. Chaque planche ci-dessous
+    est un vrai fichier de travail, dans l'ordre où il a été produit.</p>
+  </div>
+
+  <div class="step">
+    <h3>Besson — dix-huit versions pour un sapin et un B</h3>
+    <p>Lettrages, sapins, triangles de charpente : la menuiserie Besson a traversé dix-huit fichiers avant
+    de trouver son signe, <b>un trait anguleux entre la lettre et la charpente</b>. Puis le système : papeterie, versions, couleurs.</p>
+    <div class="mos">
+      <figure><img src="logos-assets/recherche/besson-3-1.webp" alt="Recherche logo Besson, planche 3-1" loading="lazy" decoding="async" width="1800" height="1310"></figure><figure><img src="logos-assets/recherche/besson-4-1.webp" alt="Recherche logo Besson, planche 4-1" loading="lazy" decoding="async" width="1373" height="477"></figure><figure><img src="logos-assets/recherche/besson-5-1.webp" alt="Recherche logo Besson, planche 5-1" loading="lazy" decoding="async" width="1800" height="1210"></figure><figure><img src="logos-assets/recherche/besson-5-5.webp" alt="Recherche logo Besson, planche 5-5" loading="lazy" decoding="async" width="1800" height="973"></figure><figure><img src="logos-assets/recherche/besson-6-1.webp" alt="Recherche logo Besson, planche 6-1" loading="lazy" decoding="async" width="1800" height="1419"></figure><figure><img src="logos-assets/recherche/besson-8-1.webp" alt="Recherche logo Besson, planche 8-1" loading="lazy" decoding="async" width="1800" height="1050"></figure><figure><img src="logos-assets/recherche/besson-9-1.webp" alt="Recherche logo Besson, planche 9-1" loading="lazy" decoding="async" width="1800" height="1314"></figure><figure><img src="logos-assets/recherche/besson-9.5-1.webp" alt="Recherche logo Besson, planche 9.5-1" loading="lazy" decoding="async" width="1800" height="1216"></figure><figure><img src="logos-assets/recherche/besson-11-2.webp" alt="Recherche logo Besson, planche 11-2" loading="lazy" decoding="async" width="1800" height="1231"></figure><figure><img src="logos-assets/recherche/besson-11-4.webp" alt="Recherche logo Besson, planche 11-4" loading="lazy" decoding="async" width="1800" height="1365"></figure><figure><img src="logos-assets/recherche/besson-12-1.webp" alt="Recherche logo Besson, planche 12-1" loading="lazy" decoding="async" width="1575" height="546"></figure><figure><img src="logos-assets/recherche/besson-14-1.webp" alt="Recherche logo Besson, planche 14-1" loading="lazy" decoding="async" width="1800" height="1178"></figure><figure><img src="logos-assets/recherche/besson-14.5-2.webp" alt="Recherche logo Besson, planche 14.5-2" loading="lazy" decoding="async" width="1800" height="1273"></figure><figure><img src="logos-assets/recherche/besson-17-3.webp" alt="Recherche logo Besson, planche 17-3" loading="lazy" decoding="async" width="1464" height="1800"></figure><figure><img src="logos-assets/recherche/besson-18-3.webp" alt="Recherche logo Besson, planche 18-3" loading="lazy" decoding="async" width="1484" height="1800"></figure>
+      <figure><img src="logos-assets/recherche/besson-systeme.webp" alt="Système de logo Besson : versions et papeterie" loading="lazy" decoding="async" width="1407" height="1800"><figcaption><b>Le système final</b></figcaption></figure>
+    </div>
+  </div>
+
+  <div class="step">
+    <h3>Le bois avant le logo</h3>
+    <p>Pour Besson, j'ai photographié de vieux bois de grange : les cernes, les fentes, le grain usé par le temps.
+    C'est cette matière qui a donné le ton de l'identité.</p>
+    <div class="bois"><figure class="w"><img src="logos-assets/bois/dsc_7473.webp" alt="Vieux bois de grange, texture photographiée pour la recherche Besson" loading="lazy" decoding="async" width="1800" height="1202"></figure><figure class="w"><img src="logos-assets/bois/dsc_7474.webp" alt="Vieux bois de grange, texture photographiée pour la recherche Besson" loading="lazy" decoding="async" width="1800" height="1202"></figure><figure class="w"><img src="logos-assets/bois/dsc_7478.webp" alt="Vieux bois de grange, texture photographiée pour la recherche Besson" loading="lazy" decoding="async" width="1800" height="1202"></figure><figure class=""><img src="logos-assets/bois/dsc_7486.webp" alt="Vieux bois de grange, texture photographiée pour la recherche Besson" loading="lazy" decoding="async" width="1202" height="1800"></figure><figure class=""><img src="logos-assets/bois/dsc_7488.webp" alt="Vieux bois de grange, texture photographiée pour la recherche Besson" loading="lazy" decoding="async" width="1202" height="1800"></figure><figure class="w"><img src="logos-assets/bois/dsc_7490.webp" alt="Vieux bois de grange, texture photographiée pour la recherche Besson" loading="lazy" decoding="async" width="1800" height="1202"></figure><figure class=""><img src="logos-assets/bois/dsc_7500.webp" alt="Vieux bois de grange, texture photographiée pour la recherche Besson" loading="lazy" decoding="async" width="1202" height="1800"></figure><figure class=""><img src="logos-assets/bois/dsc_7501.webp" alt="Vieux bois de grange, texture photographiée pour la recherche Besson" loading="lazy" decoding="async" width="1202" height="1800"></figure><figure class=""><img src="logos-assets/bois/dsc_7504.webp" alt="Vieux bois de grange, texture photographiée pour la recherche Besson" loading="lazy" decoding="async" width="1202" height="1800"></figure><figure class="w"><img src="logos-assets/bois/dsc_7530.webp" alt="Vieux bois de grange, texture photographiée pour la recherche Besson" loading="lazy" decoding="async" width="1800" height="1202"></figure><figure class=""><img src="logos-assets/bois/dsc_7539.webp" alt="Vieux bois de grange, texture photographiée pour la recherche Besson" loading="lazy" decoding="async" width="1202" height="1800"></figure></div>
+  </div>
+
+  <div class="step">
+    <h3>La Plume du Vallon de l'Arande — sept passes</h3>
+    <p>La plume et l'avion se cherchent, puis se répondent. Couleurs, ciel, typographie :
+    chaque version corrige la précédente.</p>
+    <div class="ctx c4">
+      <figure><img src="logos-assets/recherche/plume-1.webp" alt="Recherche La Plume du Vallon de l'Arande, version 1" loading="lazy" decoding="async" width="1800" height="1800"><figcaption><b>V1</b></figcaption></figure>
+      <figure><img src="logos-assets/recherche/plume-2.webp" alt="Recherche La Plume du Vallon de l'Arande, version 2" loading="lazy" decoding="async" width="1800" height="1800"><figcaption><b>V2</b></figcaption></figure>
+      <figure><img src="logos-assets/recherche/plume-3.webp" alt="Recherche La Plume du Vallon de l'Arande, version 3" loading="lazy" decoding="async" width="1800" height="1800"><figcaption><b>V3</b></figcaption></figure>
+      <figure><img src="logos-assets/recherche/plume-4.webp" alt="Recherche La Plume du Vallon de l'Arande, version 4" loading="lazy" decoding="async" width="1800" height="1800"><figcaption><b>V4</b></figcaption></figure>
+      <figure><img src="logos-assets/recherche/plume-5.webp" alt="Recherche La Plume du Vallon de l'Arande, version 5" loading="lazy" decoding="async" width="1800" height="1800"><figcaption><b>V5</b></figcaption></figure>
+      <figure><img src="logos-assets/recherche/plume-6.webp" alt="Recherche La Plume du Vallon de l'Arande, version 6" loading="lazy" decoding="async" width="1800" height="1800"><figcaption><b>V6</b></figcaption></figure>
+      <figure><img src="logos-assets/recherche/plume-7.webp" alt="Recherche La Plume du Vallon de l'Arande, version 7" loading="lazy" decoding="async" width="1800" height="1800"><figcaption><b>V7</b></figcaption></figure>
+    </div>
+  </div>
+
+  <div class="step">
+    <h3>Portalet — de l'affiche au signe</h3>
+    <p>Avant la ligne graphique, des essais à partir de la roche elle-même : bichromies, découpes, puis le monolithe
+    qui deviendra le logo.</p>
+    <div class="ctx c4">
+      <figure><img src="logos-assets/recherche/portalet-v1.webp" alt="Portalet, première version" loading="lazy" decoding="async" width="1273" height="1800"><figcaption><b>V1</b></figcaption></figure>
+      <figure><img src="logos-assets/recherche/portalet-v4-1.webp" alt="Portalet, recherche V4 page 1" loading="lazy" decoding="async" width="1273" height="1800"><figcaption><b>V4 · 1</b></figcaption></figure>
+      <figure><img src="logos-assets/recherche/portalet-v4-2.webp" alt="Portalet, recherche V4 page 2" loading="lazy" decoding="async" width="1212" height="1800"><figcaption><b>V4 · 2</b></figcaption></figure>
+      <figure><img src="logos-assets/recherche/portalet-v4-3.webp" alt="Portalet, recherche V4 page 3" loading="lazy" decoding="async" width="1273" height="1800"><figcaption><b>V4 · 3</b></figcaption></figure>
+      <figure><img src="logos-assets/recherche/portalet-v4-4.webp" alt="Portalet, recherche V4 page 4" loading="lazy" decoding="async" width="1273" height="1800"><figcaption><b>V4 · 4</b></figcaption></figure>
+      <figure><img src="logos-assets/recherche/portalet-v4-5.webp" alt="Portalet, recherche V4 page 5" loading="lazy" decoding="async" width="1273" height="1800"><figcaption><b>V4 · 5</b></figcaption></figure>
+      <figure><img src="logos-assets/recherche/portalet-v4-6.webp" alt="Portalet, recherche V4 page 6" loading="lazy" decoding="async" width="1273" height="1800"><figcaption><b>V4 · 6</b></figcaption></figure>
+    </div>
+  </div>
+
+  <div class="step">
+    <h3>Festival des Métiers de la Montagne, Artis'Alpes, et d'autres</h3>
+    <p>Montagnes en une ligne, monogrammes, sigles : les planches de travail d'autres identités alpines.</p>
+    <div class="mos">
+      <figure><img src="logos-assets/recherche/fmmf-1.webp" alt="Recherche FMMF, première planche" loading="lazy" decoding="async" width="1800" height="1275"><figcaption><b>FMMF</b> · première planche</figcaption></figure>
+      <figure><img src="logos-assets/recherche/fmmf-3.5.webp" alt="Recherche FMMF, planche finale" loading="lazy" decoding="async" width="1800" height="1477"><figcaption><b>FMMF</b> · planche finale</figcaption></figure>
+      <figure><img src="logos-assets/recherche/artisalp-1.webp" alt="Recherche Artis'Alpes" loading="lazy" decoding="async" width="1800" height="1429"><figcaption><b>Artis'Alpes</b> · pistes</figcaption></figure>
+      <figure><img src="logos-assets/recherche/artisalp-2.webp" alt="Recherche Artis'Alpes, pictogramme" loading="lazy" decoding="async" width="1800" height="1502"><figcaption><b>Artis'Alpes</b> · pictogramme</figcaption></figure>
+      <figure><img src="logos-assets/recherche/artisalp-7.webp" alt="Recherche Artis'Alpes, lettrage" loading="lazy" decoding="async" width="1532" height="454"><figcaption><b>Artis'Alpes</b> · lettrage</figcaption></figure>
+      <figure><img src="logos-assets/recherche/artisalp-9.webp" alt="Recherche Artis'Alpes, version finale" loading="lazy" decoding="async" width="1800" height="1257"><figcaption><b>Artis'Alpes</b> · final</figcaption></figure>
+      <figure><img src="logos-assets/contexte/artisalp-logo.webp" alt="Logo Artis'Alpes final" loading="lazy" decoding="async" width="1800" height="1532"><figcaption><b>Artis'Alpes</b> · logo</figcaption></figure>
+      <figure><img src="logos-assets/recherche/couleurs-italie.webp" alt="Recherche Aux Couleurs d'Italie" loading="lazy" decoding="async" width="1800" height="1316"><figcaption><b>Aux Couleurs d'Italie</b> · pistes</figcaption></figure>
+      <figure><img src="logos-assets/recherche/squadro-1.webp" alt="Recherche S-Quadro volume" loading="lazy" decoding="async" width="1028" height="1368"><figcaption><b>S-Quadro</b> · volume</figcaption></figure>
+      <figure><img src="logos-assets/recherche/squadro-2.webp" alt="Recherche S-Quadro" loading="lazy" decoding="async" width="1749" height="870"><figcaption><b>S-Quadro</b> · version</figcaption></figure>
+    </div>
+  </div>
+</div></section>
+
+<section id="metier" class="chap"><div class="wrap">
+  <div class="chap-head">
+    <div><span class="num-big">04</span><h2>Ce que je sais des <span class="o">logos</span></h2></div>
+    <p>Un logo n'est pas une décoration. C'est un actif — souvent le plus durable d'une entreprise.</p>
+  </div>
+  <div class="essai">
+    <div>
+      <p><b>Le sens avant la beauté.</b> En 1971, Carolyn Davidson, étudiante en graphisme, dessine pour Phil Knight
+      une virgule inspirée de l'aile de Niké, la déesse grecque de la victoire. Knight n'aime ni le nom ni la forme.
+      Mais le signe est ancré dans une histoire : <i>gagner</i>. C'est l'idée, plus que le dessin, qui a fait le succès —
+      au point que le swoosh se passe aujourd'hui de son nom.</p>
+      <p><b>La beauté se démode, le sens reste.</b> Un designer ne s'arrête pas à quelque chose de « beau » : la beauté suit les goûts,
+      donc la mode. Un logo ancré dans des valeurs fortes devient une référence et gagne son intemporalité.</p>
+    </div>
+    <div>
+      <p><b>Créer un logo est exigeant.</b> Il faut comprendre d'où vient l'entreprise et où elle va. Ce travail
+      de fond est ce qu'il y a de plus précieux quand on communique ensuite. La seule raison de changer un logo,
+      c'est un bouleversement profond des valeurs ou de l'objectif.</p>
+      <p><b>Le public est attaché à ses signes.</b> Changer sans raison coûte cher, comme le montrent quelques
+      refontes célèbres, retirées sous la pression des clients.</p>
+    </div>
+  </div>
+  <div class="cas num">
+    <div><small>Gap · 2010</small><b>1 semaine</b><span>Durée de vie du nouveau logo avant le retour à l'ancien, face au rejet du public.</span></div>
+    <div><small>Tropicana · 2009</small><b>−20 %</b><span>Chute des ventes après le nouvel emballage ; l'ancien revient en quelques semaines.</span></div>
+    <div><small>FedEx · 1994</small><b>1 flèche</b><span>Cachée entre le E et le x : vitesse et précision, sans un mot de plus.</span></div>
+    <div><small>Mastercard · 2016</small><b>2 cercles</b><span>Pentagram retire le superflu ; quelques années plus tard, le nom disparaît du signe.</span></div>
+    <div><small>Coca-Cola · 1886</small><b>~140 ans</b><span>Un lettrage presque inchangé, par respect pour sa propre histoire.</span></div>
+    <div><small>BMW · 1917</small><b>1 cercle</b><span>Hérité de Rapp Motorenwerke ; le damier bleu et blanc vient de la Bavière, pas d'une hélice.</span></div>
+  </div>
+</div></section>
+
+<section class="sl"><div class="wrap">
+  <span class="eyebrow" style="color:#E8921C">SL-60™ · protocole indépendant</span>
+  <h2 style="margin-top:.8rem">Un logo ne se juge pas. <span class="o">Il se mesure.</span></h2>
+  <p class="lede">Pour objectiver ce métier, j'ai conçu SL-60™ : un protocole d'audit structurel de 60 critères vérifiables,
+  répartis en 5 piliers. Il donne un verdict factuel sur ce qu'un logo vaut vraiment — techniquement, formellement,
+  stratégiquement. Pas d'avis, des critères cochés et argumentés.</p>
+  <div class="piliers">
+    <div><small>PILIER 01</small><b>Intégrité technique</b><span>Pureté vectorielle, aucun raster caché, tracés stables. Un logo qui ne tient pas dans son fichier ne tient nulle part.</span></div>
+    <div><small>PILIER 02</small><b>Performance d'usage</b><span>Fonctionner à 16 px comme à 10 mètres, en couleur comme en noir plein. Les conditions réelles, pas idéales.</span></div>
+    <div><small>PILIER 03</small><b>Architecture formelle</b><span>Équilibre optique, cohérence géométrique, maîtrise du plein et du vide. Ce qui fait tenir un logo 30 ans, pas 3.</span></div>
+    <div><small>PILIER 04</small><b>Cohérence systémique</b><span>Primary, mark, monochromes, lockups : un système cohérent, quatre versions officielles au maximum.</span></div>
+    <div><small>PILIER 05</small><b>Charge symbolique</b><span>Différenciation sectorielle, non-généricité, alignement entre la forme et la promesse de marque.</span></div>
+  </div>
+  <div class="bloq"><span>Lisible à 16 et 24 px</span><span>Monochrome réellement utilisable</span><span>Pilier 1 ≥ 8/12</span><span>Seuil global ≥ 45/60</span></div>
+  <div class="big-nums num">
+    <div><b>60</b><span>critères vérifiables</span></div>
+    <div><b>5</b><span>piliers d'évaluation</span></div>
+    <div><b>75 %</b><span>seuil de certification</span></div>
+    <div><b>0</b><span>compromis accepté</span></div>
+  </div>
+  <a class="back" href="https://suisselogo.ch" target="_blank" rel="noopener">Découvrir le protocole sur suisselogo.ch →</a>
+  <a class="back" href="./#contact">Parler de votre logo</a>
+</div></section>
+
+<footer><div class="wrap foot-in">
+  <span class="num">© 2026 Adrien Thétaz — designer MPA &amp; illustrateur, Martigny</span>
+  <span lang="en">Art makes <b>(hi)</b>story</span>
+</div></footer>
+</body>
+</html>
