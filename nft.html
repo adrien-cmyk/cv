@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Collections NFT — Adrien Thétaz</title>
+<meta name="description" content="Deux collections NFT dessinées à la main en 2023 : les bustes grecs, puis Nautilus. De la recherche au crayon au système génératif — près d'un million de combinaisons chacune.">
+<link rel="canonical" href="https://adrienthetaz.ch/nft.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Collections NFT — Adrien Thétaz">
+<meta property="og:description" content="Du premier trait au système génératif : les bustes grecs et Nautilus.">
+<meta property="og:url" content="https://adrienthetaz.ch/nft.html">
+<meta property="og:image" content="https://adrienthetaz.ch/nft-assets/process/31-nautify-couleur.jpg">
+<meta property="og:locale" content="fr_CH">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap">
+<style>
+/* Page projet « Collections NFT » — même système que l'accueil : blanc, encre, vermillon.
+   Les œuvres portent la couleur ; deux chapitres, une épilogue. */
+:root{
+  --paper:#FFFFFF; --ink:#1B1916; --ink-soft:#57534A; --verm:#B83228; --line:#E4E0D8; --tint:#F6F5F2;
+  --sans:'General Sans',system-ui,'Helvetica Neue',Arial,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:1.03rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--verm);outline-offset:3px}
+.wrap{max-width:76rem;margin:0 auto;padding-inline:clamp(16px,4vw,44px)}
+h1,h2,h3{letter-spacing:-.025em;line-height:1.08;text-wrap:balance;margin:0;font-weight:650}
+.eyebrow{font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--verm)}
+.num{font-variant-numeric:tabular-nums}
+figure{margin:0}
+figcaption{font-size:.8rem;color:var(--ink-soft);margin-top:.6rem;line-height:1.5}
+figcaption b{color:var(--ink);font-weight:600}
+section{scroll-margin-top:5rem}
+
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,#fff 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.4rem;padding-block:.8rem}
+.brand{font-weight:700;letter-spacing:-.02em;text-decoration:none;margin-right:auto}
+.brand i{font-style:normal;color:var(--verm)}
+.nav-in a:not(.brand){font-size:.86rem;font-weight:550;color:var(--ink-soft);text-decoration:none}
+.nav-in a:not(.brand):hover{color:var(--verm)}
+
+/* hero */
+.hero{padding-block:clamp(2.5rem,6vh,4.5rem) 2rem}
+.hero .eyebrow{display:block;margin-bottom:1rem}
+.hero h1{font-size:clamp(2.6rem,7vw,5.4rem);max-width:12em}
+.hero h1 em{font-style:normal;color:var(--verm)}
+.hero .lede{max-width:40em;color:var(--ink-soft);margin:1.4rem 0 0;font-size:1.08rem}
+.facts{display:flex;flex-wrap:wrap;gap:.4rem .6rem;margin-top:1.6rem}
+.facts span{font-size:.76rem;font-weight:600;border:1px solid var(--line);border-radius:999px;padding:.32rem .8rem;color:var(--ink-soft)}
+
+/* Croquis / Réalisé */
+.trait{margin-top:2.4rem}
+.trait-frame{position:relative;border:1px solid var(--line);background:#fff;overflow:hidden}
+.trait-frame img{width:100%}
+.trait-frame img + img{position:absolute;inset:0;height:100%;object-fit:cover}
+.trait-frame[data-state="croquis"] .is-real{opacity:0}
+.trait-frame[data-state="realise"] .is-real{opacity:1}
+@media (prefers-reduced-motion:no-preference){.trait-frame .is-real{transition:opacity .5s ease}}
+.toggle{display:inline-flex;margin-top:1rem;border:1px solid var(--ink);border-radius:999px;padding:3px;gap:3px}
+.toggle button{font:inherit;font-size:.85rem;font-weight:600;border:0;background:none;color:var(--ink);padding:.5rem 1.1rem;border-radius:999px;cursor:pointer}
+.toggle button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.trait-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.6rem 1.5rem}
+
+/* chapitres */
+.chap{padding-block:clamp(3.2rem,7vh,5.5rem);border-top:1px solid var(--line)}
+.chap-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:1rem 4rem;align-items:end;margin-bottom:2.6rem}
+.chap-head .num-big{font-size:clamp(3.5rem,9vw,7rem);font-weight:700;line-height:.85;color:var(--verm);letter-spacing:-.04em}
+.chap-head h2{font-size:clamp(1.9rem,4vw,2.9rem);margin-top:.6rem}
+.chap-head p{margin:0;color:var(--ink-soft);max-width:36em}
+.step{margin-top:3.2rem}
+.step h3{font-size:1.15rem;margin-bottom:.4rem}
+.step > p{margin:0 0 1.4rem;color:var(--ink-soft);max-width:44em;font-size:.97rem}
+.step > p b{color:var(--ink);font-weight:600}
+
+.duo{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:2.5rem;align-items:center}
+.grid-sk{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
+.grid-sk figure,.strip figure,.bordered{border:1px solid var(--line);background:#fff}
+.grid-sk img{aspect-ratio:3/4;object-fit:cover;width:100%}
+.strip{display:grid;grid-template-columns:repeat(6,1fr);gap:.8rem;counter-reset:s}
+.strip figure{counter-increment:s;position:relative}
+.strip figure::before{content:counter(s);position:absolute;top:.5rem;left:.55rem;font-size:.7rem;font-weight:700;color:var(--verm)}
+.strip img{aspect-ratio:1/1;object-fit:cover;width:100%}
+.strip figcaption,.grid-sk figcaption{padding:.55rem .65rem .65rem;margin:0}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:1.4rem}
+.rules div{background:#fff;padding:1rem 1.1rem}
+.rules b{display:block;font-size:.72rem;font-weight:650;letter-spacing:.1em;text-transform:uppercase;color:var(--verm);margin-bottom:.3rem}
+.rules span{font-size:.9rem;color:var(--ink-soft)}
+
+.showcase{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.showcase figure{border:1px solid var(--line)}
+.showcase figcaption{padding:.55rem .7rem .7rem;margin:0}
+
+/* murs de collection */
+.wall-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.5rem 2rem;margin-bottom:1rem}
+.wall-head p{margin:0;color:var(--ink-soft);font-size:.9rem}
+.wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:4px}
+.wall img{width:100%;aspect-ratio:1/1;object-fit:cover;background:var(--tint)}
+.wall.dark{background:#101418;padding:4px}
+
+.etapes{display:grid;grid-template-columns:repeat(5,1fr);gap:.8rem}
+.etapes figure{border:1px solid var(--line)}
+.etapes figcaption{padding:.5rem .6rem .6rem;margin:0}
+.etapes figure::after{content:"";display:none}
+
+.epilogue{background:var(--ink);color:#fff;padding-block:clamp(3.2rem,8vh,5.5rem)}
+.epilogue h2{font-size:clamp(1.9rem,4.4vw,3.1rem);max-width:15em}
+.epilogue h2 em{font-style:normal;color:#E86A5E}
+.epilogue p{color:#C9C4BA;max-width:42em}
+.big-nums{display:flex;flex-wrap:wrap;gap:1.5rem 4rem;margin:2.2rem 0 2.4rem}
+.big-nums div{display:flex;flex-direction:column}
+.big-nums b{font-size:clamp(2rem,5vw,3.2rem);font-weight:700;letter-spacing:-.03em}
+.big-nums span{font-size:.82rem;color:#A8A296}
+.back{display:inline-flex;font-size:.9rem;font-weight:600;text-decoration:none;border-radius:999px;padding:.75rem 1.4rem;background:#fff;color:var(--ink)}
+.back:hover{background:#E86A5E;color:#fff}
+
+footer{padding-block:1.6rem calc(1.6rem + env(safe-area-inset-bottom,0px));font-size:.82rem;color:var(--ink-soft)}
+.foot-in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 2rem}
+.foot-in b{color:var(--verm)}
+
+@media (max-width:900px){
+  .chap-head,.duo{grid-template-columns:1fr}
+  .grid-sk{grid-template-columns:repeat(3,1fr)}
+  .strip{grid-template-columns:repeat(3,1fr)}
+  .etapes{grid-template-columns:repeat(3,1fr)}
+  .showcase{grid-template-columns:1fr 1fr}
+}
+@media (max-width:540px){
+  .grid-sk,.strip,.etapes{grid-template-columns:repeat(2,1fr)}
+  .showcase{grid-template-columns:1fr}
+  .wall{grid-template-columns:repeat(auto-fill,minmax(76px,1fr))}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap nav-in">
+  <a class="brand" href="./">Adrien Thétaz<i>.</i></a>
+  <a href="#grecs">Bustes grecs</a>
+  <a href="#nautilus">Nautilus</a>
+  <a href="./#projets">← Tous les projets</a>
+</div></nav>
+
+<header class="hero wrap">
+  <span class="eyebrow">Projet personnel · 2023 · Illustration &amp; système génératif</span>
+  <h1>Deux collections NFT, <em>dessinées à la main.</em></h1>
+  <p class="lede">En 2023, j'ai conçu deux collections d'avatars génératifs : chaque élément est
+  dessiné, puis découpé en calques qu'un script assemble par milliers. La bulle NFT s'est effondrée
+  avant la sortie. Les dessins, eux, sont restés — voici leur histoire, du premier croquis au système.</p>
+  <div class="facts num">
+    <span>2 collections</span><span>~2 millions de combinaisons</span><span>300 pièces assemblées ici</span><span>Dessin · Illustrator · Photoshop · Python</span>
+  </div>
+
+  <figure class="trait">
+    <div class="trait-frame" id="nautifyFrame" data-state="croquis">
+      <img src="nft-assets/process/30-nautify-encre.jpg" alt="Le Nautify, vaisseau dessiné à l'encre noire sur papier" width="1800" height="1169">
+      <img class="is-real" src="nft-assets/process/31-nautify-couleur.jpg" alt="Le Nautify en couleur, dans un univers sous-marin turquoise" width="1800" height="1207">
+    </div>
+    <div class="trait-row">
+      <div class="toggle" role="group" aria-label="Voir le trait">
+        <button type="button" aria-pressed="true" data-v="croquis">Croquis</button>
+        <button type="button" aria-pressed="false" data-v="realise">Réalisé</button>
+      </div>
+      <figcaption><b>Le Nautify</b> — image de couverture de la collection Nautilus. Encre sur papier, puis mise en couleur numérique.</figcaption>
+    </div>
+  </figure>
+</header>
+
+<!-- ============ CHAPITRE I ============ -->
+<section class="chap" id="grecs"><div class="wrap">
+  <div class="chap-head">
+    <div><span class="num-big">I</span><h2>Les bustes grecs</h2></div>
+    <p>Mars — mai 2023. Le point de départ : un visage de statue, réinterprété en buste contemporain.
+    L'idée est de garder un seul personnage et de le faire varier à l'infini par ses attributs.</p>
+  </div>
+
+  <div class="step duo">
+    <figure class="bordered"><img src="nft-assets/process/00-premier-croquis.jpg" alt="Premier croquis au crayon d'un buste d'homme, cheveux bouclés, marinière" loading="lazy" width="1000" height="1183"></figure>
+    <div>
+      <h3>1 · Le premier croquis</h3>
+      <p>Tout commence au crayon : un buste aux traits de statue antique, regard baissé,
+      marinière. <b>C'est ce dessin qui fixe la pose</b> — tous les éléments de la collection
+      devront ensuite s'y ajuster au pixel près.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <h3>2 · Les variations, dessinées sur tirages</h3>
+    <p>Avant de passer au vecteur, j'imprime le buste et je dessine directement par-dessus :
+    chapeaux, bonnets, barbes, lunettes, coiffures. <b>Une façon rapide de tester ce qui « tient »
+    sur le personnage</b> avant d'investir des heures dans chaque élément.</p>
+    <div class="grid-sk">
+      <figure><img src="nft-assets/process/08-variations-chapeaux.jpg" alt="Tirage du buste avec chapeaux et bonnet dessinés au crayon" loading="lazy"><figcaption>Chapeaux</figcaption></figure>
+      <figure><img src="nft-assets/process/09-variations-barbes.jpg" alt="Tirage du buste avec barbes dessinées" loading="lazy"><figcaption>Barbes</figcaption></figure>
+      <figure><img src="nft-assets/process/10-variations-lunettes.jpg" alt="Tirage du buste avec lunettes et chapeaux dessinés" loading="lazy"><figcaption>Lunettes</figcaption></figure>
+      <figure><img src="nft-assets/process/11-variations-cheveux.jpg" alt="Tirage du buste avec coiffures dessinées" loading="lazy"><figcaption>Coiffures</figcaption></figure>
+      <figure><img src="nft-assets/process/12-variations-moustaches.jpg" alt="Tirage du buste avec moustaches et barbes dessinées" loading="lazy"><figcaption>Moustaches</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="step">
+    <h3>3 · Du crayon au vecteur</h3>
+    <p>Six versions successives du même fichier Illustrator : le croquis scanné sert de guide,
+    puis viennent le contour, la couleur, les carnations, le fond à méandres grecs et le buste final.</p>
+    <div class="strip">
+      <figure><img src="nft-assets/process/01-croquis-trace.jpg" alt="Croquis scanné sous le tracé" loading="lazy"><figcaption>Croquis scanné</figcaption></figure>
+      <figure><img src="nft-assets/process/02-contour.jpg" alt="Contour vectoriel du buste" loading="lazy"><figcaption>Contour</figcaption></figure>
+      <figure><img src="nft-assets/process/03-couleur.jpg" alt="Buste mis en couleur" loading="lazy"><figcaption>Couleur</figcaption></figure>
+      <figure><img src="nft-assets/process/04-carnations.jpg" alt="Planche de variantes de carnation" loading="lazy"><figcaption>Carnations</figcaption></figure>
+      <figure><img src="nft-assets/process/05-meandre.jpg" alt="Buste sur fond de méandres grecs" loading="lazy"><figcaption>Méandres</figcaption></figure>
+      <figure><img src="nft-assets/process/06-buste-final.jpg" alt="Buste vectoriel final" loading="lazy"><figcaption>Buste final</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="step">
+    <h3>4 · La planche d'éléments</h3>
+    <p>Sur un second plan de travail, tous les attributs sont dessinés et calés sur le buste :
+    lunettes, barbes, coiffures, chapeaux — et une série de tatouages en argot crypto
+    (<b>GM, HODL, WAGMI, FOMO, FUD, LFG, SAFU</b>), clin d'œil à l'univers de la collection.</p>
+    <figure class="bordered"><img src="nft-assets/process/07-planche-elements.jpg" alt="Planche Illustrator : lunettes, barbes, coiffures, chapeaux, tatouages crypto et croquis de recherche" loading="lazy" width="1800" height="1193"></figure>
+  </div>
+
+  <div class="step">
+    <h3>5 · L'assemblage</h3>
+    <p>Chaque élément est exporté sur un calque transparent de même format, puis empilé dans un
+    ordre fixe. Certains attributs sont rares, d'autres absents : c'est ce qui donne à chaque
+    pièce sa personnalité.</p>
+    <div class="rules">
+      <div><b>Fond</b><span>10 univers — vagues, méandres, Alpes</span></div>
+      <div><b>Buste</b><span>4 tenues — blanc, marinière, rouge, jaune</span></div>
+      <div><b>Tatouage</b><span>7 mots crypto · optionnel</span></div>
+      <div><b>Barbe</b><span>8 barbes · optionnelle</span></div>
+      <div><b>Coiffure</b><span>11 coiffures + crâne rasé</span></div>
+      <div><b>Lunettes &amp; chapeau</b><span>3 lunettes, 6 chapeaux · optionnels</span></div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="wall-head"><h3>La collection — 100 bustes</h3><p class="num">967 680 combinaisons possibles · assemblées en vectoriel (SVG)</p></div>
+    <div class="showcase" style="margin-bottom:1.2rem">
+      <figure><img src="nft-assets/greek/GREEK-007.svg" alt="Buste grec n° 7, fichier vectoriel" loading="lazy" width="1023" height="1023"><figcaption><b>GREEK-007</b> · SVG</figcaption></figure>
+      <figure><img src="nft-assets/greek/GREEK-023.svg" alt="Buste grec n° 23, fichier vectoriel" loading="lazy" width="1023" height="1023"><figcaption><b>GREEK-023</b> · SVG</figcaption></figure>
+      <figure><img src="nft-assets/greek/GREEK-051.svg" alt="Buste grec n° 51, fichier vectoriel" loading="lazy" width="1023" height="1023"><figcaption><b>GREEK-051</b> · SVG</figcaption></figure>
+    </div>
+    <div class="wall" id="wallGreek" aria-label="Les 100 bustes de la collection"></div>
+  </div>
+</div></section>
+
+<!-- ============ CHAPITRE II ============ -->
+<section class="chap" id="nautilus"><div class="wrap">
+  <div class="chap-head">
+    <div><span class="num-big">II</span><h2>Nautilus</h2></div>
+    <p>Juin — septembre 2023. Le buste devient créature des profondeurs : le même principe de
+    calques, mais un univers entièrement nouveau, plus libre, plus organique — et le Nautify
+    comme vaisseau-amiral de la collection.</p>
+  </div>
+
+  <div class="step">
+    <h3>1 · Le pivot : des bustes aux créatures</h3>
+    <p>Les premiers croquis gardent la silhouette du buste mais l'étirent, la fissurent, la
+    transforment en organisme. Puis apparaît le plongeur : casque, tuyaux, scaphandre —
+    <b>le personnage qui deviendra le modèle de base</b>.</p>
+    <div class="grid-sk" style="grid-template-columns:repeat(3,1fr)">
+      <figure><img src="nft-assets/process/20-alien-croquis-1.jpg" alt="Croquis à l'encre d'un buste extraterrestre au crâne allongé" loading="lazy"><figcaption>Croquis — créature I</figcaption></figure>
+      <figure><img src="nft-assets/process/21-alien-croquis-2.jpg" alt="Croquis à l'encre d'un buste extraterrestre, variante" loading="lazy"><figcaption>Croquis — créature II</figcaption></figure>
+      <figure><img src="nft-assets/process/22-plongeur-croquis.jpg" alt="Croquis du plongeur en scaphandre" loading="lazy"><figcaption>Le plongeur</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="step duo">
+    <div>
+      <h3>2 · D'abord, un trait</h3>
+      <p>Chaque modèle repose sur un calque de trait dessiné à part. <b>Le trait reste
+      identique ; tout le reste change</b> — corps, peau, accessoires, fond.
+      Basculez pour voir la ligne seule, puis la pièce terminée.</p>
+      <div class="toggle" role="group" aria-label="Voir le trait du Nautilus">
+        <button type="button" aria-pressed="true" data-v="croquis">Trait</button>
+        <button type="button" aria-pressed="false" data-v="realise">Réalisé</button>
+      </div>
+    </div>
+    <div class="trait-frame" id="traitFrame" data-state="croquis">
+      <img src="nft-assets/nautilus/trait-seul.jpg" alt="Calque de trait seul d'un Nautilus, lignes noires sur blanc" loading="lazy" width="900" height="900">
+      <img class="is-real" src="nft-assets/nautilus/final-m1-01.jpg" alt="Le même Nautilus terminé, en couleur sur fond violet" loading="lazy" width="900" height="900">
+    </div>
+  </div>
+
+  <div class="step">
+    <h3>3 · Le système</h3>
+    <p>Cinq modèles de base, chacun avec ses propres calques. L'assemblage suit des règles
+    précises pour que chaque créature reste crédible : <b>un seul appareil respiratoire, un
+    seul casque</b> — certains éléments sont des variantes exclusives les uns des autres.</p>
+    <div class="etapes">
+      <figure><img src="nft-assets/nautilus/etape-1.jpg" alt="Étape 1 : fond seul" loading="lazy"><figcaption>Fond</figcaption></figure>
+      <figure><img src="nft-assets/nautilus/etape-2.jpg" alt="Étape 2 : corps ajouté" loading="lazy"><figcaption>+ corps</figcaption></figure>
+      <figure><img src="nft-assets/nautilus/etape-3.jpg" alt="Étape 3 : détails ajoutés" loading="lazy"><figcaption>+ détails</figcaption></figure>
+      <figure><img src="nft-assets/nautilus/etape-4.jpg" alt="Étape 4 : trait ajouté" loading="lazy"><figcaption>+ trait</figcaption></figure>
+      <figure><img src="nft-assets/nautilus/etape-5.jpg" alt="Étape 5 : accessoires ajoutés, pièce terminée" loading="lazy"><figcaption>+ accessoires</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="wall-head"><h3>La collection — 200 Nautilus</h3><p class="num">1 031 760 combinaisons possibles · 5 modèles</p></div>
+    <div class="wall dark" id="wallNautilus" aria-label="Les 200 créatures de la collection Nautilus"></div>
+  </div>
+</div></section>
+
+<section class="epilogue"><div class="wrap">
+  <span class="eyebrow" style="color:#E86A5E">Épilogue</span>
+  <h2 style="margin-top:.8rem">La bulle a éclaté. <em>Les dessins sont restés.</em></h2>
+  <p>Le marché des NFT s'est effondré avant la mise en vente. Plutôt que de laisser dormir
+  le travail, je l'ai réassemblé pour ce site : deux systèmes complets, prêts à générer
+  des centaines de milliers de pièces uniques — et la preuve qu'un trait peut devenir tout un monde.</p>
+  <div class="big-nums num">
+    <div><b>~2 M</b><span>combinaisons possibles</span></div>
+    <div><b>300</b><span>pièces assemblées ici</span></div>
+    <div><b>1</b><span>crayon au départ</span></div>
+  </div>
+  <a class="back" href="./#projets">← Retour aux projets</a>
+</div></section>
+
+<footer><div class="wrap foot-in">
+  <span class="num">© 2026 Adrien Thétaz — designer MPA &amp; illustrateur, Martigny</span>
+  <span lang="en">Art makes <b>(hi)</b>story</span>
+</div></footer>
+
+<script>
+// Bascule Croquis / Réalisé — clavier et toucher, sans survol
+document.querySelectorAll('.toggle').forEach(function(t){
+  var frame = t.closest('.trait, .duo').querySelector('.trait-frame');
+  t.querySelectorAll('button').forEach(function(b){
+    b.addEventListener('click',function(){
+      frame.dataset.state=b.dataset.v;
+      t.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+    });
+  });
+});
+// Murs de collection (images légères, chargement différé)
+function wall(id,list,alt){
+  var w=document.getElementById(id),frag=document.createDocumentFragment();
+  list.forEach(function(src,i){var im=new Image();im.src=src;im.loading='lazy';im.decoding='async';im.width=320;im.height=320;im.alt=alt+' '+(i+1);frag.appendChild(im)});
+  w.appendChild(frag);
+}
+var g=[];for(var i=1;i<=100;i++)g.push('nft-assets/greek/mur/G-'+String(i).padStart(3,'0')+'.webp');
+wall('wallGreek',g,'Buste grec');
+var n=[];for(var m=1;m<=5;m++)for(var j=1;j<=40;j++)n.push('nft-assets/nautilus/mur/M'+m+'-'+String(j).padStart(2,'0')+'.webp');
+// mélange déterministe pour que les 5 modèles se répondent dans le mur
+var seed=7;n.sort(function(){seed=(seed*9301+49297)%233280;return seed/233280-.5});
+wall('wallNautilus',n,'Nautilus');
+</script>
+</body>
+</html>
