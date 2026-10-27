@@ -28,9 +28,9 @@ jobs:
       - name: Déployer via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          server: ${{ secrets.FTP_SERVER || secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME || secrets.FTP_USER || secrets.FTP_LOGIN }}
+          password: ${{ secrets.FTP_PASSWORD || secrets.FTP_PASS || secrets.FTP_PWD }}
           protocol: ftps
           server-dir: /web/
           local-dir: ./
