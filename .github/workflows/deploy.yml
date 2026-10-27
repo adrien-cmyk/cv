@@ -25,12 +25,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Vérifier la configuration
+        env:
+          S: ${{ secrets.FTP_SERVER || vars.FTP_SERVER }}
+          U: ${{ secrets.INFOMANIAK_FTP_USERNAME || vars.INFOMANIAK_FTP_USERNAME }}
+          P: ${{ secrets.INFOMANIAK_FTP_PASSWORD || vars.INFOMANIAK_FTP_PASSWORD }}
+        run: |
+          ok=1
+          [ -z "$S" ] && { echo "::error::FTP_SERVER introuvable (ni secret ni variable du repo)"; ok=0; }
+          [ -z "$U" ] && { echo "::error::INFOMANIAK_FTP_USERNAME introuvable (ni secret ni variable du repo)"; ok=0; }
+          [ -z "$P" ] && { echo "::error::INFOMANIAK_FTP_PASSWORD introuvable (ni secret ni variable du repo)"; ok=0; }
+          [ "$ok" = 1 ]
+
       - name: Déployer via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.INFOMANIAK_FTP_USERNAME }}
-          password: ${{ secrets.INFOMANIAK_FTP_PASSWORD }}
+          server: ${{ secrets.FTP_SERVER || vars.FTP_SERVER }}
+          username: ${{ secrets.INFOMANIAK_FTP_USERNAME || vars.INFOMANIAK_FTP_USERNAME }}
+          password: ${{ secrets.INFOMANIAK_FTP_PASSWORD || vars.INFOMANIAK_FTP_PASSWORD }}
           protocol: ftps
           server-dir: /web/
           local-dir: ./
