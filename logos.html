@@ -152,6 +152,9 @@ footer{padding-block:1.6rem calc(1.6rem + env(safe-area-inset-bottom,0px));font-
 .mos figure{break-inside:avoid;margin-bottom:1.2rem}
 .bois{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.6rem}
 .bois img{width:100%;aspect-ratio:2/3;object-fit:cover}
+.dessin{grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);align-items:start}
+.dessin > figure,.dessin-side figure{border:1px solid var(--line)}
+.dessin-side{display:grid;gap:1.2rem}
 .bois .w{grid-column:span 2}.bois .w img{aspect-ratio:auto;height:100%}
 .essai{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2.5rem 4rem}
 .essai p{margin:0 0 1rem;color:var(--ink-soft)}
@@ -173,7 +176,7 @@ footer{padding-block:1.6rem calc(1.6rem + env(safe-area-inset-bottom,0px));font-
 .bloq span{font-size:.78rem;font-weight:600;border:1px solid #3A3833;border-radius:999px;padding:.35rem .85rem;color:#E4E0D8}
 .sl .big-nums span{color:#A8A296}
 .sl a.back{margin-right:.6rem}
-@media (max-width:900px){.cas{grid-template-columns:1fr 1fr}.logos-all{grid-template-columns:1fr 1fr}.ctx{--c:2!important}.piliers{grid-template-columns:1fr 1fr}.essai{grid-template-columns:1fr}.bois{grid-template-columns:1fr 1fr}}
+@media (max-width:900px){.dessin{grid-template-columns:1fr}.cas{grid-template-columns:1fr 1fr}.logos-all{grid-template-columns:1fr 1fr}.ctx{--c:2!important}.piliers{grid-template-columns:1fr 1fr}.essai{grid-template-columns:1fr}.bois{grid-template-columns:1fr 1fr}}
 @media (max-width:540px){.cas{grid-template-columns:1fr}.logos-all{grid-template-columns:1fr}.ctx{--c:1!important}.piliers{grid-template-columns:1fr}}
 </style>
 </head>
@@ -342,34 +345,70 @@ footer{padding-block:1.6rem calc(1.6rem + env(safe-area-inset-bottom,0px));font-
   </div>
 
   <div class="step">
-    <h3>Portalet — de l'affiche au signe</h3>
-    <p>Avant la ligne graphique, des essais à partir de la roche elle-même : bichromies, découpes, puis le monolithe
-    qui deviendra le logo.</p>
+    <h3>Portalet — de la chandelle au signe</h3>
+    <p>Le briefing parlait de valeurs à l'image du Portalet : durable, discret, authentique, solide. J'ai d'abord travaillé
+    le Petit Clocher, comme une signature — mais sa forme rendait le « P » trop approximatif. Puis j'ai trouvé un attribut
+    moins connu et tout aussi symbolique : <b>la chandelle. Pour mieux m'en imprégner, je l'ai dessinée.</b></p>
+    <div class="duo dessin">
+      <figure><img src="logos-assets/recherche/portalet-dessin.webp" alt="Dessin au crayon de la chandelle du Portalet par Adrien Thétaz" loading="lazy" decoding="async" width="1080" height="1920"><figcaption><b>La chandelle du Portalet</b> · crayon</figcaption></figure>
+      <div class="dessin-side">
+        <figure><img src="logos-assets/recherche/portalet-croquis.webp" alt="Premiers croquis autour du Petit Clocher" loading="lazy" decoding="async" width="1001" height="1600"><figcaption><b>Premières pistes</b> · le Petit Clocher en signature</figcaption></figure>
+        <figure><img src="logos-assets/recherche/portalet-synthese.webp" alt="Synthèse de la forme de la chandelle vers l'initiale P" loading="lazy" decoding="async" width="906" height="1600"><figcaption><b>La synthèse</b> · la chandelle rejoint l'initiale</figcaption></figure>
+      </div>
+    </div>
+    <p style="margin-top:2rem">En simplifiant la chandelle, sa silhouette s'est rapprochée de l'initiale. Il restait à en extraire un logo solide —
+    puis à le confronter à la roche elle-même.</p>
     <div class="ctx c4">
       <figure><img src="logos-assets/recherche/portalet-v1.webp" alt="Portalet, première version" loading="lazy" decoding="async" width="1273" height="1800"><figcaption><b>V1</b></figcaption></figure>
-      <figure><img src="logos-assets/recherche/portalet-v4-1.webp" alt="Portalet, recherche V4 page 1" loading="lazy" decoding="async" width="1273" height="1800"><figcaption><b>V4 · 1</b></figcaption></figure>
-      <figure><img src="logos-assets/recherche/portalet-v4-2.webp" alt="Portalet, recherche V4 page 2" loading="lazy" decoding="async" width="1212" height="1800"><figcaption><b>V4 · 2</b></figcaption></figure>
-      <figure><img src="logos-assets/recherche/portalet-v4-3.webp" alt="Portalet, recherche V4 page 3" loading="lazy" decoding="async" width="1273" height="1800"><figcaption><b>V4 · 3</b></figcaption></figure>
-      <figure><img src="logos-assets/recherche/portalet-v4-4.webp" alt="Portalet, recherche V4 page 4" loading="lazy" decoding="async" width="1273" height="1800"><figcaption><b>V4 · 4</b></figcaption></figure>
-      <figure><img src="logos-assets/recherche/portalet-v4-5.webp" alt="Portalet, recherche V4 page 5" loading="lazy" decoding="async" width="1273" height="1800"><figcaption><b>V4 · 5</b></figcaption></figure>
-      <figure><img src="logos-assets/recherche/portalet-v4-6.webp" alt="Portalet, recherche V4 page 6" loading="lazy" decoding="async" width="1273" height="1800"><figcaption><b>V4 · 6</b></figcaption></figure>
+      <figure><img src="logos-assets/recherche/portalet-v4-1.webp" alt="Portalet, recherche V4 page 1" loading="lazy" decoding="async" width="1273" height="1800"><figcaption><b>V4 · 1</b></figcaption></figure><figure><img src="logos-assets/recherche/portalet-v4-2.webp" alt="Portalet, recherche V4 page 2" loading="lazy" decoding="async" width="1212" height="1800"><figcaption><b>V4 · 2</b></figcaption></figure><figure><img src="logos-assets/recherche/portalet-v4-3.webp" alt="Portalet, recherche V4 page 3" loading="lazy" decoding="async" width="1273" height="1800"><figcaption><b>V4 · 3</b></figcaption></figure><figure><img src="logos-assets/recherche/portalet-v4-4.webp" alt="Portalet, recherche V4 page 4" loading="lazy" decoding="async" width="1273" height="1800"><figcaption><b>V4 · 4</b></figcaption></figure><figure><img src="logos-assets/recherche/portalet-v4-5.webp" alt="Portalet, recherche V4 page 5" loading="lazy" decoding="async" width="1273" height="1800"><figcaption><b>V4 · 5</b></figcaption></figure><figure><img src="logos-assets/recherche/portalet-v4-6.webp" alt="Portalet, recherche V4 page 6" loading="lazy" decoding="async" width="1273" height="1800"><figcaption><b>V4 · 6</b></figcaption></figure>
     </div>
   </div>
 
   <div class="step">
-    <h3>Festival des Métiers de la Montagne, Artis'Alpes, et d'autres</h3>
-    <p>Montagnes en une ligne, monogrammes, sigles : les planches de travail d'autres identités alpines.</p>
-    <div class="mos">
-      <figure><img src="logos-assets/recherche/fmmf-1.webp" alt="Recherche FMMF, première planche" loading="lazy" decoding="async" width="1800" height="1275"><figcaption><b>FMMF</b> · première planche</figcaption></figure>
-      <figure><img src="logos-assets/recherche/fmmf-3.5.webp" alt="Recherche FMMF, planche finale" loading="lazy" decoding="async" width="1800" height="1477"><figcaption><b>FMMF</b> · planche finale</figcaption></figure>
-      <figure><img src="logos-assets/recherche/artisalp-1.webp" alt="Recherche Artis'Alpes" loading="lazy" decoding="async" width="1800" height="1429"><figcaption><b>Artis'Alpes</b> · pistes</figcaption></figure>
-      <figure><img src="logos-assets/recherche/artisalp-2.webp" alt="Recherche Artis'Alpes, pictogramme" loading="lazy" decoding="async" width="1800" height="1502"><figcaption><b>Artis'Alpes</b> · pictogramme</figcaption></figure>
-      <figure><img src="logos-assets/recherche/artisalp-7.webp" alt="Recherche Artis'Alpes, lettrage" loading="lazy" decoding="async" width="1532" height="454"><figcaption><b>Artis'Alpes</b> · lettrage</figcaption></figure>
-      <figure><img src="logos-assets/recherche/artisalp-9.webp" alt="Recherche Artis'Alpes, version finale" loading="lazy" decoding="async" width="1800" height="1257"><figcaption><b>Artis'Alpes</b> · final</figcaption></figure>
-      <figure><img src="logos-assets/contexte/artisalp-logo.webp" alt="Logo Artis'Alpes final" loading="lazy" decoding="async" width="1800" height="1532"><figcaption><b>Artis'Alpes</b> · logo</figcaption></figure>
-      <figure><img src="logos-assets/recherche/couleurs-italie.webp" alt="Recherche Aux Couleurs d'Italie" loading="lazy" decoding="async" width="1800" height="1316"><figcaption><b>Aux Couleurs d'Italie</b> · pistes</figcaption></figure>
-      <figure><img src="logos-assets/recherche/squadro-1.webp" alt="Recherche S-Quadro volume" loading="lazy" decoding="async" width="1028" height="1368"><figcaption><b>S-Quadro</b> · volume</figcaption></figure>
-      <figure><img src="logos-assets/recherche/squadro-2.webp" alt="Recherche S-Quadro" loading="lazy" decoding="async" width="1749" height="870"><figcaption><b>S-Quadro</b> · version</figcaption></figure>
+    <h3>Festival des Métiers de la Montagne — un système, des sommets</h3>
+    <p>Partir des quatre lettres F·M·M·F et en faire une ligne de crêtes : le nom devient le paysage de La Fouly.
+    Une fois le signe trouvé, <b>il se décline sans jamais se déformer</b>.</p>
+    <div class="ctx c2">
+      <figure><img src="logos-assets/recherche/fmmf-1.webp" alt="Première planche de recherche FMMF" loading="lazy" decoding="async" width="1800" height="1275"><figcaption><b>Planche 1</b> · les premières crêtes</figcaption></figure>
+      <figure><img src="logos-assets/recherche/fmmf-planche.webp" alt="Planche de recherche FMMF finale" loading="lazy" decoding="async" width="2400" height="1803"><figcaption><b>Planche finale</b> · pistes, monogrammes, lockups</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="step">
+    <p><b>Le noyau.</b> Chaque lettre est un sommet ; le texte s'accroche à la crête comme une légende de panorama.</p>
+    <div class="ctx c2">
+      <figure><img src="logos-assets/recherche/fmmf-lockup.webp" alt="Logo FMMF : lettres en ligne de crête et texte" loading="lazy" decoding="async" width="1317" height="660"><figcaption><b>Lockup principal</b></figcaption></figure>
+      <figure><img src="logos-assets/recherche/fmmf-noyau.webp" alt="Logo FMMF annoté comme un panorama" loading="lazy" decoding="async" width="1600" height="925"><figcaption><b>Le principe</b> · chaque mot pointe son sommet</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="step">
+    <p><b>Une touche de couleur par partenaire.</b> Chaque sponsor reçoit son propre sommet — Tour Noir, Dolent, Tsavre,
+    Dotse, Six Niers — et sa couleur. Le logo reste le même ; seule une crête s'allume. Un système logique, lisible,
+    et extensible à l'infini.</p>
+    <div class="ctx">
+      <figure><img src="logos-assets/recherche/fmmf-sponsor-tour-noir.webp" alt="FMMF, sommet Tour Noir en bleu" loading="lazy" decoding="async" width="730" height="329"><figcaption><b>Tour Noir</b></figcaption></figure>
+      <figure><img src="logos-assets/recherche/fmmf-sponsor-dolent.webp" alt="FMMF, sommet Dolent en magenta" loading="lazy" decoding="async" width="730" height="329"><figcaption><b>Dolent</b></figcaption></figure>
+      <figure><img src="logos-assets/recherche/fmmf-sponsor-tsavre.webp" alt="FMMF, sommet Tsavre en rose" loading="lazy" decoding="async" width="730" height="329"><figcaption><b>Tsavre</b></figcaption></figure>
+      <figure><img src="logos-assets/recherche/fmmf-sponsor-dotse.webp" alt="FMMF, sommet Dotse en vert" loading="lazy" decoding="async" width="730" height="329"><figcaption><b>Dotse</b></figcaption></figure>
+      <figure><img src="logos-assets/recherche/fmmf-sponsor-six-niers.webp" alt="FMMF, sommet Six Niers en orange" loading="lazy" decoding="async" width="730" height="329"><figcaption><b>Six Niers</b></figcaption></figure>
+    </div>
+  </div>
+
+  <div class="step">
+    <p><b>Les déclinaisons.</b> Du trait fin au monogramme plein : trois graisses pour trois usages, du signal à la signature.</p>
+    <div style="max-width:44rem">
+      <figure style="border:1px solid var(--line)"><img src="logos-assets/recherche/fmmf-variantes.webp" alt="Trois variantes du monogramme FMMF" loading="lazy" decoding="async" width="1600" height="1399"><figcaption><b>Monogrammes</b> · fin, régulier, plein</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="step">
+    <h3>Artis'Alpes — des pistes au logo</h3>
+    <p>Une montagne taillée comme un copeau pour une menuiserie alpine : de la feuille d'essais au signe retenu.</p>
+    <div class="ctx">
+      <figure><img src="logos-assets/recherche/artisalp-1.webp" alt="Recherche Artis'Alpes" loading="lazy" decoding="async" width="1800" height="1429"><figcaption><b>Pistes</b></figcaption></figure>
+      <figure><img src="logos-assets/recherche/artisalp-2.webp" alt="Recherche Artis'Alpes, pictogramme" loading="lazy" decoding="async" width="1800" height="1502"><figcaption><b>Pictogramme</b></figcaption></figure>
+      <figure><img src="logos-assets/contexte/artisalp-logo.webp" alt="Logo Artis'Alpes final" loading="lazy" decoding="async" width="1800" height="1532"><figcaption><b>Le logo</b></figcaption></figure>
     </div>
   </div>
 </div></section>
