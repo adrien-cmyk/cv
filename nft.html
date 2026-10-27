@@ -92,10 +92,11 @@ nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-
 .rules b{display:block;font-size:.72rem;font-weight:650;letter-spacing:.1em;text-transform:uppercase;color:var(--verm);margin-bottom:.3rem}
 .rules span{font-size:.9rem;color:var(--ink-soft)}
 
-.showcase{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.showcase{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
 .showcase figure{border:1px solid var(--line)}
 .showcase img{display:block;width:100%;height:auto}
 .greek-all a{display:block}
+.greek-all figure,.naut-all figure{content-visibility:auto;contain-intrinsic-block-size:auto 480px}
 .showcase figcaption{padding:.55rem .7rem .7rem;margin:0}
 
 /* murs de collection */
@@ -155,7 +156,7 @@ footer{padding-block:1.6rem calc(1.6rem + env(safe-area-inset-bottom,0px));font-
   dessiné, puis découpé en calques qu'un script assemble par milliers. La bulle NFT s'est effondrée
   avant la sortie. Les dessins, eux, sont restés — voici leur histoire, du premier croquis au système.</p>
   <div class="facts num">
-    <span>2 collections</span><span>~1 million de combinaisons</span><span>300 pièces assemblées ici</span><span>Dessin · Illustrator · Photoshop · Python</span>
+    <span>2 collections</span><span>~1 million de combinaisons</span><span>1 100 pièces assemblées ici</span><span>Dessin · Illustrator · Photoshop · Python</span>
   </div>
 
   <figure class="trait">
@@ -402,8 +403,8 @@ footer{padding-block:1.6rem calc(1.6rem + env(safe-area-inset-bottom,0px));font-
   </div>
 
   <div class="step">
-    <div class="wall-head"><h3>La collection — 200 Nautilus</h3><p class="num">1 031 760 combinaisons possibles · 5 modèles</p></div>
-    <div class="wall dark" id="wallNautilus" aria-label="Les 200 créatures de la collection Nautilus"></div>
+    <div class="wall-head"><h3>La collection — 1000 Nautilus</h3><p class="num">1 031 760 combinaisons possibles · 5 modèles</p></div>
+    <div class="showcase naut-all" id="wallNautilus" aria-label="Les 1000 créatures de la collection Nautilus"></div>
   </div>
 </div></section>
 
@@ -415,7 +416,7 @@ footer{padding-block:1.6rem calc(1.6rem + env(safe-area-inset-bottom,0px));font-
   des centaines de milliers de pièces uniques — et la preuve qu'un trait peut devenir tout un monde.</p>
   <div class="big-nums num">
     <div><b>~1 M</b><span>combinaisons possibles</span></div>
-    <div><b>300</b><span>pièces assemblées ici</span></div>
+    <div><b>1 100</b><span>pièces assemblées ici</span></div>
     <div><b>1</b><span>crayon au départ</span></div>
   </div>
   <a class="back" href="./#projets">← Retour aux projets</a>
@@ -438,15 +439,19 @@ document.querySelectorAll('.toggle').forEach(function(t){
   });
 });
 // Murs de collection (images légères, chargement différé)
-function wall(id,list,alt){
-  var w=document.getElementById(id),frag=document.createDocumentFragment();
-  list.forEach(function(src,i){var im=new Image();im.src=src;im.loading='lazy';im.decoding='async';im.width=320;im.height=320;im.alt=alt+' '+(i+1);frag.appendChild(im)});
+var NAUT_MODELS='3345435431525134423515113334415155253252213432354432114255435135425445553451114434231112442531532452134345211411122211353123145334122245213155244155435554313314331245323122554123541542334145541355424441222133154541542414451251331232224343215255432324343113522551251525554233111232453421522551333334425255322215155455534252451443151215431432443413442241233531212354245145345551221125521211552324551445355132254243541531245133531114255551121334141414321233155232211524443153345513214244315553134255153452421315115413354243244322431445132531553442123324333112334145545114425422133221325234155543223125511325433123341114212345431224322315125452454221325115544532532232114411321412333323414533525323241344332431511311415212333111222155555153325311354533545551513244231252211133221342234533353334133554413141114545535553412322255422542251233153421514231433421332152425444423154411311133454234243123341442254435125455122454114534442425222443524132255141513242225234151432234453124422231444122314245245111241';
+// 1000 cartes Nautilus, générées au chargement (images différées)
+(function(){
+  var w=document.getElementById('wallNautilus'),M=NAUT_MODELS,frag=document.createDocumentFragment();
+  for(var i=1;i<=1000;i++){
+    var id=String(i).padStart(4,'0'),f=document.createElement('figure'),im=document.createElement('img');
+    im.loading='lazy';im.decoding='async';im.width=600;im.height=600;im.alt='Nautilus n° '+i;
+    im.src='nft-assets/nautilus/mur/N-'+id+'.webp';
+    var c=document.createElement('figcaption');c.innerHTML='<b>NAUTILUS-'+id+'</b> · Modèle '+M.charAt(i-1);
+    f.appendChild(im);f.appendChild(c);frag.appendChild(f);
+  }
   w.appendChild(frag);
-}
-var n=[];for(var m=1;m<=5;m++)for(var j=1;j<=40;j++)n.push('nft-assets/nautilus/mur/M'+m+'-'+String(j).padStart(2,'0')+'.webp');
-// mélange déterministe pour que les 5 modèles se répondent dans le mur
-var seed=7;n.sort(function(){seed=(seed*9301+49297)%233280;return seed/233280-.5});
-wall('wallNautilus',n,'Nautilus');
+})();
 </script>
 </body>
 </html>
