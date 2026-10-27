@@ -44,7 +44,7 @@ jobs:
           username: ${{ secrets.INFOMANIAK_FTP_USERNAME || secrets.INFOMANIAK_FTP_USER || secrets.INFOMANIAK_USERNAME || secrets.FTP_USERNAME || vars.INFOMANIAK_FTP_USERNAME }}
           password: ${{ secrets.INFOMANIAK_FTP_PASSWORD || vars.INFOMANIAK_FTP_PASSWORD }}
           protocol: ftps
-          server-dir: /web/
+          server-dir: /sites/adrienthetaz.ch/
           local-dir: ./
           exclude: |
             **/.git*
