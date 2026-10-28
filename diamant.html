@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Diamant des Alpes — brochure de luxe — Adrien Thétaz</title>
+<meta name="description" content="Le Verbier, Diamant des Alpes : une brochure de luxe A3 de 34 pages et son coffret noir à cordon rouge, avec maquette imprimée en 3D, pour un projet immobilier haut de gamme à Verbier.">
+<link rel="canonical" href="https://adrienthetaz.ch/diamant.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Diamant des Alpes — une brochure comme un écrin">
+<meta property="og:description" content="Brochure A3 de 34 pages, coffret et maquette 3D pour un projet immobilier à Verbier.">
+<meta property="og:url" content="https://adrienthetaz.ch/diamant.html">
+<meta property="og:image" content="https://adrienthetaz.ch/diamant-assets/photos/4494.webp">
+<meta property="og:locale" content="fr_CH">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap">
+<style>
+/* Page « Logos » — même système que l'accueil et la page NFT. */
+:root{
+  --paper:#FFFFFF; --ink:#1B1916; --ink-soft:#57534A; --verm:#B83228; --orange:#E8921C; --line:#E4E0D8; --tint:#F6F5F2;
+  --sans:'Satoshi',system-ui,'Helvetica Neue',Arial,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:1.03rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit}
+.o{color:var(--orange)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--verm);outline-offset:3px}
+.wrap{max-width:76rem;margin:0 auto;padding-inline:clamp(16px,4vw,44px)}
+h1,h2,h3{letter-spacing:-.025em;line-height:1.08;text-wrap:balance;margin:0;font-weight:500}
+.eyebrow{font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--verm)}
+.num{font-variant-numeric:tabular-nums}
+figure{margin:0}
+figcaption{font-size:.8rem;color:var(--ink-soft);margin-top:.6rem;line-height:1.5}
+figcaption b{color:var(--ink);font-weight:600}
+section{scroll-margin-top:5rem}
+
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,#fff 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.4rem;padding-block:.8rem}
+.brand{font-weight:700;letter-spacing:-.02em;text-decoration:none;margin-right:auto}
+.brand i{font-style:normal;color:var(--verm)}
+.nav-in a:not(.brand){font-size:.86rem;font-weight:550;color:var(--ink-soft);text-decoration:none}
+.nav-in a:not(.brand):hover{color:var(--verm)}
+
+/* hero */
+.hero{padding-block:clamp(2.5rem,6vh,4.5rem) 2rem}
+.hero .eyebrow{display:block;margin-bottom:1rem}
+.hero h1{font-size:clamp(2.6rem,7vw,5.4rem);max-width:12em}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero .lede{max-width:40em;color:var(--ink-soft);margin:1.4rem 0 0;font-size:1.08rem}
+.facts{display:flex;flex-wrap:wrap;gap:.4rem .6rem;margin-top:1.6rem}
+.facts span{font-size:.76rem;font-weight:600;border:1px solid var(--line);border-radius:999px;padding:.32rem .8rem;color:var(--ink-soft)}
+
+/* Croquis / Réalisé */
+.trait{margin-top:2.4rem}
+.trait-frame{position:relative;border:1px solid var(--line);background:#fff;overflow:hidden}
+.trait-frame img{width:100%}
+.trait-frame img + img{position:absolute;inset:0;height:100%;object-fit:cover}
+.trait-frame[data-state="croquis"] .is-real{opacity:0}
+.trait-frame[data-state="realise"] .is-real{opacity:1}
+@media (prefers-reduced-motion:no-preference){.trait-frame .is-real{transition:opacity .5s ease}}
+.toggle{display:inline-flex;margin-top:1rem;border:1px solid var(--ink);border-radius:999px;padding:3px;gap:3px}
+.toggle button{font:inherit;font-size:.85rem;font-weight:600;border:0;background:none;color:var(--ink);padding:.5rem 1.1rem;border-radius:999px;cursor:pointer}
+.toggle button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.trait-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.6rem 1.5rem}
+
+/* chapitres */
+.chap{padding-block:clamp(3.2rem,7vh,5.5rem);border-top:1px solid var(--line)}
+.chap-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:1rem 4rem;align-items:end;margin-bottom:2.6rem}
+.chap-head .num-big{font-size:clamp(3.5rem,9vw,7rem);font-weight:500;line-height:.85;color:var(--orange);letter-spacing:-.04em}
+.chap-head h2{font-size:clamp(1.9rem,4vw,2.9rem);margin-top:.6rem}
+.chap-head p{margin:0;color:var(--ink-soft);max-width:36em}
+.step{margin-top:3.2rem}
+.step h3{font-size:1.15rem;margin-bottom:.4rem}
+.step > p{margin:0 0 1.4rem;color:var(--ink-soft);max-width:44em;font-size:.97rem}
+.step > p b{color:var(--ink);font-weight:600}
+
+.duo{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:2.5rem;align-items:center}
+.grid-sk{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
+.grid-sk figure,.strip figure,.bordered{border:1px solid var(--line);background:#fff}
+.grid-sk img{aspect-ratio:3/4;object-fit:cover;width:100%}
+.strip{display:grid;grid-template-columns:repeat(6,1fr);gap:.8rem;counter-reset:s}
+.strip figure{counter-increment:s;position:relative}
+.strip figure::before{content:counter(s);position:absolute;top:.5rem;left:.55rem;font-size:.7rem;font-weight:700;color:var(--verm)}
+.strip img{aspect-ratio:1/1;object-fit:cover;width:100%}
+.strip figcaption,.grid-sk figcaption{padding:.55rem .65rem .65rem;margin:0}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:1.4rem}
+.rules div{background:#fff;padding:1rem 1.1rem}
+.rules b{display:block;font-size:.72rem;font-weight:650;letter-spacing:.1em;text-transform:uppercase;color:var(--verm);margin-bottom:.3rem}
+.rules span{font-size:.9rem;color:var(--ink-soft)}
+
+.showcase{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
+.showcase figure{border:1px solid var(--line)}
+.showcase img{display:block;width:100%;height:auto}
+.greek-all a{display:block}
+.greek-all figure,.naut-all figure{content-visibility:auto;contain-intrinsic-block-size:auto 480px}
+.showcase figcaption{padding:.55rem .7rem .7rem;margin:0}
+
+/* murs de collection */
+.wall-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.5rem 2rem;margin-bottom:1rem}
+.wall-head p{margin:0;color:var(--ink-soft);font-size:.9rem}
+.wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:4px}
+.wall img{width:100%;aspect-ratio:1/1;object-fit:cover;background:var(--tint)}
+.wall.dark{background:#101418;padding:4px}
+
+.etapes{display:grid;grid-template-columns:repeat(5,1fr);gap:.8rem}
+.etapes figure{border:1px solid var(--line)}
+.etapes figcaption{padding:.5rem .6rem .6rem;margin:0}
+.etapes figure::after{content:"";display:none}
+
+.epilogue{background:var(--ink);color:#fff;padding-block:clamp(3.2rem,8vh,5.5rem)}
+.epilogue h2{font-size:clamp(1.9rem,4.4vw,3.1rem);max-width:15em}
+.epilogue h2 em{font-style:normal;color:#E86A5E}
+.epilogue p{color:#C9C4BA;max-width:42em}
+.big-nums{display:flex;flex-wrap:wrap;gap:1.5rem 4rem;margin:2.2rem 0 2.4rem}
+.big-nums div{display:flex;flex-direction:column}
+.big-nums b{font-size:clamp(2rem,5vw,3.2rem);font-weight:700;letter-spacing:-.03em}
+.big-nums span{font-size:.82rem;color:#A8A296}
+.back{display:inline-flex;font-size:.9rem;font-weight:600;text-decoration:none;border-radius:999px;padding:.75rem 1.4rem;background:#fff;color:var(--ink)}
+.back:hover{background:#E86A5E;color:#fff}
+
+footer{padding-block:1.6rem calc(1.6rem + env(safe-area-inset-bottom,0px));font-size:.82rem;color:var(--ink-soft)}
+.foot-in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 2rem}
+.foot-in b{color:var(--verm)}
+
+@media (max-width:900px){
+  .chap-head,.duo{grid-template-columns:1fr}
+  .grid-sk{grid-template-columns:repeat(3,1fr)}
+  .strip{grid-template-columns:repeat(3,1fr)}
+  .etapes{grid-template-columns:repeat(3,1fr)}
+  .showcase{grid-template-columns:1fr 1fr}
+}
+@media (max-width:540px){
+  .grid-sk,.strip,.etapes{grid-template-columns:repeat(2,1fr)}
+  .showcase{grid-template-columns:1fr}
+  .wall{grid-template-columns:repeat(auto-fill,minmax(76px,1fr))}
+}
+
+/* logos */
+.logos-all{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
+.logos-all figure{border:1px solid var(--line);content-visibility:auto;contain-intrinsic-block-size:auto 440px}
+.logos-all img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.logos-all figcaption,.ctx figcaption,.mos figcaption{padding:.55rem .7rem .7rem;margin:0}
+.ctx{display:grid;gap:1.2rem;grid-template-columns:repeat(var(--c,3),minmax(0,1fr));align-items:start}
+.ctx figure,.mos figure{border:1px solid var(--line);background:#fff}
+.ctx.c2{--c:2}.ctx.c4{--c:4}.ctx.c5{--c:5}.ctx.c6{--c:6}.ctx.c7{--c:7}
+.ctx.sq img{aspect-ratio:1/1;object-fit:contain;background:#fff}
+.mos{columns:3 18rem;column-gap:1.2rem}
+.mos figure{break-inside:avoid;margin-bottom:1.2rem}
+.bois{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.6rem}
+.bois img{width:100%;aspect-ratio:2/3;object-fit:cover}
+.dessin{grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);align-items:start}
+.dessin > figure,.dessin-side figure{border:1px solid var(--line)}
+.dessin-side{display:grid;gap:1.2rem}
+.bois .w{grid-column:span 2}.bois .w img{aspect-ratio:auto;height:100%}
+.essai{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2.5rem 4rem}
+.essai p{margin:0 0 1rem;color:var(--ink-soft)}
+.essai p b{color:var(--ink);font-weight:600}
+.cas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:2rem}
+.cas div{background:#fff;padding:1.2rem 1.3rem}
+.cas b{display:block;font-size:1.6rem;font-weight:700;letter-spacing:-.02em}
+.cas small{display:block;font-size:.72rem;font-weight:650;letter-spacing:.1em;text-transform:uppercase;color:var(--verm);margin:.2rem 0 .5rem}
+.cas span{font-size:.9rem;color:var(--ink-soft)}
+.sl{background:#0B0B0A;color:#fff;padding-block:clamp(3.2rem,8vh,5.5rem)}
+.sl h2{font-size:clamp(2rem,5vw,3.6rem);max-width:13em}
+.sl .lede{color:#C9C4BA;max-width:44em;margin:1.2rem 0 0}
+.piliers{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:#2A2926;border:1px solid #2A2926;margin-top:2.4rem}
+.piliers div{background:#0B0B0A;padding:1.2rem 1.1rem}
+.piliers small{display:block;font-size:.68rem;letter-spacing:.14em;color:#8E897F;margin-bottom:.5rem}
+.piliers b{display:block;font-size:1rem;font-weight:700;margin-bottom:.5rem}
+.piliers span{font-size:.86rem;color:#B5B0A6;line-height:1.55}
+.bloq{display:flex;flex-wrap:wrap;gap:.5rem .7rem;margin-top:1.8rem}
+.bloq span{font-size:.78rem;font-weight:600;border:1px solid #3A3833;border-radius:999px;padding:.35rem .85rem;color:#E4E0D8}
+.sl .big-nums span{color:#A8A296}
+.sl a.back{margin-right:.6rem}
+@media (max-width:900px){.dessin{grid-template-columns:1fr}.cas{grid-template-columns:1fr 1fr}.logos-all{grid-template-columns:1fr 1fr}.ctx{--c:2!important}.piliers{grid-template-columns:1fr 1fr}.essai{grid-template-columns:1fr}.bois{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.cas{grid-template-columns:1fr}.logos-all{grid-template-columns:1fr}.ctx{--c:1!important}.piliers{grid-template-columns:1fr}}
+
+/* Titres : Bricolage Grotesque — paragraphes inchangés (Satoshi) */
+h1,h2,h3,.eyebrow,.tag,.num-big,.titre,.big-nums b,.cas b,.piliers b,.brand,.k,.yr{font-family:'Bricolage Grotesque',var(--sans);font-optical-sizing:auto}
+h1,h2,h3{font-weight:600;letter-spacing:-.03em}
+.num-big,.big-nums b{font-weight:600}
+
+/* Farinet */
+.pq{margin:0 0 2rem;max-width:46em;font-family:'Bricolage Grotesque',var(--sans);font-size:clamp(1.25rem,2.4vw,1.7rem);line-height:1.3;letter-spacing:-.015em}
+.pq cite{display:block;margin-top:.6rem;font-family:var(--sans);font-style:normal;font-size:.85rem;color:var(--ink-soft)}
+.bordered{border:1px solid var(--line);background:#fff}
+.stage.land{max-width:min(1100px,calc((100vh - 230px)*1.414))}
+.thumbs.t6{grid-template-columns:repeat(6,minmax(0,1fr))}
+.az-video{border:1px solid var(--line);background:#000;margin:0}
+.az-video video{display:block;width:100%;height:auto;background:#000}
+.az-video figcaption{background:#fff;padding:.55rem .7rem .7rem;margin:0}
+.uv{background:#07061a;color:#fff;padding:clamp(4rem,9vw,7rem) 0}
+.uv .eyebrow{color:#9d8cff}
+.uv h2{color:#fff;margin:.8rem 0 1rem}
+.uv-lede{max-width:44em;color:rgba(255,255,255,.75);margin:0 0 2.4rem}
+.uv figure{margin:0}
+.uv img{display:block;width:100%;height:auto;border-radius:2px}
+.uv figcaption{font-size:.82rem;color:rgba(255,255,255,.6);padding:.55rem 0 0}
+.uv-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem;margin:1.2rem 0}
+@media (max-width:700px){.uv-grid{grid-template-columns:1fr}.thumbs.t6{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.viewer{border:1px solid var(--line);background:#fff;padding:clamp(1rem,3vw,2rem)}
+.stage{position:relative;max-width:min(820px,calc((100vh - 230px)*.953));margin:0 auto;cursor:zoom-in;touch-action:pan-y}
+.stage img{width:100%;height:auto;user-select:none;-webkit-user-drag:none}
+.loupe{position:absolute;width:220px;height:220px;border-radius:50%;border:2px solid #fff;box-shadow:0 6px 22px rgba(0,0,0,.16),0 0 0 1px rgba(0,0,0,.08);
+  pointer-events:none;background-repeat:no-repeat;opacity:0;transform:translate(-50%,-50%) scale(.92);transition:opacity .25s,transform .25s}
+.stage.on .loupe{transform:translate(-50%,-50%) scale(1)}
+.stage.on .loupe{opacity:1}
+.v-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.8rem 1.5rem;margin-top:1.2rem}
+.v-bar .val{font-family:'Bricolage Grotesque',var(--sans);font-weight:600;font-size:clamp(1.6rem,3.5vw,2.4rem);letter-spacing:-.03em}
+.v-bar .val small{font-family:var(--sans);font-size:.85rem;font-weight:500;color:var(--ink-soft);letter-spacing:0;margin-left:.6rem}
+.v-nav{display:flex;gap:.5rem}
+.v-nav button,.thumbs button{font:inherit;cursor:pointer}
+.v-nav button{border:1px solid var(--ink);background:#fff;color:var(--ink);border-radius:999px;padding:.55rem 1.1rem;font-size:.9rem;font-weight:600}
+.v-nav button:hover{background:var(--ink);color:#fff}
+.thumbs{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:.5rem;margin-top:1.2rem}
+.thumbs button{border:1px solid var(--line);background:#fff;padding:0;opacity:.55;transition:opacity .2s,border-color .2s}
+.thumbs button[aria-current="true"],.thumbs button:hover{opacity:1;border-color:var(--ink)}
+.thumbs span{display:block;font-size:.72rem;font-weight:600;padding:.3rem 0}
+.hint{font-size:.8rem;color:var(--ink-soft);text-align:center;margin:.8rem 0 0}
+.details{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem;align-items:start}
+.details figure{border:1px solid var(--line)}
+.details .w2{grid-column:span 2}
+.refs{list-style:none;padding:0;margin:1.4rem 0 0;display:grid;gap:.6rem}
+.refs a{font-weight:600;text-decoration:none;border-bottom:1px solid var(--line)}
+.refs a:hover{color:var(--verm);border-color:var(--verm)}
+.refs span{color:var(--ink-soft);font-size:.9rem}
+.essai a{color:var(--ink);font-weight:600}
+@media (max-width:900px){.details{grid-template-columns:1fr 1fr}.details .w2{grid-column:span 2}.thumbs{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:540px){.details{grid-template-columns:1fr}.details .w2{grid-column:auto}}
+
+/* Diamant */
+.stage.land{max-width:min(1200px,calc((100vh - 230px)*1.414))}
+.thumbs.strip{display:flex;overflow-x:auto;gap:.5rem;padding-bottom:.6rem;scroll-snap-type:x proximity}
+.thumbs.strip button{flex:0 0 112px;scroll-snap-align:start}
+.dm-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:2.5rem 4rem;align-items:center}
+.dm-hero h1{font-size:clamp(2.2rem,4.2vw,3.5rem)}
+.dm-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:1.2rem}
+.dm-grid figure{margin:0;border:1px solid var(--line);background:#fff}
+.dm-grid img{display:block;width:100%;height:auto}
+.dm-grid figcaption{padding:.55rem .7rem .7rem;margin:0;font-size:.82rem;color:var(--ink-soft)}
+.dm-grid figcaption b{color:var(--ink)}
+.dm-grid .s2{grid-column:span 2}.dm-grid .s3{grid-column:span 3}.dm-grid .s4{grid-column:span 4}.dm-grid .s6{grid-column:span 6}
+.fil{display:grid;gap:clamp(2rem,5vw,3.6rem)}
+.fil .row{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:clamp(1.4rem,3vw,2.6rem);align-items:center}
+.fil .row.rev{grid-template-columns:minmax(0,1fr) minmax(0,1.6fr)}
+.fil .row.rev figure{order:2}
+.fil figure{margin:0;border:1px solid var(--line)}
+.fil img{display:block;width:100%;height:auto}
+.fil h3{font-size:clamp(1.3rem,2.4vw,1.8rem);margin:0 0 .6rem}
+.fil p{margin:0;color:var(--ink-soft)}
+.facts span{white-space:nowrap}
+@media (max-width:900px){.dm-hero,.fil .row,.fil .row.rev{grid-template-columns:1fr}.fil .row.rev figure{order:0}.dm-grid{grid-template-columns:1fr 1fr}.dm-grid .s2,.dm-grid .s3,.dm-grid .s4,.dm-grid .s6{grid-column:span 2}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap nav-in">
+  <a class="brand" href="./">Adrien Thétaz<i>.</i></a>
+  <a href="#ecrin">L’écrin</a>
+  <a href="#brochure">La brochure</a>
+  <a href="#fil">Le fil rouge</a>
+  <a href="./#projets">← Tous les projets</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="dm-hero">
+    <div>
+      <span class="eyebrow">Brochure de luxe · Promotion immobilière · Verbier</span>
+      <h1>Diamant des Alpes, <em>une brochure comme un écrin.</em></h1>
+      <p class="lede">Pour présenter <b>Le Verbier — Diamant des Alpes</b>, un projet résidentiel et hôtelier ultra haut de gamme à Verbier,
+      j’ai conçu une brochure A3 à l’italienne de 34 pages, glissée dans un coffret noir fermé d’un cordon rouge,
+      accompagnée d’une maquette du bâtiment imprimée en 3D. Un objet à ouvrir avant d’être lu.</p>
+      <div class="facts"><span>A3 paysage · 34 pages</span><span>Coffret &amp; cordon</span><span>Maquette 3D</span><span>InDesign · Photoshop</span></div>
+    </div>
+    <figure class="bordered"><img src="diamant-assets/photos/4494.webp" alt="Le coffret noir Le Verbier, sa fenêtre au blason et la maquette blanche du bâtiment" width="2000" height="1335"></figure>
+  </div>
+</div></header>
+
+<section id="ecrin" class="chap"><div class="wrap">
+  <div class="chap-head">
+    <div><span class="num-big">01</span><h2>L’<span class="o">écrin</span></h2></div>
+    <p>Avant la première page, il y a l’objet : un coffret noir, une fenêtre sur le blason, un cordon à dénouer.
+    À l’intérieur, des doubles pages qui se déplient sur la table, et la maquette du bâtiment en volume.</p>
+  </div>
+  <div class="dm-grid">
+    <figure class="s3"><img src="diamant-assets/photos/4497.webp" alt="Le coffret noir fermé, fenêtre au logo Le Verbier et cordon rouge" loading="lazy" decoding="async" width="2000" height="1335"><figcaption><b>Le coffret</b> · carton noir, fenêtre et cordon rouge</figcaption></figure>
+    <figure class="s3"><img src="diamant-assets/photos/4496.webp" alt="Le coffret avec la maquette blanche du bâtiment imprimée en 3D" loading="lazy" decoding="async" width="2000" height="1335"><figcaption><b>La maquette</b> · le bâtiment imprimé en 3D, posé sur le coffret</figcaption></figure>
+    <figure class="s2"><img src="diamant-assets/photos/4483.webp" alt="Brochure ouverte sur la double page Situation et ses cartes" loading="lazy" decoding="async" width="2000" height="1335"><figcaption><b>Situation</b> · cartes en noir et blanc, un seul repère rouge</figcaption></figure>
+    <figure class="s2"><img src="diamant-assets/photos/4486.webp" alt="Brochure ouverte sur Crystal rocks & traditions" loading="lazy" decoding="async" width="2000" height="1335"><figcaption><b>Le cristal</b> · le fil rouge de la brochure</figcaption></figure>
+    <figure class="s2"><img src="diamant-assets/photos/4487.webp" alt="Brochure ouverte sur Diamond of the Alps" loading="lazy" decoding="async" width="2000" height="1335"><figcaption><b>Diamond of the Alps</b> · le concept</figcaption></figure>
+    <figure class="s3"><img src="diamant-assets/photos/4490.webp" alt="Brochure ouverte sur un plan d’étage et la vue du spa" loading="lazy" decoding="async" width="2000" height="1335"><figcaption><b>Plans &amp; vues</b> · chaque étage face à son ambiance</figcaption></figure>
+    <figure class="s3"><img src="diamant-assets/photos/4491.webp" alt="Brochure ouverte sur le plan d’une suite et sa chambre" loading="lazy" decoding="async" width="2000" height="1335"><figcaption><b>Les suites</b> · le plan à gauche, la vie à droite</figcaption></figure>
+  </div>
+</div></section>
+
+<section id="brochure" class="chap"><div class="wrap">
+  <div class="chap-head">
+    <div><span class="num-big">02</span><h2>Feuilleter la <span class="o">brochure</span></h2></div>
+    <p>Les 34 pages, dans l’ordre. Passez la souris pour la loupe, ou utilisez les flèches du clavier.</p>
+  </div>
+  <div class="viewer" id="dviewer">
+    <div class="stage land" id="dstage">
+      <img id="dpage" src="diamant-assets/pages/page-01.webp" alt="Brochure Diamant des Alpes, couverture" width="2000" height="1415">
+      <div class="loupe" id="dloupe" aria-hidden="true"></div>
+    </div>
+    <div class="v-bar">
+      <div class="val num" id="dval" aria-live="polite">Couverture</div>
+      <div class="v-nav"><button type="button" id="dprev" aria-label="Page précédente">← Précédent</button><button type="button" id="dnext" aria-label="Page suivante">Suivant →</button></div>
+    </div>
+    <div class="thumbs strip" id="dthumbs"><button type="button" aria-label="Couverture" aria-current="true"><img src="diamant-assets/pages/page-01.webp" alt="" width="2000" height="1415" loading="lazy"><span>1</span></button><button type="button" aria-label="Motif de garde"><img src="diamant-assets/pages/page-02.webp" alt="" width="2000" height="1415" loading="lazy"><span>2</span></button><button type="button" aria-label="Le Grand Combin"><img src="diamant-assets/pages/page-03.webp" alt="" width="2000" height="1415" loading="lazy"><span>3</span></button><button type="button" aria-label="Situation — Verbier"><img src="diamant-assets/pages/page-04.webp" alt="" width="2000" height="1415" loading="lazy"><span>4</span></button><button type="button" aria-label="Situation — le village"><img src="diamant-assets/pages/page-05.webp" alt="" width="2000" height="1415" loading="lazy"><span>5</span></button><button type="button" aria-label="Mood"><img src="diamant-assets/pages/page-06.webp" alt="" width="2000" height="1415" loading="lazy"><span>6</span></button><button type="button" aria-label="Crystal rocks & traditions"><img src="diamant-assets/pages/page-07.webp" alt="" width="2000" height="1415" loading="lazy"><span>7</span></button><button type="button" aria-label="Le bâtiment"><img src="diamant-assets/pages/page-08.webp" alt="" width="2000" height="1415" loading="lazy"><span>8</span></button><button type="button" aria-label="Diamond of the Alps"><img src="diamant-assets/pages/page-09.webp" alt="" width="2000" height="1415" loading="lazy"><span>9</span></button><button type="button" aria-label="Ecoluxe"><img src="diamant-assets/pages/page-10.webp" alt="" width="2000" height="1415" loading="lazy"><span>10</span></button><button type="button" aria-label="The Art of Living"><img src="diamant-assets/pages/page-11.webp" alt="" width="2000" height="1415" loading="lazy"><span>11</span></button><button type="button" aria-label="Le spa"><img src="diamant-assets/pages/page-12.webp" alt="" width="2000" height="1415" loading="lazy"><span>12</span></button><button type="button" aria-label="Plans"><img src="diamant-assets/pages/page-13.webp" alt="" width="2000" height="1415" loading="lazy"><span>13</span></button><button type="button" aria-label="−1 · Spa, fitness & conférences"><img src="diamant-assets/pages/page-14.webp" alt="" width="2000" height="1415" loading="lazy"><span>14</span></button><button type="button" aria-label="Le spa en vue intérieure"><img src="diamant-assets/pages/page-15.webp" alt="" width="2000" height="1415" loading="lazy"><span>15</span></button><button type="button" aria-label="0 · Lobby, restaurant & boutiques"><img src="diamant-assets/pages/page-16.webp" alt="" width="2000" height="1415" loading="lazy"><span>16</span></button><button type="button" aria-label="Le restaurant"><img src="diamant-assets/pages/page-17.webp" alt="" width="2000" height="1415" loading="lazy"><span>17</span></button><button type="button" aria-label="1 · Nursery, bibliothèque & résidences"><img src="diamant-assets/pages/page-18.webp" alt="" width="2000" height="1415" loading="lazy"><span>18</span></button><button type="button" aria-label="L’espace enfants"><img src="diamant-assets/pages/page-19.webp" alt="" width="2000" height="1415" loading="lazy"><span>19</span></button><button type="button" aria-label="2 · Piscine, patinoire & résidences"><img src="diamant-assets/pages/page-20.webp" alt="" width="2000" height="1415" loading="lazy"><span>20</span></button><button type="button" aria-label="La terrasse"><img src="diamant-assets/pages/page-21.webp" alt="" width="2000" height="1415" loading="lazy"><span>21</span></button><button type="button" aria-label="3 · Résidences"><img src="diamant-assets/pages/page-22.webp" alt="" width="2000" height="1415" loading="lazy"><span>22</span></button><button type="button" aria-label="Une chambre"><img src="diamant-assets/pages/page-23.webp" alt="" width="2000" height="1415" loading="lazy"><span>23</span></button><button type="button" aria-label="4 · Résidences"><img src="diamant-assets/pages/page-24.webp" alt="" width="2000" height="1415" loading="lazy"><span>24</span></button><button type="button" aria-label="Une salle de bains"><img src="diamant-assets/pages/page-25.webp" alt="" width="2000" height="1415" loading="lazy"><span>25</span></button><button type="button" aria-label="Coupe"><img src="diamant-assets/pages/page-26.webp" alt="" width="2000" height="1415" loading="lazy"><span>26</span></button><button type="button" aria-label="Suites"><img src="diamant-assets/pages/page-27.webp" alt="" width="2000" height="1415" loading="lazy"><span>27</span></button><button type="button" aria-label="Suite — plan"><img src="diamant-assets/pages/page-28.webp" alt="" width="2000" height="1415" loading="lazy"><span>28</span></button><button type="button" aria-label="Suite — chambre au cristal"><img src="diamant-assets/pages/page-29.webp" alt="" width="2000" height="1415" loading="lazy"><span>29</span></button><button type="button" aria-label="Suite — plan"><img src="diamant-assets/pages/page-30.webp" alt="" width="2000" height="1415" loading="lazy"><span>30</span></button><button type="button" aria-label="Suite — séjour"><img src="diamant-assets/pages/page-31.webp" alt="" width="2000" height="1415" loading="lazy"><span>31</span></button><button type="button" aria-label="Trois garanties"><img src="diamant-assets/pages/page-32.webp" alt="" width="2000" height="1415" loading="lazy"><span>32</span></button><button type="button" aria-label="About us"><img src="diamant-assets/pages/page-33.webp" alt="" width="2000" height="1415" loading="lazy"><span>33</span></button><button type="button" aria-label="Dos"><img src="diamant-assets/pages/page-34.webp" alt="" width="2000" height="1415" loading="lazy"><span>34</span></button></div>
+  </div>
+</div></section>
+
+<section id="fil" class="chap"><div class="wrap">
+  <div class="chap-head">
+    <div><span class="num-big">03</span><h2>Le fil <span class="o">rouge</span></h2></div>
+    <p>Une brochure de luxe ne vend pas des mètres carrés : elle raconte un lieu. Ici, le récit suit un cristal.</p>
+  </div>
+  <div class="fil">
+    <div class="row"><figure><img src="diamant-assets/pages/page-07.webp" alt="Page Crystal rocks & traditions : cristal de roche et poya découpée" loading="lazy" decoding="async" width="2000" height="1415"></figure><div><h3>De la montagne au <span class="o">cristal</span></h3><p>La brochure s’ouvre sur le Grand Combin, puis descend dans la roche : un cristal de roche, le papier découpé des poyas.
+    Le bâtiment, taillé en facettes, devient le « diamant » — et ce cristal revient jusque dans les chambres.</p></div></div>
+    <div class="row rev"><figure><img src="diamant-assets/pages/page-28.webp" alt="Plan coloré d’une suite avec ses surfaces" loading="lazy" decoding="async" width="2000" height="1415"></figure><div><h3>Le luxe en <span class="o">plans</span></h3><p>Chaque étage est présenté en deux temps : un plan clair, axonométrique, puis l’ambiance qu’il promet.
+    Le lecteur visite le bâtiment du spa aux suites, comme on monte les étages.</p></div></div>
+    <div class="row"><figure><img src="diamant-assets/pages/page-17.webp" alt="Le restaurant du Diamant des Alpes, cave à vin vitrée" loading="lazy" decoding="async" width="2000" height="1415"></figure><div><h3>Une vie entière, <span class="o">mise en page</span></h3><p>Restaurant, bibliothèque, espace enfants, terrasses : des visuels en pleine page, peu de texte, beaucoup de blanc.
+    Une mise en page qui laisse respirer, comme l’exige le très haut de gamme.</p></div></div>
+  </div>
+</div></section>
+
+<section class="epilogue"><div class="wrap">
+  <span class="eyebrow" style="color:#E8921C">Diamant des Alpes</span>
+  <h2 style="margin-top:.8rem">« Mountains are the beginning and the end of all natural scenery. » <span class="o">John Ruskin</span></h2>
+  <p>La citation qui ouvre la brochure, face au Grand Combin.</p>
+  <a class="back" href="./#projets">← Retour aux projets</a>
+</div></section>
+
+<footer><div class="wrap foot-in">
+  <span class="num">© 2026 Adrien Thétaz — designer MPA &amp; illustrateur, Martigny</span>
+  <span lang="en">Art makes <b>(hi)</b>story</span>
+</div></footer>
+
+<script>
+(function(){
+  var DL=["Couverture", "Motif de garde", "Le Grand Combin", "Situation — Verbier", "Situation — le village", "Mood", "Crystal rocks & traditions", "Le bâtiment", "Diamond of the Alps", "Ecoluxe", "The Art of Living", "Le spa", "Plans", "−1 · Spa, fitness & conférences", "Le spa en vue intérieure", "0 · Lobby, restaurant & boutiques", "Le restaurant", "1 · Nursery, bibliothèque & résidences", "L’espace enfants", "2 · Piscine, patinoire & résidences", "La terrasse", "3 · Résidences", "Une chambre", "4 · Résidences", "Une salle de bains", "Coupe", "Suites", "Suite — plan", "Suite — chambre au cristal", "Suite — plan", "Suite — séjour", "Trois garanties", "About us", "Dos"], N=DL.length, i=0, Z=1.8, R=110, img=document.getElementById('dpage'), st=document.getElementById('dstage'), lp=document.getElementById('dloupe'),
+      val=document.getElementById('dval'), th=[].slice.call(document.querySelectorAll('#dthumbs button'));
+  function src(k){return 'diamant-assets/pages/page-'+String(k+1).padStart(2,'0')+'.webp';}
+  function show(k){ i=(k+N)%N; img.src=src(i); img.alt='Brochure Diamant des Alpes, '+DL[i];
+    val.innerHTML=DL[i]+'<small>'+(i+1)+' / '+N+'</small>'; lp.style.backgroundImage='url('+src(i)+')';
+    th.forEach(function(b,n){b.setAttribute('aria-current',n===i?'true':'false');});
+    var b=th[i], s=b.parentNode; s.scrollTo({left:b.offsetLeft-s.clientWidth/2+b.clientWidth/2,behavior:'smooth'});
+    var nx=new Image(); nx.src=src((i+1)%N); }
+  function move(x,y){ var r=img.getBoundingClientRect(), px=x-r.left, py=y-r.top;
+    if(px<0||py<0||px>r.width||py>r.height){st.classList.remove('on');return;}
+    var s=st.getBoundingClientRect(); st.classList.add('on'); lp.style.left=(x-s.left)+'px'; lp.style.top=(y-s.top)+'px';
+    lp.style.backgroundSize=(r.width*Z)+'px '+(r.height*Z)+'px'; lp.style.backgroundPosition=(-(px*Z-R))+'px '+(-(py*Z-R))+'px'; }
+  st.addEventListener('mousemove',function(e){move(e.clientX,e.clientY);});
+  st.addEventListener('mouseleave',function(){st.classList.remove('on');});
+  st.addEventListener('touchstart',function(e){var t=e.touches[0];move(t.clientX,t.clientY);},{passive:true});
+  st.addEventListener('touchmove',function(e){var t=e.touches[0];move(t.clientX,t.clientY);},{passive:true});
+  st.addEventListener('touchend',function(){st.classList.remove('on');});
+  document.getElementById('dprev').onclick=function(){show(i-1);};
+  document.getElementById('dnext').onclick=function(){show(i+1);};
+  th.forEach(function(b,n){b.onclick=function(){show(n);};});
+  document.addEventListener('keydown',function(e){ var r=document.getElementById('dviewer').getBoundingClientRect();
+    if(r.top>innerHeight*.6||r.bottom<innerHeight*.4) return; if(e.key==='ArrowRight')show(i+1); if(e.key==='ArrowLeft')show(i-1); });
+  show(0);
+})();
+</script>
+</body>
+</html>
