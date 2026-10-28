@@ -188,11 +188,29 @@ h1,h2,h3{font-weight:600;letter-spacing:-.03em}
 .num-big,.big-nums b{font-weight:600}
 
 /* Farinet */
+.pq{margin:0 0 2rem;max-width:46em;font-family:'Bricolage Grotesque',var(--sans);font-size:clamp(1.25rem,2.4vw,1.7rem);line-height:1.3;letter-spacing:-.015em}
+.pq cite{display:block;margin-top:.6rem;font-family:var(--sans);font-style:normal;font-size:.85rem;color:var(--ink-soft)}
+.bordered{border:1px solid var(--line);background:#fff}
+.stage.land{max-width:min(1100px,calc((100vh - 230px)*1.414))}
+.thumbs.t6{grid-template-columns:repeat(6,minmax(0,1fr))}
+.az-video{border:1px solid var(--line);background:#000;margin:0}
+.az-video video{display:block;width:100%;height:auto;background:#000}
+.az-video figcaption{background:#fff;padding:.55rem .7rem .7rem;margin:0}
+.uv{background:#07061a;color:#fff;padding:clamp(4rem,9vw,7rem) 0}
+.uv .eyebrow{color:#9d8cff}
+.uv h2{color:#fff;margin:.8rem 0 1rem}
+.uv-lede{max-width:44em;color:rgba(255,255,255,.75);margin:0 0 2.4rem}
+.uv figure{margin:0}
+.uv img{display:block;width:100%;height:auto;border-radius:2px}
+.uv figcaption{font-size:.82rem;color:rgba(255,255,255,.6);padding:.55rem 0 0}
+.uv-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem;margin:1.2rem 0}
+@media (max-width:700px){.uv-grid{grid-template-columns:1fr}.thumbs.t6{grid-template-columns:repeat(3,minmax(0,1fr))}}
 .viewer{border:1px solid var(--line);background:#fff;padding:clamp(1rem,3vw,2rem)}
 .stage{position:relative;max-width:min(820px,calc((100vh - 230px)*.953));margin:0 auto;cursor:zoom-in;touch-action:pan-y}
 .stage img{width:100%;height:auto;user-select:none;-webkit-user-drag:none}
-.loupe{position:absolute;width:220px;height:220px;border-radius:50%;border:3px solid #fff;box-shadow:0 8px 30px rgba(0,0,0,.28),0 0 0 1px rgba(0,0,0,.15);
-  pointer-events:none;background-repeat:no-repeat;opacity:0;transform:translate(-50%,-50%);transition:opacity .15s}
+.loupe{position:absolute;width:220px;height:220px;border-radius:50%;border:2px solid #fff;box-shadow:0 6px 22px rgba(0,0,0,.16),0 0 0 1px rgba(0,0,0,.08);
+  pointer-events:none;background-repeat:no-repeat;opacity:0;transform:translate(-50%,-50%) scale(.92);transition:opacity .25s,transform .25s}
+.stage.on .loupe{transform:translate(-50%,-50%) scale(1)}
 .stage.on .loupe{opacity:1}
 .v-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.8rem 1.5rem;margin-top:1.2rem}
 .v-bar .val{font-family:'Bricolage Grotesque',var(--sans);font-weight:600;font-size:clamp(1.6rem,3.5vw,2.4rem);letter-spacing:-.03em}
@@ -223,7 +241,9 @@ h1,h2,h3{font-weight:600;letter-spacing:-.03em}
 <nav><div class="wrap nav-in">
   <a class="brand" href="./">Adrien Thétaz<i>.</i></a>
   <a href="#collection">La collection</a>
-  <a href="#details">Détails</a>
+  <a href="#concours">Le concours</a>
+  <a href="#musee">Au musée</a>
+  <a href="#loutz">Deuxième vie</a>
   <a href="#histoire">L’histoire</a>
   <a href="./#projets">← Tous les projets</a>
 </div></nav>
@@ -257,27 +277,75 @@ h1,h2,h3{font-weight:600;letter-spacing:-.03em}
   </div>
 </div></section>
 
-<section id="details" class="chap"><div class="wrap">
+<section id="concours" class="chap"><div class="wrap">
   <div class="chap-head">
-    <div><span class="num-big">02</span><h2>Dans le fichier <span class="o">original</span></h2></div>
-    <p>Extraits du fichier Illustrator de production du billet de 1 farinet : les détails qu’on ne voit qu’en s’approchant —
-    et la signature, glissée dans le motif.</p>
+    <div><span class="num-big">02</span><h2>Le dossier du <span class="o">concours</span></h2></div>
+    <p>Tout a commencé par un concours de design, en 2016. Mon dossier proposait un billet de 13 farinets, le Grand Chavalard
+    taillé en triangles — c’est lui qui a gagné. Les pages du dossier original, à lire à la loupe.</p>
   </div>
-  <div class="details">
-    <figure class="w2"><img src="farinet-assets/detail-signature.webp" alt="Signature graphisme © Adrien Thétaz intégrée verticalement dans le billet" loading="lazy" decoding="async" width="1466" height="355"><figcaption><b>La signature</b> · « graphisme © Adrien Thétaz », glissée dans le motif de flèches</figcaption></figure>
-    <figure><img src="farinet-assets/detail-microtexte.webp" alt="Microtexte du billet : liste des donateurs et des inspirations" loading="lazy" decoding="async" width="499" height="504"><figcaption><b>Le microtexte</b> · donateurs et inspirations, de Joseph-Samuel Farinet à Rob Hopkins</figcaption></figure>
-    <figure><img src="farinet-assets/detail-carte-sion.webp" alt="Carte topographique de Sion en fond de billet" loading="lazy" decoding="async" width="1332" height="1133"><figcaption><b>La carte</b> · Sion en topographie, en filigrane du recto</figcaption></figure>
-    <figure><img src="farinet-assets/detail-chiffre.webp" alt="Chiffre 1 et symbole du farinet" loading="lazy" decoding="async" width="699" height="800"><figcaption><b>Le chiffre</b> · flèches et symbole ₣</figcaption></figure>
-    <figure><img src="farinet-assets/detail-facettes.webp" alt="Château de Sion taillé en facettes" loading="lazy" decoding="async" width="1119" height="1067"><figcaption><b>Les facettes</b> · le patrimoine taillé comme un cristal</figcaption></figure>
-    <figure><img src="farinet-assets/detail-fleches.webp" alt="Motif de flèches sur facettes" loading="lazy" decoding="async" width="865" height="800"><figcaption><b>Le motif</b> · des flèches qui guident l’œil et compliquent la copie</figcaption></figure>
-    <figure class="w2"><img src="farinet-assets/detail-drapeau.webp" alt="Drapeau valaisan et mention monnaie locale complémentaire" loading="lazy" decoding="async" width="1400" height="315"><figcaption><b>Le cartouche</b> · bilingue, comme le canton</figcaption></figure>
-    <figure><img src="farinet-assets/recto-1-vectoriel.webp" alt="Recto du billet de 1 farinet rendu depuis le fichier vectoriel" loading="lazy" decoding="async" width="1370" height="2800"><figcaption><b>Recto 1 farinet</b> · rendu depuis le fichier vectoriel</figcaption></figure>
+  <blockquote class="pq">« Un symbole qui serait indéniablement régional, immuable. L’évidence de nos montagnes m’est apparue comme le choix le plus pertinent. »<cite>Adrien Thétaz, dossier de concours, 2016</cite></blockquote>
+  <div class="viewer" id="dviewer">
+    <div class="stage land" id="dstage">
+      <img id="dpage" src="farinet-assets/dossier/page-1.webp" alt="Dossier de concours du Farinet, couverture" width="1988" height="1406">
+      <div class="loupe" id="dloupe" aria-hidden="true"></div>
+    </div>
+    <div class="v-bar">
+      <div class="val num" id="dval" aria-live="polite">Couverture</div>
+      <div class="v-nav"><button type="button" id="dprev" aria-label="Page précédente">← Précédent</button><button type="button" id="dnext" aria-label="Page suivante">Suivant →</button></div>
+    </div>
+    <div class="thumbs t6" id="dthumbs"><button type="button" aria-label="Couverture" aria-current="true"><img src="farinet-assets/dossier/page-1.webp" alt="" width="1988" height="1406" loading="lazy"><span>1</span></button><button type="button" aria-label="Notre identité, la montagne"><img src="farinet-assets/dossier/page-2.webp" alt="" width="1988" height="1406" loading="lazy"><span>2</span></button><button type="button" aria-label="La montagne mais pas que"><img src="farinet-assets/dossier/page-3.webp" alt="" width="1988" height="1406" loading="lazy"><span>3</span></button><button type="button" aria-label="Quelques détails"><img src="farinet-assets/dossier/page-4.webp" alt="" width="1988" height="1406" loading="lazy"><span>4</span></button><button type="button" aria-label="Les goûts et les couleurs"><img src="farinet-assets/dossier/page-5.webp" alt="" width="1988" height="1406" loading="lazy"><span>5</span></button><button type="button" aria-label="Quelques photos"><img src="farinet-assets/dossier/page-6.webp" alt="" width="1988" height="1406" loading="lazy"><span>6</span></button></div>
   </div>
+</div></section>
+
+<section id="musee" class="chap"><div class="wrap">
+  <div class="chap-head">
+    <div><span class="num-big">03</span><h2>Derrière la <span class="o">vitrine</span></h2></div>
+    <p>Au Musée de la fausse monnaie à Saillon, la série complète a sa vitrine : les huit coupures alignées devant les Alpes,
+    avec la presse qui les a racontées.</p>
+  </div>
+  <div class="ctx c2">
+    <figure class="bordered"><img src="farinet-assets/musee/vitrine.webp" alt="Vitrine du Musée de la fausse monnaie à Saillon consacrée au Farinet, monnaie locale" loading="lazy" width="1672" height="941"><figcaption><b>Musée de la fausse monnaie</b> · Saillon</figcaption></figure>
+    <figure class="bordered"><img src="farinet-assets/musee/vitrine-detail.webp" alt="Les huit billets Farinet de 1 à 100 alignés dans la vitrine, avec les magazines qui en ont parlé" loading="lazy" width="1672" height="941"><figcaption><b>La série</b> · de 1 à 100 farinets</figcaption></figure>
+  </div>
+</div></section>
+
+<section id="loutz" class="chap"><div class="wrap">
+  <div class="chap-head">
+    <div><span class="num-big">04</span><h2>Une deuxième <span class="o">vie</span></h2></div>
+    <p>Quand le Farinet s’est arrêté, les billets restants ont été confiés à l’artiste valaisan Julien Loutz, connu pour ses
+    créations à partir de matériaux recyclés. Découpés en silhouettes par milliers, ils sont devenus 13 œuvres, exposées
+    à L’archipel, à Sion, du 31 janvier au 16 février 2025.</p>
+  </div>
+  <figure class="az-video">
+    <video controls muted playsinline loop preload="metadata" poster="farinet-assets/loutz/expo-poster.jpg" width="1600" height="900">
+      <source src="farinet-assets/loutz/expo-loutz.mp4" type="video/mp4">
+    </video>
+    <figcaption><b>L’archipel, Sion</b> · les 13 œuvres de Julien Loutz</figcaption>
+  </figure>
+  <figure class="bordered" style="margin-top:1.4rem"><img src="farinet-assets/loutz/salle.webp" alt="Les panneaux de Julien Loutz disposés en arc de cercle à L’archipel" loading="lazy" width="1800" height="1350"><figcaption><b>L’installation</b> · treize panneaux en arc de cercle</figcaption></figure>
+  <div class="ctx c2" style="margin-top:1.4rem">
+    <figure class="bordered"><img src="farinet-assets/loutz/detail-jour.webp" alt="Détail d’une œuvre : une foule de silhouettes découpées dans les billets Farinet" loading="lazy" width="1800" height="1350"><figcaption><b>De près</b> · chaque silhouette est un morceau de billet</figcaption></figure>
+    <figure class="bordered"><img src="farinet-assets/loutz/panneaux-jour.webp" alt="Rangée de panneaux encadrés recouverts de silhouettes multicolores" loading="lazy" width="1800" height="1350"><figcaption><b>Les panneaux</b> · une foule de couleurs</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="uv" aria-labelledby="uv-t"><div class="wrap">
+  <span class="eyebrow">Sous la lumière noire</span>
+  <h2 id="uv-t">Ce que les billets <span class="o">cachaient</span></h2>
+  <p class="uv-lede">Les billets portaient des motifs invisibles à l’œil nu, imprimés à l’encre fluorescente : croix valaisannes,
+  flocons, grappes, soleils, logos. Sous lumière noire, les œuvres de Julien Loutz s’allument — et la foule se met à briller.</p>
+  <figure><img src="farinet-assets/loutz/uv-panneaux.webp" alt="Les panneaux de Julien Loutz sous lumière noire : des milliers de motifs fluorescents" loading="lazy" width="1800" height="1350"></figure>
+  <div class="uv-grid">
+    <figure><img src="farinet-assets/loutz/uv-oeuvre.webp" alt="Une œuvre entière sous UV, constellée de motifs lumineux" loading="lazy" width="1350" height="1800"><figcaption>Une œuvre entière</figcaption></figure>
+    <figure><img src="farinet-assets/loutz/uv-trois.webp" alt="Trois panneaux sous UV vus de biais" loading="lazy" width="1350" height="1800"><figcaption>Trois panneaux</figcaption></figure>
+    <figure><img src="farinet-assets/loutz/uv-detail.webp" alt="Détail sous UV : croix, flocons, grappes et logo fluorescents" loading="lazy" width="1350" height="1800"><figcaption>Les motifs de sécurité, révélés</figcaption></figure>
+  </div>
+  <figure><img src="farinet-assets/loutz/uv-quatre.webp" alt="Quatre panneaux lumineux dans l’obscurité" loading="lazy" width="1800" height="1350"></figure>
 </div></section>
 
 <section id="histoire" class="chap"><div class="wrap">
   <div class="chap-head">
-    <div><span class="num-big">03</span><h2>Un faussaire, <span class="o">une monnaie</span></h2></div>
+    <div><span class="num-big">05</span><h2>Un faussaire, <span class="o">une monnaie</span></h2></div>
     <p>Une monnaie locale qui porte le nom d’un faux-monnayeur : le clin d’œil est assumé.</p>
   </div>
   <div class="essai">
@@ -293,7 +361,7 @@ h1,h2,h3{font-weight:600;letter-spacing:-.03em}
       taillés en facettes, sur fond de carte topographique. Une couleur par valeur, des microtextes, des motifs fins :
       tout ce qui fait un vrai billet.</p>
       <p><b>Aujourd’hui</b>, les billets sont exposés au <a href="https://www.saillontourisme.ch/fr/decor-de-legendes/musee-de-la-fausse-monnaie-61/" target="_blank" rel="noopener">Musée de la fausse monnaie à Saillon</a> —
-      là même où Farinet a été traqué.</p>
+      là même où Farinet a été traqué. Les derniers ont été recyclés en œuvres d’art par Julien Loutz.</p>
     </div>
   </div>
   <div class="step">
@@ -326,41 +394,39 @@ h1,h2,h3{font-weight:600;letter-spacing:-.03em}
 
 <script>
 (function(){
-  var V=[1, 2, 5, 10, 20, 50, 13, 100], i=0, Z=2.6, R=110;
-  var img=document.getElementById('billet'), st=document.getElementById('stage'), lp=document.getElementById('loupe'),
-      val=document.getElementById('val'), th=[].slice.call(document.querySelectorAll('#thumbs button'));
-  function src(k){return 'farinet-assets/billet-'+(k+1)+'.webp';}
-  function show(k){
-    i=(k+V.length)%V.length; var v=V[i], s=v>1?'s':'';
-    img.src=src(i); img.alt='Billet de '+v+' farinet'+s+', recto et verso';
-    val.innerHTML=v+' farinet'+s+'<small>'+(i+1)+' / '+V.length+' · recto et verso</small>';
-    th.forEach(function(b,n){b.setAttribute('aria-current',n===i?'true':'false');});
-    lp.style.backgroundImage='url('+src(i)+')';
-    var nx=new Image(); nx.src=src((i+1)%V.length);
+  function viewer(o){
+    var N=o.n, i=0, img=document.getElementById(o.img), st=document.getElementById(o.stage), lp=document.getElementById(o.loupe),
+        val=document.getElementById(o.val), th=[].slice.call(document.querySelectorAll('#'+o.thumbs+' button')), R=110;
+    function show(k){ i=(k+N)%N; img.src=o.src(i); img.alt=o.alt(i); val.innerHTML=o.label(i);
+      th.forEach(function(b,n){b.setAttribute('aria-current',n===i?'true':'false');});
+      lp.style.backgroundImage='url('+o.src(i)+')'; var nx=new Image(); nx.src=o.src((i+1)%N); }
+    function move(x,y){ var r=img.getBoundingClientRect(), px=x-r.left, py=y-r.top;
+      if(px<0||py<0||px>r.width||py>r.height){st.classList.remove('on');return;}
+      var s=st.getBoundingClientRect(); st.classList.add('on'); lp.style.left=(x-s.left)+'px'; lp.style.top=(y-s.top)+'px';
+      lp.style.backgroundSize=(r.width*o.z)+'px '+(r.height*o.z)+'px'; lp.style.backgroundPosition=(-(px*o.z-R))+'px '+(-(py*o.z-R))+'px'; }
+    st.addEventListener('mousemove',function(e){move(e.clientX,e.clientY);});
+    st.addEventListener('mouseleave',function(){st.classList.remove('on');});
+    st.addEventListener('touchstart',function(e){var t=e.touches[0];move(t.clientX,t.clientY);},{passive:true});
+    st.addEventListener('touchmove',function(e){var t=e.touches[0];move(t.clientX,t.clientY);},{passive:true});
+    st.addEventListener('touchend',function(){st.classList.remove('on');});
+    document.getElementById(o.prev).onclick=function(){show(i-1);};
+    document.getElementById(o.next).onclick=function(){show(i+1);};
+    th.forEach(function(b,n){b.onclick=function(){show(n);};});
+    document.addEventListener('keydown',function(e){ var r=document.getElementById(o.box).getBoundingClientRect();
+      if(r.top>innerHeight*.6||r.bottom<innerHeight*.4) return;
+      if(e.key==='ArrowRight')show(i+1); if(e.key==='ArrowLeft')show(i-1); });
+    show(0);
   }
-  function move(x,y){
-    var r=st.getBoundingClientRect(), px=x-r.left, py=y-r.top;
-    if(px<0||py<0||px>r.width||py>r.height){st.classList.remove('on');return;}
-    st.classList.add('on');
-    lp.style.left=px+'px'; lp.style.top=py+'px';
-    lp.style.backgroundSize=(r.width*Z)+'px '+(r.height*Z)+'px';
-    lp.style.backgroundPosition=(-(px*Z-R))+'px '+(-(py*Z-R))+'px';
-  }
-  st.addEventListener('mousemove',function(e){move(e.clientX,e.clientY);});
-  st.addEventListener('mouseleave',function(){st.classList.remove('on');});
-  st.addEventListener('touchstart',function(e){var t=e.touches[0];move(t.clientX,t.clientY);},{passive:true});
-  st.addEventListener('touchmove',function(e){var t=e.touches[0];move(t.clientX,t.clientY);},{passive:true});
-  st.addEventListener('touchend',function(){st.classList.remove('on');});
-  document.getElementById('prev').onclick=function(){show(i-1);};
-  document.getElementById('next').onclick=function(){show(i+1);};
-  th.forEach(function(b,n){b.onclick=function(){show(n);};});
-  document.addEventListener('keydown',function(e){
-    var r=document.getElementById('viewer').getBoundingClientRect();
-    if(r.bottom<0||r.top>innerHeight) return;
-    if(e.key==='ArrowRight') show(i+1);
-    if(e.key==='ArrowLeft') show(i-1);
-  });
-  show(0);
+  var V=[1, 2, 5, 10, 20, 50, 13, 100];
+  viewer({n:V.length,z:1.7,box:'viewer',img:'billet',stage:'stage',loupe:'loupe',val:'val',thumbs:'thumbs',prev:'prev',next:'next',
+    src:function(k){return 'farinet-assets/billet-'+(k+1)+'.webp';},
+    alt:function(k){return 'Billet de '+V[k]+' farinet'+(V[k]>1?'s':'')+', recto et verso';},
+    label:function(k){return V[k]+' farinet'+(V[k]>1?'s':'')+'<small>'+(k+1)+' / '+V.length+' · recto et verso</small>';}});
+  var DL=["Couverture", "Notre identité, la montagne", "La montagne mais pas que", "Quelques détails", "Les goûts et les couleurs", "Quelques photos"];
+  viewer({n:DL.length,z:2,box:'dviewer',img:'dpage',stage:'dstage',loupe:'dloupe',val:'dval',thumbs:'dthumbs',prev:'dprev',next:'dnext',
+    src:function(k){return 'farinet-assets/dossier/page-'+(k+1)+'.webp';},
+    alt:function(k){return 'Dossier de concours du Farinet, '+DL[k];},
+    label:function(k){return DL[k]+'<small>'+(k+1)+' / '+DL.length+'</small>';}});
 })();
 </script>
 </body>
