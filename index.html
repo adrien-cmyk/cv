@@ -186,6 +186,18 @@ section{padding-block:clamp(3.2rem,7vh,5.4rem)}
 .vrac img{display:block;width:100%;height:auto}
 .vrac figcaption{padding:.6rem .8rem .75rem;margin:0;font-size:.82rem;color:var(--ink-soft)}
 .vrac figcaption b{color:var(--ink)}
+.encours{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(1.2rem,2.4vw,2rem)}
+.ec{display:flex;flex-direction:column;gap:.55rem;text-decoration:none;color:var(--ink);border-top:2px solid var(--ink);padding-top:1rem}
+.ec .im{aspect-ratio:4/3;overflow:hidden;border:1px solid var(--line);background:#fff}
+.ec .im img,.ec .im svg{display:block;width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.ec:hover .im img,.ec:hover .im svg{transform:scale(1.03)}
+.ec .dom{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--verm);margin-top:.3rem}
+.ec h3{font-size:1.25rem;margin:0;transition:color .2s}
+.ec:hover h3{color:var(--orange)}
+.ec p{margin:0;font-size:.88rem;color:var(--ink-soft)}
+.ec .go{margin-top:auto;padding-top:.4rem;font-weight:600;font-size:.88rem}
+@media (max-width:1000px){.encours{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:540px){.encours{grid-template-columns:1fr}}
 .dessins-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1.4rem;align-items:start}
 .dessins-grid figure{min-width:0;border:1px solid var(--line);background:var(--paper-2)}
 .d1{grid-column:span 4}.d2{grid-column:span 4}.d3{grid-column:span 4}
@@ -260,6 +272,7 @@ h1,h2,h3{font-weight:600;letter-spacing:-.03em}
   <div class="nav-links">
     <a href="#projets">Projets</a>
     <a href="logos.html">Logos</a>
+    <a href="#encours">En cours</a>
     <a href="#dessins">Dessins</a>
     <a href="#apropos">À propos</a>
     <a href="#contact">Contact</a>
@@ -375,6 +388,52 @@ h1,h2,h3{font-weight:600;letter-spacing:-.03em}
   </div>
 </div></section>
 
+<section id="encours"><div class="wrap">
+  <div class="sec-head">
+    <span class="eyebrow">En ce moment</span>
+    <h2>Les projets qui m’occupent <span class="o">aujourd’hui</span></h2>
+    <p>À côté des mandats, je construis mes propres projets, de l’idée au site en ligne : une BD, un studio photo,
+    une galerie d’objets uniques et un jeu vidéo.</p>
+  </div>
+  <div class="encours">
+    <a class="ec" href="https://pauline-bd.ch" target="_blank" rel="noopener">
+      <div class="im"><img src="atelier/encours/pauline.webp" alt="Couverture de la BD Pauline — au commencement" loading="lazy" width="1200" height="900"></div>
+      <span class="dom">pauline-bd.ch</span>
+      <h3>Pauline</h3>
+      <p>La BD valaisanne drôle et grinçante : l’album, ses librairies partenaires et la boutique en ligne.</p>
+      <span class="go">Visiter →</span>
+    </a>
+    <a class="ec" href="https://adrienphoto.ch" target="_blank" rel="noopener">
+      <div class="im"><img src="atelier/encours/adrienphoto.webp" alt="Adrien Photographie, reportage d’événements" loading="lazy" width="1120" height="840"></div>
+      <span class="dom">adrienphoto.ch</span>
+      <h3>Adrien Photographie</h3>
+      <p>Reportage d’événements et de mariages en Suisse romande, photo de produit et drone FPV — en lumière naturelle, au 50 mm.</p>
+      <span class="go">Visiter →</span>
+    </a>
+    <a class="ec" href="https://onedesignatime.ch" target="_blank" rel="noopener">
+      <div class="im"><img src="atelier/encours/onedesignatime.webp" alt="La Sentinelle : phare de Citroën de 1934 monté sur un trépied de théodolite" loading="lazy" width="1200" height="900"></div>
+      <span class="dom">onedesignatime.ch</span>
+      <h3>One Design a Time</h3>
+      <p>Une galerie d’une seule pièce à la fois, restaurée à la main et racontée par un conte, puis confiée au plus offrant. Pièce #001 : La Sentinelle.</p>
+      <span class="go">Visiter →</span>
+    </a>
+    <a class="ec" href="https://starbyte.online" target="_blank" rel="noopener">
+      <div class="im sb" role="img" aria-label="Starbyte, jeu de stratégie spatiale">
+        <svg viewBox="0 0 400 300" aria-hidden="true"><defs><pattern id="hx" width="34" height="58.9" patternUnits="userSpaceOnUse" patternTransform="scale(1.1)"><path d="M17 0l17 9.8v19.6L17 39.3 0 29.4V9.8zM17 39.3v19.6" fill="none" stroke="rgba(160,190,255,.22)" stroke-width="1.2"/></pattern><radialGradient id="pl" cx=".38" cy=".35"><stop offset="0" stop-color="#ffd27a"/><stop offset=".55" stop-color="#E8921C"/><stop offset="1" stop-color="#7a2f0e"/></radialGradient></defs>
+          <rect width="400" height="300" fill="#0b0d24"/><rect width="400" height="300" fill="url(#hx)"/>
+          <g fill="#fff"><circle cx="40" cy="40" r="1.2"/><circle cx="350" cy="60" r="1.4"/><circle cx="300" cy="250" r="1"/><circle cx="80" cy="230" r="1.3"/><circle cx="220" cy="30" r="1"/><circle cx="370" cy="190" r="1.1"/></g>
+          <circle cx="318" cy="222" r="52" fill="url(#pl)"/><ellipse cx="318" cy="222" rx="84" ry="17" fill="none" stroke="rgba(255,210,122,.55)" stroke-width="2" transform="rotate(-14 318 222)"/>
+          <text x="32" y="112" fill="#fff" font-family="Bricolage Grotesque,Arial,sans-serif" font-weight="800" font-size="44" letter-spacing="-1">STARBYTE</text>
+          <text x="34" y="136" fill="rgba(255,255,255,.7)" font-family="Arial,sans-serif" font-size="12.5">Ta planète n’est que le commencement.</text></svg>
+      </div>
+      <span class="dom">starbyte.online</span>
+      <h3>Starbyte</h3>
+      <p>Mon jeu de stratégie spatiale, en bêta ouverte dans le navigateur : un match-3 sur grille hexagonale, une capitale à bâtir, une flotte à lancer.</p>
+      <span class="go">Jouer →</span>
+    </a>
+  </div>
+</div></section>
+
 <section id="dessins"><div class="wrap">
   <div class="sec-head">
     <span class="eyebrow">Dessins &amp; recherches</span>
@@ -386,10 +445,7 @@ h1,h2,h3{font-weight:600;letter-spacing:-.03em}
     <figure class="lbl" data-l="Croquis"><img src="atelier/dessins/nautilus-encre.jpg" alt="Vaisseau Nautilus : dessin à l'encre noir et blanc" loading="lazy" width="1600" height="1039"><figcaption><b>Nautilus</b> — encre sur papier, le premier état du vaisseau.</figcaption></figure>
     <figure class="lbl fin" data-l="Réalisé"><img src="atelier/dessins/nautilus-couleur.jpg" alt="Vaisseau Nautilus : version couleur finale" loading="lazy" width="1600" height="1073"><figcaption><b>Nautilus</b> — la mise en couleur, même trait, tout un monde.</figcaption></figure>
   </div>
-  <div class="diptyque">
-    <figure class="lbl" data-l="Croquis"><img src="atelier/dessins/cowboy-croquis.jpg" alt="Cowboy au chapeau, croquis au crayon" loading="lazy" width="1100" height="1955"><figcaption><b>Cowboy</b> — recherche au crayon.</figcaption></figure>
-    <figure class="lbl fin" data-l="Réalisé"><img src="atelier/dessins/cowboy-vecteur.jpg" alt="Cowboy au chapeau, version vectorielle pop-art « There is just one thing in life »" loading="lazy" width="1400" height="989"><figcaption><b>Cowboy</b> — vectorisation pop-art du même personnage.</figcaption></figure>
-  </div>
+  
 
   <div class="vrac">
     <figure><img src="atelier/dessins/champexstival.webp" alt="Affiche Champex’stival 2017 : quatre poissons traversent un passage piéton façon Abbey Road" loading="lazy" decoding="async" width="722" height="1024"><figcaption><b>Champex’stival</b> — affiche du festival, 2017.</figcaption></figure>
