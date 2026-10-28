@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gotham Lausanne — une BD murale — Adrien Thétaz</title>
+<meta name="description" content="Une bande dessinée vectorielle pour habiller l’espace de coworking Gotham Lausanne-Flon : Batman, Robin et une imprimante possédée, case par case, du crayon au mur.">
+<link rel="canonical" href="https://adrienthetaz.ch/gotham.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gotham Lausanne — l’imprimante possédée">
+<meta property="og:description" content="Une BD murale vectorielle pour le coworking Gotham Lausanne-Flon.">
+<meta property="og:url" content="https://adrienthetaz.ch/gotham.html">
+<meta property="og:image" content="https://adrienthetaz.ch/gotham-assets/cases/case-07.webp">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap">
+<style>
+/* Page « Logos » — même système que l'accueil et la page NFT. */
+:root{
+  --paper:#FFFFFF; --ink:#1B1916; --ink-soft:#57534A; --verm:#B83228; --orange:#E8921C; --line:#E4E0D8; --tint:#F6F5F2;
+  --sans:'Satoshi',system-ui,'Helvetica Neue',Arial,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:1.03rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit}
+.o{color:var(--orange)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--verm);outline-offset:3px}
+.wrap{max-width:76rem;margin:0 auto;padding-inline:clamp(16px,4vw,44px)}
+h1,h2,h3{letter-spacing:-.025em;line-height:1.08;text-wrap:balance;margin:0;font-weight:500}
+.eyebrow{font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--verm)}
+.num{font-variant-numeric:tabular-nums}
+figure{margin:0}
+figcaption{font-size:.8rem;color:var(--ink-soft);margin-top:.6rem;line-height:1.5}
+figcaption b{color:var(--ink);font-weight:600}
+section{scroll-margin-top:5rem}
+
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,#fff 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.4rem;padding-block:.8rem}
+.brand{font-weight:700;letter-spacing:-.02em;text-decoration:none;margin-right:auto}
+.brand i{font-style:normal;color:var(--verm)}
+.nav-in a:not(.brand){font-size:.86rem;font-weight:550;color:var(--ink-soft);text-decoration:none}
+.nav-in a:not(.brand):hover{color:var(--verm)}
+
+/* hero */
+.hero{padding-block:clamp(2.5rem,6vh,4.5rem) 2rem}
+.hero .eyebrow{display:block;margin-bottom:1rem}
+.hero h1{font-size:clamp(2.6rem,7vw,5.4rem);max-width:12em}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero .lede{max-width:40em;color:var(--ink-soft);margin:1.4rem 0 0;font-size:1.08rem}
+.facts{display:flex;flex-wrap:wrap;gap:.4rem .6rem;margin-top:1.6rem}
+.facts span{font-size:.76rem;font-weight:600;border:1px solid var(--line);border-radius:999px;padding:.32rem .8rem;color:var(--ink-soft)}
+
+/* Croquis / Réalisé */
+.trait{margin-top:2.4rem}
+.trait-frame{position:relative;border:1px solid var(--line);background:#fff;overflow:hidden}
+.trait-frame img{width:100%}
+.trait-frame img + img{position:absolute;inset:0;height:100%;object-fit:cover}
+.trait-frame[data-state="croquis"] .is-real{opacity:0}
+.trait-frame[data-state="realise"] .is-real{opacity:1}
+@media (prefers-reduced-motion:no-preference){.trait-frame .is-real{transition:opacity .5s ease}}
+.toggle{display:inline-flex;margin-top:1rem;border:1px solid var(--ink);border-radius:999px;padding:3px;gap:3px}
+.toggle button{font:inherit;font-size:.85rem;font-weight:600;border:0;background:none;color:var(--ink);padding:.5rem 1.1rem;border-radius:999px;cursor:pointer}
+.toggle button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.trait-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.6rem 1.5rem}
+
+/* chapitres */
+.chap{padding-block:clamp(3.2rem,7vh,5.5rem);border-top:1px solid var(--line)}
+.chap-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:1rem 4rem;align-items:end;margin-bottom:2.6rem}
+.chap-head .num-big{font-size:clamp(3.5rem,9vw,7rem);font-weight:500;line-height:.85;color:var(--orange);letter-spacing:-.04em}
+.chap-head h2{font-size:clamp(1.9rem,4vw,2.9rem);margin-top:.6rem}
+.chap-head p{margin:0;color:var(--ink-soft);max-width:36em}
+.step{margin-top:3.2rem}
+.step h3{font-size:1.15rem;margin-bottom:.4rem}
+.step > p{margin:0 0 1.4rem;color:var(--ink-soft);max-width:44em;font-size:.97rem}
+.step > p b{color:var(--ink);font-weight:600}
+
+.duo{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:2.5rem;align-items:center}
+.grid-sk{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
+.grid-sk figure,.strip figure,.bordered{border:1px solid var(--line);background:#fff}
+.grid-sk img{aspect-ratio:3/4;object-fit:cover;width:100%}
+.strip{display:grid;grid-template-columns:repeat(6,1fr);gap:.8rem;counter-reset:s}
+.strip figure{counter-increment:s;position:relative}
+.strip figure::before{content:counter(s);position:absolute;top:.5rem;left:.55rem;font-size:.7rem;font-weight:700;color:var(--verm)}
+.strip img{aspect-ratio:1/1;object-fit:cover;width:100%}
+.strip figcaption,.grid-sk figcaption{padding:.55rem .65rem .65rem;margin:0}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:1.4rem}
+.rules div{background:#fff;padding:1rem 1.1rem}
+.rules b{display:block;font-size:.72rem;font-weight:650;letter-spacing:.1em;text-transform:uppercase;color:var(--verm);margin-bottom:.3rem}
+.rules span{font-size:.9rem;color:var(--ink-soft)}
+
+.showcase{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
+.showcase figure{border:1px solid var(--line)}
+.showcase img{display:block;width:100%;height:auto}
+.greek-all a{display:block}
+.greek-all figure,.naut-all figure{content-visibility:auto;contain-intrinsic-block-size:auto 480px}
+.showcase figcaption{padding:.55rem .7rem .7rem;margin:0}
+
+/* murs de collection */
+.wall-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.5rem 2rem;margin-bottom:1rem}
+.wall-head p{margin:0;color:var(--ink-soft);font-size:.9rem}
+.wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:4px}
+.wall img{width:100%;aspect-ratio:1/1;object-fit:cover;background:var(--tint)}
+.wall.dark{background:#101418;padding:4px}
+
+.etapes{display:grid;grid-template-columns:repeat(5,1fr);gap:.8rem}
+.etapes figure{border:1px solid var(--line)}
+.etapes figcaption{padding:.5rem .6rem .6rem;margin:0}
+.etapes figure::after{content:"";display:none}
+
+.epilogue{background:var(--ink);color:#fff;padding-block:clamp(3.2rem,8vh,5.5rem)}
+.epilogue h2{font-size:clamp(1.9rem,4.4vw,3.1rem);max-width:15em}
+.epilogue h2 em{font-style:normal;color:#E86A5E}
+.epilogue p{color:#C9C4BA;max-width:42em}
+.big-nums{display:flex;flex-wrap:wrap;gap:1.5rem 4rem;margin:2.2rem 0 2.4rem}
+.big-nums div{display:flex;flex-direction:column}
+.big-nums b{font-size:clamp(2rem,5vw,3.2rem);font-weight:700;letter-spacing:-.03em}
+.big-nums span{font-size:.82rem;color:#A8A296}
+.back{display:inline-flex;font-size:.9rem;font-weight:600;text-decoration:none;border-radius:999px;padding:.75rem 1.4rem;background:#fff;color:var(--ink)}
+.back:hover{background:#E86A5E;color:#fff}
+
+footer{padding-block:1.6rem calc(1.6rem + env(safe-area-inset-bottom,0px));font-size:.82rem;color:var(--ink-soft)}
+.foot-in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 2rem}
+.foot-in b{color:var(--verm)}
+
+@media (max-width:900px){
+  .chap-head,.duo{grid-template-columns:1fr}
+  .grid-sk{grid-template-columns:repeat(3,1fr)}
+  .strip{grid-template-columns:repeat(3,1fr)}
+  .etapes{grid-template-columns:repeat(3,1fr)}
+  .showcase{grid-template-columns:1fr 1fr}
+}
+@media (max-width:540px){
+  .grid-sk,.strip,.etapes{grid-template-columns:repeat(2,1fr)}
+  .showcase{grid-template-columns:1fr}
+  .wall{grid-template-columns:repeat(auto-fill,minmax(76px,1fr))}
+}
+
+/* logos */
+.logos-all{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
+.logos-all figure{border:1px solid var(--line);content-visibility:auto;contain-intrinsic-block-size:auto 440px}
+.logos-all img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.logos-all figcaption,.ctx figcaption,.mos figcaption{padding:.55rem .7rem .7rem;margin:0}
+.ctx{display:grid;gap:1.2rem;grid-template-columns:repeat(var(--c,3),minmax(0,1fr));align-items:start}
+.ctx figure,.mos figure{border:1px solid var(--line);background:#fff}
+.ctx.c2{--c:2}.ctx.c4{--c:4}.ctx.c5{--c:5}.ctx.c6{--c:6}.ctx.c7{--c:7}
+.ctx.sq img{aspect-ratio:1/1;object-fit:contain;background:#fff}
+.mos{columns:3 18rem;column-gap:1.2rem}
+.mos figure{break-inside:avoid;margin-bottom:1.2rem}
+.bois{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.6rem}
+.bois img{width:100%;aspect-ratio:2/3;object-fit:cover}
+.dessin{grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);align-items:start}
+.dessin > figure,.dessin-side figure{border:1px solid var(--line)}
+.dessin-side{display:grid;gap:1.2rem}
+.bois .w{grid-column:span 2}.bois .w img{aspect-ratio:auto;height:100%}
+.essai{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2.5rem 4rem}
+.essai p{margin:0 0 1rem;color:var(--ink-soft)}
+.essai p b{color:var(--ink);font-weight:600}
+.cas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:2rem}
+.cas div{background:#fff;padding:1.2rem 1.3rem}
+.cas b{display:block;font-size:1.6rem;font-weight:700;letter-spacing:-.02em}
+.cas small{display:block;font-size:.72rem;font-weight:650;letter-spacing:.1em;text-transform:uppercase;color:var(--verm);margin:.2rem 0 .5rem}
+.cas span{font-size:.9rem;color:var(--ink-soft)}
+.sl{background:#0B0B0A;color:#fff;padding-block:clamp(3.2rem,8vh,5.5rem)}
+.sl h2{font-size:clamp(2rem,5vw,3.6rem);max-width:13em}
+.sl .lede{color:#C9C4BA;max-width:44em;margin:1.2rem 0 0}
+.piliers{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:#2A2926;border:1px solid #2A2926;margin-top:2.4rem}
+.piliers div{background:#0B0B0A;padding:1.2rem 1.1rem}
+.piliers small{display:block;font-size:.68rem;letter-spacing:.14em;color:#8E897F;margin-bottom:.5rem}
+.piliers b{display:block;font-size:1rem;font-weight:700;margin-bottom:.5rem}
+.piliers span{font-size:.86rem;color:#B5B0A6;line-height:1.55}
+.bloq{display:flex;flex-wrap:wrap;gap:.5rem .7rem;margin-top:1.8rem}
+.bloq span{font-size:.78rem;font-weight:600;border:1px solid #3A3833;border-radius:999px;padding:.35rem .85rem;color:#E4E0D8}
+.sl .big-nums span{color:#A8A296}
+.sl a.back{margin-right:.6rem}
+@media (max-width:900px){.dessin{grid-template-columns:1fr}.cas{grid-template-columns:1fr 1fr}.logos-all{grid-template-columns:1fr 1fr}.ctx{--c:2!important}.piliers{grid-template-columns:1fr 1fr}.essai{grid-template-columns:1fr}.bois{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.cas{grid-template-columns:1fr}.logos-all{grid-template-columns:1fr}.ctx{--c:1!important}.piliers{grid-template-columns:1fr}}
+
+/* Titres : Bricolage Grotesque — paragraphes inchangés (Satoshi) */
+h1,h2,h3,.eyebrow,.tag,.num-big,.titre,.big-nums b,.cas b,.piliers b,.brand,.k,.yr{font-family:'Bricolage Grotesque',var(--sans);font-optical-sizing:auto}
+h1,h2,h3{font-weight:600;letter-spacing:-.03em}
+.num-big,.big-nums b{font-weight:600}
+
+/* Anzère */
+.az-hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:2.5rem 4rem;align-items:center}
+.az-hero h1{font-size:clamp(2.4rem,6vw,4.6rem)}
+.az-video{border:1px solid var(--line);background:#000}
+.az-video video{display:block;width:100%;height:auto;background:#000}
+.az-video figcaption{background:#fff;padding:.55rem .7rem .7rem;margin:0}
+.az-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:1.2rem;align-items:start}
+.az-side{display:grid;gap:1.2rem}
+.bordered figcaption{padding:.55rem .7rem .7rem;margin:0}
+.epilogue .back + .back{background:transparent;color:#fff;border:1px solid #5a564f}
+@media (max-width:900px){.az-hero,.az-grid{grid-template-columns:1fr}}
+
+/* Gotham */
+.g-hero h1{font-size:clamp(2.4rem,6vw,4.6rem)}
+.g-strip{display:grid;gap:1.2rem;align-items:end}
+.g-strip.s3{grid-template-columns:1.3fr 1.4fr .75fr}
+.g-strip.s2{grid-template-columns:1fr 1fr;margin-top:1.2rem}
+.case{margin:0}
+.case img{display:block;width:100%;height:auto}
+.case figcaption{font-size:.85rem;color:var(--ink-soft);padding:.5rem 0 0}
+.case figcaption b{color:var(--ink)}
+.case figcaption .en{font-style:italic}
+.saga{display:grid;gap:clamp(2.5rem,6vw,5rem)}
+.saga .case.xl{margin-inline:calc(-1 * clamp(0rem,3vw,3rem))}
+.saga .duo2{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;align-items:end}
+.saga .right{width:88%;margin-left:auto}
+.saga .left{width:88%}
+.beat{font-family:'Bricolage Grotesque',var(--sans);font-weight:600;font-size:clamp(1.3rem,2.6vw,1.9rem);letter-spacing:-.02em;line-height:1.2;max-width:28em;margin:0}
+.beat .o{color:var(--orange)}
+.finale{position:relative}
+.finale .tag3{display:inline-block;background:var(--orange);color:#fff;font-weight:700;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;padding:.35rem .7rem;margin-bottom:.8rem}
+.rv{opacity:0;transform:translateY(36px) scale(.985);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+.pencil{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;align-items:center;margin-top:1.8rem}
+.pencil figure{margin:0}
+.pencil .p{border:1px solid var(--line);background:#fff;padding:1rem}
+.g-3d{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem;margin-top:1.2rem}
+.g-mur{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:2.4rem;align-items:center;max-width:980px}
+@media (max-width:800px){.g-strip.s3,.g-strip.s2,.saga .duo2,.pencil,.g-3d,.g-mur{grid-template-columns:1fr}.saga .right,.saga .left{width:100%}.saga .case.xl{margin-inline:0}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap nav-in">
+  <a class="brand" href="./">Adrien Thétaz<i>.</i></a>
+  <a href="#appel">L’appel</a>
+  <a href="#imprimante">L’imprimante</a>
+  <a href="#crayon">Au crayon</a>
+  <a href="#mur">Sur le mur</a>
+  <a href="./#projets">← Tous les projets</a>
+</div></nav>
+
+<header class="hero g-hero"><div class="wrap">
+  <span class="eyebrow">Bande dessinée murale · Illustration vectorielle · Gotham Lausanne-Flon · 2018</span>
+  <h1>Gotham, <em>l’imprimante possédée.</em></h1>
+  <p class="lede">Pour habiller l’espace de coworking Gotham, au Flon à Lausanne, j’ai écrit et dessiné une bande dessinée
+  à l’échelle du bâtiment : douze cases qui grimpent le long de l’escalier jusqu’à la mezzanine. Le scénario ? Une alerte
+  à Gotham, un duo de justiciers appelé en renfort, et l’ennemi juré de tout open space : l’imprimante.</p>
+  <div class="facts"><span>12 cases</span><span>Scénario &amp; dessin</span><span>Vectoriel, imprimé grand format</span><span>Crayon · Illustrator · 3D</span></div>
+  <figure class="bordered" style="margin-top:2.4rem"><img src="gotham-assets/mur/fresque.webp" alt="La BD murale installée chez Gotham Lausanne : les cases en diagonale le long de l’escalier, sous l’enseigne Gotham en mousse végétale" width="2200" height="1650"></figure>
+</div></header>
+
+<section id="appel" class="chap"><div class="wrap">
+  <div class="chap-head">
+    <div><span class="num-big">01</span><h2>Un appel de <span class="o">Gotham</span></h2></div>
+    <p>L’histoire commence comme il se doit : un appel, une moto, une grande devise. Et une hôte qui attend les héros de pied ferme.</p>
+  </div>
+  <div class="g-strip s3">
+    <figure class="case"><img src="gotham-assets/cases/case-01.webp" alt="Robin et Batman à moto : « It’s a call from Gotham ! — Let’s go ! »" loading="lazy" decoding="async" width="1318" height="699"><figcaption><b>Case 1</b> · <span class=en>« It’s a call from Gotham ! »</span></figcaption></figure>
+    <figure class="case"><img src="gotham-assets/cases/case-02.webp" alt="Robin et Batman de dos devant la porte Gotham : « With a great name… comes great responsabilities »" loading="lazy" decoding="async" width="1434" height="699"><figcaption><b>Case 2</b> · <span class=en>« With a great name… »</span></figcaption></figure>
+    <figure class="case"><img src="gotham-assets/cases/case-03.webp" alt="L’hôte de Gotham, poings sur les hanches : « Oh, glad you came, we need you here ! »" loading="lazy" decoding="async" width="766" height="699"><figcaption><b>Case 3</b> · <span class=en>« Oh, glad you came ! »</span></figcaption></figure>
+  </div>
+  <div class="g-strip s2">
+    <figure class="case"><img src="gotham-assets/cases/case-04.webp" alt="Batman court : « Hurry up Robin, they need us ! »" loading="lazy" decoding="async" width="1718" height="686"><figcaption><b>Case 4</b> · <span class=en>« Hurry up Robin ! »</span></figcaption></figure>
+    <figure class="case"><img src="gotham-assets/cases/case-05.webp" alt="Robin, Batman et l’hôte : « Where is the problem ? — It’s over here »" loading="lazy" decoding="async" width="1821" height="699"><figcaption><b>Case 5</b> · <span class=en>« Where is the problem ? »</span></figcaption></figure>
+  </div>
+</div></section>
+
+<section id="imprimante" class="chap"><div class="wrap">
+  <div class="chap-head">
+    <div><span class="num-big">02</span><h2>L’imprimante <span class="o">possédée</span></h2></div>
+    <p>Le cœur de l’histoire, et la blague que tout coworker comprend. Les cases en grand, dans l’ordre — de l’alerte au bourrage final.</p>
+  </div>
+  <div class="saga">
+    <figure class="case rv xl"><img src="gotham-assets/cases/wonder-grand.webp" alt="L’hôte de Gotham, mains sur la tête, paniquée : « We have such a huuuUUUUuuge printing issue !! »" loading="lazy" decoding="async" width="2400" height="852"><figcaption><b>Case 6</b> · <span class=en>« We have such a huuuUUUUuuge printing issue !! »</span></figcaption></figure>
+    <p class="beat rv">Sur le palier, le monstre crache du papier par rafales. <span class="o">VRRRRRR.</span></p>
+    <figure class="case rv xl"><img src="gotham-assets/cases/case-07.webp" alt="L’imprimante possédée crache des feuilles en rafale devant l’hôte et Batman : « As you can see, our printer is possessed »" loading="lazy" decoding="async" width="2200" height="995"><figcaption><b>Case 7</b> · <span class=en>« As you can see, our printer is possessed »</span></figcaption></figure>
+    <p class="beat rv">Batman se jette sur la machine à mains nues. <span class="o">Elle mord.</span></p>
+    <figure class="case rv xl"><img src="gotham-assets/cases/case-08.webp" alt="Batman se bat avec l’imprimante qui le mord : « MAKE THIS STOP !!! — BAF »" loading="lazy" decoding="async" width="1582" height="793"><figcaption><b>Case 8</b> · <span class=en>« Make this stop !!! »</span> — BAF.</figcaption></figure>
+    <p class="beat rv">Robin a une meilleure idée : <span class="o">la prise.</span></p>
+    <figure class="case rv xl"><img src="gotham-assets/cases/case-09.webp" alt="Robin plonge et arrache la prise de l’imprimante : « I GOT IT ! — ZZIK »" loading="lazy" decoding="async" width="1646" height="896"><figcaption><b>Case 9</b> · <span class=en>« I got it ! »</span> — ZZIK.</figcaption></figure>
+    <div class="duo2">
+      <figure class="case rv"><img src="gotham-assets/cases/case-10.webp" alt="Batman relance le programme sur un ordinateur portable : « And now we should just restart the program… — is it long ? »" loading="lazy" decoding="async" width="2132" height="896"><figcaption><b>Case 10</b> · <span class=en>« Is it long ? »</span></figcaption></figure>
+      <figure class="case rv"><img src="gotham-assets/cases/case-11.webp" alt="Batman et Robin se tapent dans la main au-dessus de l’imprimante calmée : « No ! It’s one more successfull mission ! »" loading="lazy" decoding="async" width="1614" height="896"><figcaption><b>Case 11</b> · <span class=en>« One more successfull mission ! »</span></figcaption></figure>
+    </div>
+    <div class="finale">
+      <span class="tag3 rv">Épilogue</span>
+      <figure class="case rv xl"><img src="gotham-assets/cases/case-12.webp" alt="Trois mois plus tard, l’imprimante est de nouveau possédée : VRRRR, Fkk Fkk" loading="lazy" decoding="async" width="1133" height="699"><figcaption><b>Case 12</b> · <span class=en>« 3 months later… »</span> — et ça recommence.</figcaption></figure>
+    </div>
+  </div>
+</div></section>
+
+<section id="crayon" class="chap"><div class="wrap">
+  <div class="chap-head">
+    <div><span class="num-big">03</span><h2>Du crayon au <span class="o">vecteur</span></h2></div>
+    <p>Chaque case est d’abord crayonnée sur papier, puis redessinée en vectoriel dans Illustrator : des aplats, des trames
+    de points façon comics, un trait net qui tient à plusieurs mètres de haut.</p>
+  </div>
+  <div class="pencil"><figure class="p"><img src="gotham-assets/crayon/imprimante-batman.webp" alt="Crayonné : Batman plonge sur l’imprimante qui crache du papier" loading="lazy" decoding="async" width="1800" height="1213"><figcaption><b>Crayon</b> · Batman contre l’imprimante</figcaption></figure><figure class="case"><img src="gotham-assets/cases/case-08.webp" alt="Version vectorielle colorée de la même case" loading="lazy" decoding="async" width="1582" height="793"><figcaption><b>Vectoriel</b> · case 8</figcaption></figure></div>
+  <div class="pencil"><figure class="p"><img src="gotham-assets/crayon/robin-prise.webp" alt="Crayonné : Robin arrache la prise, ZZIK" loading="lazy" decoding="async" width="1800" height="821"><figcaption><b>Crayon</b> · Robin débranche</figcaption></figure><figure class="case"><img src="gotham-assets/cases/case-09.webp" alt="Version vectorielle colorée : Robin arrache la prise" loading="lazy" decoding="async" width="1646" height="896"><figcaption><b>Vectoriel</b> · case 9</figcaption></figure></div>
+  <div class="pencil"><figure class="p"><img src="gotham-assets/crayon/high-five.webp" alt="Crayonné : Batman et Robin se tapent dans la main" loading="lazy" decoding="async" width="1731" height="1482"><figcaption><b>Crayon</b> · mission accomplie</figcaption></figure><figure class="case"><img src="gotham-assets/cases/case-11.webp" alt="Version vectorielle colorée du high five" loading="lazy" decoding="async" width="1614" height="896"><figcaption><b>Vectoriel</b> · case 11</figcaption></figure></div>
+</div></section>
+
+<section id="mur" class="chap"><div class="wrap">
+  <div class="chap-head">
+    <div><span class="num-big">04</span><h2>En 3D, puis sur le <span class="o">mur</span></h2></div>
+    <p>Avant l’impression, la BD a été posée sur une maquette 3D de l’espace pour régler l’échelle et les diagonales
+    de l’escalier. Puis elle a pris sa place, jusque sur les portes.</p>
+  </div>
+  <figure class="az-video" style="max-width:760px;margin-inline:auto">
+    <video controls muted playsinline preload="metadata" poster="gotham-assets/3d/visite-poster.jpg" width="720" height="720" style="max-height:80vh;object-fit:contain">
+      <source src="gotham-assets/3d/visite-3d.mp4" type="video/mp4">
+    </video>
+    <figcaption><b>Visite 3D</b> · la BD simulée dans l’espace avant impression</figcaption>
+  </figure>
+  <div class="g-3d"><figure class="bordered"><img src="gotham-assets/3d/rendu-1.webp" alt="Rendu 3D de l’espace Gotham avec la BD le long de l’escalier et de la mezzanine" loading="lazy" decoding="async" width="2000" height="1105"><figcaption><b>Rendu 3D</b> · vue d’ensemble</figcaption></figure><figure class="bordered"><img src="gotham-assets/3d/rendu-2.webp" alt="Rendu 3D : la BD vue depuis l’espace café" loading="lazy" decoding="async" width="2000" height="998"><figcaption><b>Rendu 3D</b> · depuis le café</figcaption></figure><figure class="bordered"><img src="gotham-assets/3d/rendu-3.webp" alt="Rendu 3D : la BD sous la verrière" loading="lazy" decoding="async" width="2000" height="997"><figcaption><b>Rendu 3D</b> · sous la verrière</figcaption></figure></div>
+  <div class="g-mur" style="margin-top:1.2rem"><figure class="bordered"><img src="gotham-assets/mur/porte.webp" alt="Batman et l’hôte de Gotham imprimés sur une porte" loading="lazy" decoding="async" width="1350" height="1800"><figcaption><b>Jusque sur les portes</b></figcaption></figure><p class="beat">Et pour ceux qui attendent devant la porte : <span class="o">le duo en taille réelle.</span></p></div>
+</div></section>
+
+<section class="epilogue"><div class="wrap">
+  <span class="eyebrow" style="color:#E8921C">Gotham Lausanne-Flon</span>
+  <h2 style="margin-top:.8rem">Une BD pour un coworking. <span class="o">Et une mission de plus réussie.</span></h2>
+  <p>Gotham Lausanne-Flon, rue du Port-Franc 22, à deux minutes du métro Flon : coworking, salles de réunion et une
+  imprimante qui n’a qu’à bien se tenir.</p>
+  <a class="back" href="https://gothamco.com/nos-espaces/lausanne-flon/" target="_blank" rel="noopener">Gotham Lausanne-Flon →</a>
+  <a class="back ghost" href="./#projets">← Retour aux projets</a>
+</div></section>
+
+<footer><div class="wrap foot-in">
+  <span class="num">© 2026 Adrien Thétaz — designer MPA &amp; illustrateur, Martigny</span>
+  <span lang="en">Art makes <b>(hi)</b>story</span>
+</div></footer>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e);});
+})();
+</script>
+</body>
+</html>
