@@ -217,16 +217,18 @@ section{padding-block:clamp(3.2rem,7vh,5.4rem)}
 
 /* — à propos — */
 #apropos{background:var(--paper-2);border-block:1px solid var(--line)}
-.pas-comme{display:grid;grid-template-columns:minmax(12rem,16rem) minmax(0,1fr);gap:2.5rem 4rem;margin-top:clamp(3rem,7vw,5rem);padding-top:clamp(2rem,4vw,3rem);border-top:2px solid var(--ink);align-items:start}
-.pc-k{margin:0;font-family:'Bricolage Grotesque',var(--sans);font-weight:700;font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1.02;letter-spacing:-.03em}
-.pc-k .o{color:var(--orange)}
-.pc-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.4rem}
-.pc{border:1px solid var(--line);padding:clamp(1.3rem,2.6vw,2rem);background:#fff}
-.pc-n{display:block;width:3rem;height:2rem;margin-bottom:1rem}
-.pc h3{font-size:clamp(1.35rem,2.4vw,1.8rem);margin:0 0 .7rem;line-height:1.1}
-.pc h3 .o{color:var(--orange)}
-.pc p{margin:0;color:var(--ink-soft)}
-@media (max-width:900px){.pas-comme,.pc-cards{grid-template-columns:1fr}}
+.mains{margin-top:clamp(3rem,7vw,5rem);padding-top:clamp(2rem,4vw,3rem);border-top:2px solid var(--ink);display:grid;grid-template-columns:minmax(12rem,20rem) minmax(0,1fr);gap:2.5rem 4rem;align-items:start}
+.mains-head h3{font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1.05;letter-spacing:-.03em;margin:.6rem 0 1rem}
+.mains-head p{margin:0;color:var(--ink-soft)}
+.mains-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
+.mains-list li{border:1px solid var(--line);background:#fff;padding:1.2rem 1.3rem;display:flex;flex-direction:column;gap:.4rem}
+.mains-list li.big{grid-column:span 3;border-color:var(--ink);padding:1.6rem 1.8rem}
+.mains-list b{font-family:'Bricolage Grotesque',var(--sans);font-weight:700;font-size:1.15rem;letter-spacing:-.02em}
+.mains-list li.big b{font-size:clamp(1.5rem,2.6vw,2rem);color:var(--orange)}
+.mains-list span{font-size:.9rem;color:var(--ink-soft)}
+.mains-list li.big span{font-size:1rem;max-width:40em}
+@media (max-width:900px){.mains{grid-template-columns:1fr}.mains-list{grid-template-columns:1fr 1fr}.mains-list li.big{grid-column:span 2}}
+@media (max-width:540px){.mains-list{grid-template-columns:1fr}.mains-list li.big{grid-column:auto}}
 .apropos-grid{display:grid;grid-template-columns:minmax(12rem,16rem) minmax(0,1fr);gap:2.5rem 4rem;align-items:start}
 .apropos-grid img{border:1px solid var(--line)}
 .apropos-grid .recit{margin:0 0 1.6rem;color:var(--ink-soft)}
@@ -522,15 +524,22 @@ h1,h2,h3{font-weight:600;letter-spacing:-.03em}
       </ul>
     </div>
   </div>
-  <div class="pas-comme">
-    <p class="pc-k">Je ne suis pas<br>comme tout<br>le <span class="o">monde.</span></p>
-    <div class="pc-cards">
-      <div class="pc"><svg class="pc-n" viewBox="0 0 48 32" aria-hidden="true"><path d="M2 30 L17 8 L24 17 L31 9 L46 30 Z M13.5 13 L17 8 L20.5 13 L18.5 12 L17 14 L15.5 12 Z" fill="none" stroke="var(--orange)" stroke-width="2.2" stroke-linejoin="round"/></svg><h3>J’ai été <span class="o">gardien de cabane</span></h3>
-        <p>Là-haut, on accueille, on cuisine, on répare, on anticipe la météo et on gère l’imprévu, souvent seul.
-        La meilleure école d’autonomie et de service que je connaisse.</p></div>
-      <div class="pc"><svg class="pc-n" viewBox="0 0 48 32" aria-hidden="true"><path d="M24 2 V14 M24 14 C20 18 14 18 10 24 M24 14 C28 19 34 19 39 26 M24 14 C24 20 22 25 19 30 M16 19 C14 21 12 21 8 20 M33 19 C35 22 37 22 42 21" fill="none" stroke="var(--orange)" stroke-width="2.2" stroke-linecap="round"/></svg><h3>Je vends des <span class="o">racines</span></h3>
-        <p>Oui, des racines. Un projet à côté du design, qui me ramène au geste, à la matière et à la patience.</p></div>
+  <div class="mains">
+    <div class="mains-head">
+      <span class="eyebrow">Hors de l’écran</span>
+      <h3>Des mains qui savent <span class="o">faire</span></h3>
+      <p>Le design m’a appris à penser. Le reste, je l’ai appris en le faisant — en altitude, en cuisine, à l’atelier.
+      Ça change la façon dont j’aborde un projet : concrètement, jusqu’au bout.</p>
     </div>
+    <ul class="mains-list">
+      <li class="big"><b>Gardien de cabane</b><span>Accueillir, nourrir, réparer et décider seul, là-haut, quelle que soit la météo. Ma meilleure école de service et d’autonomie.</span></li>
+      <li><b>Cuisinier pour 25</b><span>Nourrir une tablée de cabane, tous les soirs, avec ce qu’il y a.</span></li>
+      <li><b>Brasseur</b><span>Avec Ademus, la Bière des Alpes : recettes, brassage, étiquettes.</span></li>
+      <li><b>Liquoriste</b><span>Macérations et liqueurs de montagne, à la main.</span></li>
+      <li><b>Fabricant de lampes</b><span>Des pièces uniques, comme la Sentinelle de One Design a Time.</span></li>
+      <li><b>Forgeron</b><span>Des couteaux forgés, trempés et affûtés à l’atelier.</span></li>
+      <li><b>Alpiniste</b><span>Des sommets, des cordées, et le goût des choses qui se méritent.</span></li>
+    </ul>
   </div>
 </div></section>
 
